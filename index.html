@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechNews - Technology News & Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Tech<span>News</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a>
+                </li>
+
+            </ul>
+
+            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">
+                🌙
+            </button>
+
+            <div class="lang-toggle ms-lg-2" id="langToggle" role="group" aria-label="Language toggle">
+                <button type="button" class="lang-btn active" data-lang="en">EN.</button>
+                <button type="button" class="lang-btn" data-lang="kh">KH.</button>
+            </div>
+
+        </div>
+    </div>
+</nav>
+</header>
+
+<main>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <p class="hero-small" data-en="WELCOME TO TECHNEWS" data-kh="សូមស្វាគមន៍មកកាន់ TECHNEWS">WELCOME TO TECHNEWS</p>
+
+                <h1>
+                    <span data-en="Discover the" data-kh="ស្វែងយល់ពី">Discover the</span>
+                    <span data-en="Future of Technology" data-kh="អនាគតបច្ចេកវិទ្យា">Future of Technology</span>
+                </h1>
+
+                <p class="hero-text" data-en="Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity." data-kh="ទទួលបានព័ត៌មានថ្មីៗអំពីបច្ចេកវិទ្យា និន្នាការ AI ទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី និងសន្តិសុខអនឡាញ។">
+                    Stay updated with the latest technology news,
+                    trends, AI, smartphones, computers, programming,
+                    and cybersecurity.
+                </p>
+
+                <a href="news.html" class="btn btn-primary" data-en="Explore News" data-kh="ស្វែងយល់ព័ត៌មាន">
+                    Explore News
+                </a>
+
+                <a href="blog.html" class="btn btn-outline-light ms-2" data-en="Read Blog" data-kh="អានប្លុក">
+                    Read Blog.
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <p data-en="STAY UPDATED" data-kh="ព័ត៌មានថ្មីៗ">STAY UPDATED</p>
+            <h2 data-en="Trending Technology News" data-kh="ព័ត៌មានបច្ចេកវិទ្យាកំពុងពេញនិយម">Trending Technology News</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <article class="news-card">
+                    <button class="bookmark-btn" data-id="home-ai" aria-label="Add bookmark">📑</button>
+                    <img src="images/ai.png" alt="Artificial Intelligence">
+                    <div class="card-content">
+                        <span class="category">AI</span>
+                        <h3>The Future of Artificial Intelligence</h3>
+                        <p>
+                            Learn how artificial intelligence
+                            is changing the way we use technology.
+                        </p>
+                        <a href="article.html">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="news-card">
+                    <button class="bookmark-btn" data-id="home-mobile" aria-label="Add bookmark">📑</button>
+                    <img src="images/smartphone.png" alt="Smartphone technology">
+                    <div class="card-content">
+                        <span class="category">Mobile</span>
+                        <h3>New Trends in Smartphone Technology</h3>
+                        <p>
+                            Discover new features and innovations
+                            in modern smartphones.
+                        </p>
+                        <a href="article.html">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="news-card">
+                    <button class="bookmark-btn" data-id="home-security" aria-label="Add bookmark">📑</button>
+                    <img src="images/cybersecurity.png" alt="Cybersecurity">
+                    <div class="card-content">
+                        <span class="category">Security</span>
+                        <h3>Why Cybersecurity Is Important</h3>
+                        <p>
+                            Learn simple ways to stay safe
+                            in today's digital world.
+                        </p>
+                        <a href="article.html">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="news-card">
+                    <button class="bookmark-btn" data-id="home-dev" aria-label="Add bookmark">📑</button>
+                    <img src="images/laptop.png" alt="Laptop computer">
+                    <div class="card-content">
+                        <span class="category">Computers</span>
+                        <h3>How Modern Computers Are Evolving</h3>
+                        <p>
+                            Explore the latest improvements
+                            in computer performance and design.
+                        </p>
+                        <a href="article.html">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="categories-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <p data-en="EXPLORE" data-kh="ស្វែងយល់">EXPLORE</p>
+            <h2 data-en="Technology Categories" data-kh="ប្រភេទបច្ចេកវិទ្យា">Technology Categories</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="category-box">
+                    <div class="category-icon">🤖</div>
+                    <h3>Artificial Intelligence</h3>
+                    <a href="categories.html">Explore →</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="category-box">
+                    <div class="category-icon">📱</div>
+                    <h3>Mobile</h3>
+                    <a href="categories.html">Explore →</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="category-box">
+                    <div class="category-icon">💻</div>
+                    <h3>Computers</h3>
+                    <a href="categories.html">Explore →</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="category-box">
+                    <div class="category-icon">🔐</div>
+                    <h3>Cybersecurity</h3>
+                    <a href="categories.html">Explore →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <p class="hero-small" data-en="ABOUT TECHNEWS" data-kh="អំពី TECHNEWS">ABOUT TECHNEWS</p>
+
+                <h2 class="about-title">
+                    <span data-en="Technology made" data-kh="បច្ចេកវិទ្យា">Technology made</span>
+                    <span data-en="simple." data-kh="សាមញ្ញ។">simple.</span>
+                </h2>
+
+                <p data-en="TechNews is a technology news and blog website created to help students and technology enthusiasts discover useful information in one place." data-kh="TechNews គឺជាវែបសាយព័ត៌មាន និងប្លុកបច្ចេកវិទ្យា បង្កើតឡើងដើម្បីជួយសិស្ស និងអ្នកចូលចិត្តបច្ចេកវិទ្យារកឃើញព័ត៌មានមានប្រយោជន៍នៅកន្លែងតែមួយ។">
+                    TechNews is a technology news and blog website
+                    created to help students and technology enthusiasts
+                    discover useful information in one place.
+                </p>
+
+                <p data-en="We cover AI, mobile technology, computers, programming, cybersecurity, and digital trends." data-kh="យើងគ្របដណ្តប់លើ AI បច្ចេកវិទ្យាទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី សន្តិសុខអនឡាញ និងនិន្នាការឌីជីថល។">
+                    We cover AI, mobile technology, computers,
+                    programming, cybersecurity, and digital trends.
+                </p>
+
+                <a href="blog.html" class="btn btn-primary" data-en="Explore Our Blog" data-kh="ស្វែងយល់ប្លុករបស់យើង">
+                    Explore Our Blog
+                </a>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="about-box">
+
+                    <div>
+                        <strong>50+</strong>
+                        <p>Technology Articles</p>
+                    </div>
+
+                    <div>
+                        <strong>5</strong>
+                        <p>Technology Categories</p>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <p>Responsive Design</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h3 class="footer-logo">
+                    Tech<span>News</span>
+                </h3>
+
+                <p>
+                    <span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span>
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <h5 data-en="Quick Links" data-kh="តំណភ្ជាប់រហ័ស">Quick Links</h5>
+
+                <a href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a>
+                <a href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a>
+                <a href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a>
+                <a href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            <span data-en="© 2026 TechNews. All Rights Reserved." data-kh="© 2026 TechNews។ រក្សាសិទ្ធិគ្រប់យ៉ាង។">© 2026 TechNews. All Rights Reserved.</span>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
