@@ -1,0 +1,724 @@
+/* =====================================================
+   COLOR TOKENS
+   Matches the project's Typography + Color System doc:
+   Primary #2563EB, Secondary #7C3AED, Background #F8FAFC,
+   Text #0F172A. This light palette is the default theme;
+   Dark Mode (toggle button) is an optional alternate below.
+   ===================================================== */
+
+:root {
+    /* Backgrounds - each one step darker, so sections are visibly separated */
+    --bg-body: #f8fafc;        /* Background - main page background */
+    --bg-nav: #ffffff;
+    --bg-section-alt: #eef2f8; /* alternating section background */
+    --bg-card: #ffffff;        /* cards stay white so they pop against the tinted body */
+    --bg-card-hover: #f1f5fb;
+
+    /* Text */
+    --text-heading: #0f172a;   /* Text - headings, nav, article titles */
+    --text-body: #334155;
+    --text-muted: #64748b;
+
+    /* Primary - logo, primary buttons, active links, important UI elements */
+    --accent: #2563eb;
+    --accent-strong: #1d4ed8;
+
+    /* Secondary - highlights, secondary buttons, categories, accents */
+    --secondary: #7c3aed;
+    --secondary-strong: #6d28d9;
+
+    /* Borders */
+    --border: #dce3ee;
+
+    /* Text color to use ON TOP of an accent/secondary background */
+    --on-accent: #ffffff;
+}
+
+/* Optional Dark Mode, kept for readers who prefer it (toggle button).
+   Same Primary/Secondary accents, dark backgrounds. */
+body.dark-mode {
+    --bg-body: #0b1120;
+    --bg-nav: #101a2e;
+    --bg-section-alt: #142038;
+    --bg-card: #203452;
+    --bg-card-hover: #294263;
+
+    --text-heading: #ffffff;
+    --text-body: #cbd5e1;
+    --text-muted: #94a3b8;
+
+    --accent: #38bdf8;
+    --accent-strong: #7dd3fc;
+
+    --secondary: #a78bfa;
+    --secondary-strong: #c4b5fd;
+
+    --border: #385070;
+
+    --on-accent: #0b1120;
+}
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-body);
+    color: var(--text-body);
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    overflow: hidden;
+}
+
+.page-section {
+    padding-top: 140px;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text-heading) !important;
+}
+
+.navbar-brand span,
+.footer-logo span {
+    color: var(--accent);
+}
+
+/* Bootstrap's navbar-dark hamburger icon is white by default, which
+   disappears on our light navbar background - darken it by default
+   and switch it back for the dark-mode navbar. */
+.navbar-toggler-icon {
+    filter: invert(1) brightness(0.3);
+}
+
+body.dark-mode .navbar-toggler-icon {
+    filter: none;
+}
+
+.nav-link {
+    color: var(--text-heading) !important;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent) !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+
+    background:
+        linear-gradient(
+            rgba(232, 238, 247, 0.92),
+            rgba(232, 238, 247, 0.97)
+        ),
+        url("../images/ai.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+body.dark-mode .hero {
+    background:
+        linear-gradient(
+            rgba(11, 17, 32, 0.76),
+            rgba(11, 17, 32, 0.88)
+        ),
+        url("../images/ai.png");
+}
+
+.hero-small {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 20px 0;
+    color: var(--text-heading);
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-text {
+    max-width: 650px;
+    color: var(--text-body);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn-primary {
+    background: var(--accent);
+    border: none;
+    color: var(--on-accent);
+    font-weight: 600;
+    padding: 12px 25px;
+}
+
+.btn-primary:hover {
+    background: var(--accent-strong);
+    color: var(--on-accent);
+}
+
+.btn-outline-light {
+    /* !important overrides Bootstrap's own fixed white color so this
+       always follows the current theme (light by default, dark below) */
+    padding: 12px 25px;
+    font-weight: 600;
+    color: var(--text-heading) !important;
+    border-color: var(--text-heading) !important;
+}
+
+body.dark-mode .btn-outline-light {
+    border-color: var(--border) !important;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+    padding: 100px 0;
+}
+
+/* Alternate section background so blocks of content read as distinct areas */
+.section:nth-of-type(even) {
+    background: var(--bg-section-alt);
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+
+/* ================= NEWS CARD ================= */
+
+.news-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.3s;
+    display: block;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+}
+
+.news-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    background: var(--bg-body);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.category {
+    /* Secondary color: categories, per the Color Usage Rule */
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-content h3 {
+    margin: 12px 0;
+    font-size: 21px;
+    color: var(--text-heading);
+}
+
+.card-content p {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.card-content a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories-section {
+    padding: 100px 0;
+    background: var(--bg-section-alt);
+}
+
+.category-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.category-box:hover {
+    transform: translateY(-8px);
+    /* Secondary color: this is a category card, per the Color Usage Rule */
+    border-color: var(--secondary);
+}
+
+.category-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    background: var(--bg-body);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.category-box h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-heading);
+}
+
+.category-box a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-title {
+    font-size: 42px;
+    margin: 15px 0 25px;
+    color: var(--text-heading);
+}
+
+.about-title span {
+    color: var(--accent);
+}
+
+.about-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-box > div {
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+}
+
+.about-box strong {
+    display: block;
+    font-size: 30px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.about-box p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+
+/* ================= FORMS (Contact) ================= */
+
+.form-label {
+    color: var(--text-body);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-heading);
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background: var(--bg-card);
+    border-color: var(--accent);
+    color: var(--text-heading);
+    box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+
+/* ================= ARTICLE PAGE ================= */
+
+.article-img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.article-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 15px 0 10px;
+    color: var(--text-heading);
+}
+
+.article-meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.article-img + .category {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.col-lg-8 p {
+    color: var(--text-body);
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--bg-section-alt);
+    border-top: 1px solid var(--border);
+    padding: 60px 0 25px;
+    margin-top: auto;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-heading);
+}
+
+footer p {
+    color: var(--text-muted);
+}
+
+footer h5 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--text-heading);
+}
+
+footer a {
+    display: inline-block;
+    color: var(--text-muted);
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+footer hr {
+    border-color: var(--border);
+    margin: 30px 0 20px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+
+/* ================= LANGUAGE TOGGLE (EN / KH) ================= */
+
+.lang-toggle {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-heading);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 7px 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.lang-btn.active {
+    background: var(--accent);
+    color: var(--on-accent);
+}
+
+
+/* ================= CATEGORY FILTER TAGS ================= */
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter-btn:hover {
+    /* Secondary color: category filter tags, per the Color Usage Rule */
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.filter-btn.active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--on-accent);
+}
+
+
+/* ================= BOOKMARK ICON ================= */
+
+.news-card {
+    position: relative;
+}
+
+.bookmark-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    background: rgba(11, 17, 32, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.bookmark-btn:hover {
+    /* Secondary color: highlight/save action, per the Color Usage Rule */
+    background: var(--secondary);
+    color: var(--on-accent);
+}
+
+.bookmark-btn.active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--on-accent);
+}
+
+
+/* ================= READING MODE (article page) ================= */
+
+.reading-mode-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-heading);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.reading-mode-btn:hover,
+.reading-mode-btn.active {
+    /* Secondary color: highlight feature, per the Color Usage Rule */
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--on-accent);
+}
+
+body.reading-mode .col-lg-8 {
+    max-width: 700px;
+    margin: 0 auto;
+    float: none;
+}
+
+body.reading-mode .col-lg-8 p {
+    font-size: 19px;
+    line-height: 2;
+}
+
+body.reading-mode .article-title {
+    font-size: 42px;
+}
+
+
+/* ================= RESPONSIVE =================
+   Three breakpoints to match the approved wireframes:
+   - Desktop  : 1440px and up   (default styles above)
+   - Tablet   : max-width 768px
+   - Mobile   : max-width 480px (covers 390px phones)
+*/
+
+/* ---------- TABLET (768px) ---------- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .about-box {
+        flex-direction: column;
+    }
+
+    /* Category filter tags wrap onto two rows instead of shrinking */
+    .filter-row {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    /* Language toggle + dark mode move under the collapsed nav links */
+    .lang-toggle {
+        margin-top: 12px;
+    }
+
+    .page-section {
+        padding-top: 120px;
+    }
+}
+
+/* ---------- MOBILE (390px phones) ---------- */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-small {
+        font-size: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+    /* Stack the two hero buttons instead of squeezing them side by side */
+    .hero .btn {
+        display: block;
+        width: 100%;
+        margin: 8px 0 0 0 !important;
+        text-align: center;
+    }
+
+    /* Bookmark icon shrinks slightly so it doesn't crowd small card images */
+    .bookmark-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .about-box {
+        padding: 20px;
+    }
+
+    .filter-btn {
+        font-size: 11px;
+        padding: 7px 12px;
+    }
+}
