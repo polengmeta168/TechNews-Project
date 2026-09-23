@@ -1,26 +1,41 @@
+/* =====================================================
+   COLOR TOKENS
+   Matches the project's Typography + Color System doc:
+   Primary #2563EB, Secondary #7C3AED, Background #F8FAFC,
+   Text #0F172A. This light palette is the default theme;
+   Dark Mode (toggle button) is an optional alternate below.
+   ===================================================== */
 
 :root {
-    --bg-body: #f8fafc;        
+    /* Backgrounds - each one step darker, so sections are visibly separated */
+    --bg-body: #f8fafc;        /* Background - main page background */
     --bg-nav: #ffffff;
-    --bg-section-alt: #eef2f8; 
-    --bg-card: #ffffff;        
+    --bg-section-alt: #eef2f8; /* alternating section background */
+    --bg-card: #ffffff;        /* cards stay white so they pop against the tinted body */
     --bg-card-hover: #f1f5fb;
 
-    --text-heading: #0f172a;   
+    /* Text */
+    --text-heading: #0f172a;   /* Text - headings, nav, article titles */
     --text-body: #334155;
     --text-muted: #64748b;
 
+    /* Primary - logo, primary buttons, active links, important UI elements */
     --accent: #2563eb;
     --accent-strong: #1d4ed8;
 
+    /* Secondary - highlights, secondary buttons, categories, accents */
     --secondary: #7c3aed;
     --secondary-strong: #6d28d9;
 
+    /* Borders */
     --border: #dce3ee;
 
+    /* Text color to use ON TOP of an accent/secondary background */
     --on-accent: #ffffff;
 }
 
+/* Optional Dark Mode, kept for readers who prefer it (toggle button).
+   Same Primary/Secondary accents, dark backgrounds. */
 body.dark-mode {
     --bg-body: #0b1120;
     --bg-nav: #101a2e;
@@ -42,6 +57,9 @@ body.dark-mode {
 
     --on-accent: #0b1120;
 }
+
+
+/* ================= GENERAL ================= */
 
 * {
     margin: 0;
@@ -137,11 +155,10 @@ body.dark-mode .navbar-toggler-icon {
             rgba(232, 238, 247, 0.92),
             rgba(232, 238, 247, 0.97)
         ),
-        url("../img/ai.png");
+        url("../images/ai.png");
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 body.dark-mode .hero {
@@ -150,7 +167,7 @@ body.dark-mode .hero {
             rgba(11, 17, 32, 0.76),
             rgba(11, 17, 32, 0.88)
         ),
-        url("../img/ai.png");
+        url("../images/ai.png");
 }
 
 .hero-small {
@@ -317,28 +334,14 @@ body.dark-mode .btn-outline-light {
     border-color: var(--secondary);
 }
 
-.category-icon {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 18px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(124, 58, 237, 0.10));
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.category-icon img,
 .category-image {
     width: 100%;
-    height: 100%;
+    height: 150px;
     object-fit: cover;
     object-position: center;
     background: var(--bg-body);
     border-radius: 10px;
-    display: block;
+    margin-bottom: 15px;
 }
 
 .category-box h3 {

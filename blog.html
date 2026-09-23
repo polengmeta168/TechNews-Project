@@ -21,97 +21,56 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-
-        <a class="navbar-brand" href="index.html">
-            Tech<span>News</span>
-        </a>
-
-        <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav">
+        <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
-
             <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a>
-                </li>
-
+                <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
+                <li class="nav-item"><a class="nav-link active" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
             </ul>
 
-            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">
-                🌙
-            </button>
+            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
 
-            <div class="lang-toggle ms-lg-2" id="langToggle" role="group" aria-label="Language toggle">
+            <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
                 <button type="button" class="lang-btn active" data-lang="en">EN</button>
                 <button type="button" class="lang-btn" data-lang="kh">KH</button>
             </div>
-
         </div>
     </div>
 </nav>
 </header>
 
 <main>
-
-
 <section class="section page-section">
-
     <div class="container">
-
         <div class="section-title text-center">
-
             <p data-en="LEARN WITH US" data-kh="រៀនជាមួយយើង">LEARN WITH US</p>
-
             <h2 data-en="Technology Blog" data-kh="ប្លុកបច្ចេកវិទ្យា">Technology Blog</h2>
-
         </div>
 
         <div class="filter-row" role="group" aria-label="Filter blog by category">
-            <button type="button" class="filter-btn active" data-filter="all" data-en="All" data-kh="ទាំងអស់">All</button>
-            <button type="button" class="filter-btn" data-filter="ai" data-en="AI" data-kh="AI">AI</button>
-            <button type="button" class="filter-btn" data-filter="dev" data-en="Development" data-kh="ការអភិវឌ្ឍ">DEV</button>
-            <button type="button" class="filter-btn" data-filter="gadgets" data-en="Gadgets" data-kh="ឧបករណ៍">GADGETS</button>
-            <button type="button" class="filter-btn" data-filter="security" data-en="Security" data-kh="សន្តិសុខ">SECURITY</button>
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="ai">AI</button>
+            <button type="button" class="filter-btn" data-filter="dev">DEV</button>
+            <button type="button" class="filter-btn" data-filter="gadgets">GADGETS</button>
+            <button type="button" class="filter-btn" data-filter="security">SECURITY</button>
         </div>
 
         <div class="row g-4">
-
-
             <div class="col-md-6">
                 <article class="news-card" data-category="ai">
                     <button class="bookmark-btn" data-id="blog-ai" aria-label="Add bookmark">📑</button>
-                    <img src="./img/ai.png" alt="AI">
+                    <img src="img/ai.png" alt="AI">
                     <div class="card-content">
-                        <span class="category" data-en="Artificial Intelligence" data-kh="សិប្បនិម្ម AI">Artificial Intelligence</span>
-                        <h3 data-en="Understanding Artificial Intelligence" data-kh="ការយល់ដឹងអំពីបច្ចេកវិទ្យា AI">Understanding Artificial Intelligence</h3>
-                        <p data-en="Artificial intelligence is changing many parts of daily life, from learning and work to content creation and business decisions." data-kh="បច្ចេកវិទ្យា AI កំពុងផ្លាស់ប្តូរផ្នែកជាច្រើននៃជីវិតប្រចាំថ្ងៃ ពីការរៀន ការងារ ទៅដល់ការបង្កើតមាតិកា និងការសម្រេចចិត្តក្នុងអាជីវកម្ម។">
-                            Artificial Intelligence is changing
-                            many areas of our daily lives.
-                            Learn the basics and understand
-                            why AI is important.
-                        </p>
-                        <a href="article.html?id=ai" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
+                        <span class="category">Artificial Intelligence</span>
+                        <h3>Understanding Artificial Intelligence</h3>
+                        <p>Artificial Intelligence is changing many areas of our daily lives. Learn the basics and understand why AI is important.</p>
+                        <a href="article.html?id=ai">Read Article →</a>
                     </div>
                 </article>
             </div>
@@ -119,45 +78,27 @@
             <div class="col-md-6">
                 <article class="news-card" data-category="security">
                     <button class="bookmark-btn" data-id="blog-security" aria-label="Add bookmark">📑</button>
-                    <img src="./img/cybersecurity.png" alt="Cybersecurity">
+                    <img src="img/cybersecurity.png" alt="Cybersecurity">
                     <div class="card-content">
-                        <span class="category" data-en="Cybersecurity" data-kh="សន្តិសុខអនឡាញ">Cybersecurity</span>
-                        <h3 data-en="How to Stay Safe Online" data-kh="របៀបរក្សាការសុវត្ថិភាពនៅលើអនឡាញ">How to Stay Safe Online</h3>
-                        <p data-en="Learn simple cyber hygiene habits that help protect your accounts, devices, and personal information every day." data-kh="រៀនទម្លាប់សន្តិសុខអនឡាញសាមញ្ញៗ ដើម្បីការពារគណនី ឧបករណ៍ និងព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកក្នុងប្រចាំថ្ងៃ។">
-                            Learn simple cybersecurity habits
-                            that can help protect your personal
-                            information online.
-                        </p>
-                        <a href="article.html?id=security" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
+                        <span class="category">Cybersecurity</span>
+                        <h3>How to Stay Safe Online</h3>
+                        <p>Learn simple cybersecurity habits that can help protect your personal information online.</p>
+                        <a href="article.html?id=security">Read Article →</a>
                     </div>
                 </article>
             </div>
-
         </div>
-
     </div>
-
 </section>
-
-
 </main>
 
 <footer>
-
     <div class="container text-center">
-
-        <h3 class="footer-logo">
-            Tech<span>News</span>
-        </h3>
-
+        <h3 class="footer-logo">Tech<span>News</span></h3>
         <p><span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span></p>
-
         <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
-
     </div>
-
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
