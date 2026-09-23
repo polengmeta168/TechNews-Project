@@ -732,3 +732,26 @@ body.reading-mode .article-title {
         padding: 7px 12px;
     }
 }
+/* ================= CLICKABLE CARD ================= */
+
+.news-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+}
+
+/* ធ្វើឱ្យតំណ "Read Article →" នៅខាងលើ */
+.card-content a {
+    position: relative;
+    z-index: 2;
+}
+
+/* ធ្វើឱ្យ bookmark button នៅខាងលើ */
+.bookmark-btn {
+    z-index: 3;
+}

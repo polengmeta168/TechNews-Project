@@ -83,14 +83,18 @@
 
 <script>
 const articles = {
+
+    /* ============================================================
+       1. AI ARTICLE 1
+       ============================================================ */
     ai: {
-        img: "images/ai.png",
+        img: "img/ai.png",
         category: "ARTIFICIAL INTELLIGENCE",
         title: "The Future of Artificial Intelligence",
         meta: "By TechNews Team · January 15, 2026 · 5 min read",
         body: `
             <p>Artificial Intelligence (AI) is one of the most transformative technologies of our time. It refers to the simulation of human intelligence processes by machines, especially computer systems.</p>
-            <p>These processes include learning, reasoning, and self-correction. AI is already part of our daily lives — from voice assistants on our phones, to recommendation systems on streaming platforms, to fraud detection in banking.</p>
+            <p>These processes include learning (the acquisition of information and rules for using it), reasoning (using rules to reach conclusions), and self-correction. AI is already part of our daily lives — from voice assistants on our phones, to recommendation systems on streaming platforms, to fraud detection in banking.</p>
 
             <h2>Why AI Matters</h2>
             <p>AI enables computers to perform tasks that normally require human intelligence. This includes recognizing images, understanding speech, translating languages, and making complex decisions.</p>
@@ -98,14 +102,50 @@ const articles = {
 
             <h2>Challenges and Opportunities</h2>
             <p>With great power comes great responsibility. AI raises important questions about privacy, bias, and employment. As AI continues to evolve, governments and organizations must create ethical guidelines to ensure it benefits everyone fairly.</p>
+            <p>At the same time, AI opens up incredible opportunities. It can help scientists discover new medicines, help farmers grow crops more efficiently, and help cities reduce energy consumption.</p>
 
             <h2>The Road Ahead</h2>
             <p>The future of AI will focus on making systems more transparent, more efficient, and more human-centered. Whether you are a student, a professional, or just curious, learning about AI today will prepare you for the world of tomorrow.</p>
+            <p>AI is not a replacement for human intelligence — it is a tool that amplifies it. Those who understand and use AI effectively will have a significant advantage in the coming decades.</p>
         `
     },
 
+    /* ============================================================
+       2. AI ARTICLE 2 - Machine Learning
+       ============================================================ */
+    "ai-ml": {
+        img: "img/ai-robot.png",
+        category: "ARTIFICIAL INTELLIGENCE",
+        title: "Machine Learning Explained",
+        meta: "By TechNews Team · January 14, 2026 · 6 min read",
+        body: `
+            <p>Machine Learning (ML) is a subset of AI that allows computers to learn from data without being explicitly programmed. Instead of following fixed rules, ML models find patterns in data and improve over time.</p>
+            <p>This is a fundamental shift in how we build software. Traditional programs follow rules written by humans. Machine learning programs learn the rules themselves from examples.</p>
+
+            <h2>Types of Machine Learning</h2>
+            <p><strong>Supervised Learning:</strong> The model is trained on labeled data. For example, showing it thousands of cat photos labeled "cat" so it can recognize cats in new photos.</p>
+            <p><strong>Unsupervised Learning:</strong> The model finds patterns in unlabeled data. This is useful for customer segmentation and anomaly detection.</p>
+            <p><strong>Reinforcement Learning:</strong> The model learns by trial and error, receiving rewards for good actions. This is how AI learns to play chess or control robots.</p>
+
+            <h2>How Machine Learning Works</h2>
+            <p>ML models are trained on large datasets. During training, the model makes predictions and adjusts its internal parameters based on the errors it makes. Over time, the model becomes more accurate.</p>
+            <p>Key concepts include features (the input data), labels (the correct answers), and loss functions (measures of error).</p>
+
+            <h2>Real-World Applications</h2>
+            <p>Netflix uses ML to recommend movies. Spotify uses it to create personalized playlists. Banks use it to detect fraudulent transactions in real time. Hospitals use it to analyze medical images.</p>
+            <p>Self-driving cars rely heavily on machine learning to recognize pedestrians, signs, and other vehicles.</p>
+
+            <h2>The Future of Machine Learning</h2>
+            <p>As data grows and computing power increases, machine learning will become even more powerful and accessible. New techniques like transfer learning and few-shot learning are making it possible to train models with less data.</p>
+            <p>Understanding ML is becoming an essential skill for developers, data scientists, and business leaders alike.</p>
+        `
+    },
+
+    /* ============================================================
+       3. MOBILE ARTICLE 1
+       ============================================================ */
     mobile: {
-        img: "images/smartphone.png",
+        img: "img/smartphone.png",
         category: "MOBILE TECHNOLOGY",
         title: "New Trends in Smartphone Technology",
         meta: "By TechNews Team · January 12, 2026 · 4 min read",
@@ -119,14 +159,52 @@ const articles = {
 
             <h2>Battery and Charging</h2>
             <p>Battery technology has improved significantly. Fast charging can now fill a phone to 50% in just 15 minutes, and wireless charging is becoming standard on most flagship devices.</p>
+            <p>Manufacturers are also exploring new battery materials that could last for days on a single charge.</p>
+
+            <h2>Display Technology</h2>
+            <p>Modern smartphones use OLED and AMOLED displays that offer vibrant colors and deep blacks. High refresh rates (120Hz or more) make scrolling and gaming feel smoother than ever.</p>
+            <p>Foldable displays are also emerging, allowing phones to transform into tablets when opened.</p>
 
             <h2>What's Next for Smartphones?</h2>
             <p>The future of smartphones will focus on AI integration, better battery efficiency, and new form factors. Companies are also exploring satellite connectivity for areas without cellular coverage.</p>
+            <p>As technology advances, smartphones will continue to evolve and become even more powerful and useful tools in our daily lives.</p>
         `
     },
 
+    /* ============================================================
+       4. MOBILE ARTICLE 2 - 5G
+       ============================================================ */
+    "mobile-5g": {
+        img: "img/mobile-5g.png",
+        category: "MOBILE TECHNOLOGY",
+        title: "The Rise of 5G Connectivity",
+        meta: "By TechNews Team · January 11, 2026 · 5 min read",
+        body: `
+            <p>5G is the fifth generation of mobile network technology. It promises faster speeds, lower latency, and the ability to connect more devices at once than ever before.</p>
+            <p>With 5G, downloading a full HD movie takes only seconds. Online gaming becomes smoother, and video calls are crystal clear.</p>
+
+            <h2>How 5G Works</h2>
+            <p>5G uses higher frequency radio waves than 4G. This allows more data to be transmitted at faster speeds. However, it requires more cell towers to cover the same area.</p>
+            <p>5G also uses a technology called "beamforming" to direct signals precisely to each device, rather than broadcasting in all directions.</p>
+
+            <h2>Speed Comparison</h2>
+            <p>4G typically offers download speeds of 10-50 Mbps. 5G can reach speeds of 1-10 Gbps — up to 100 times faster. Latency drops from ~50ms on 4G to under 10ms on 5G.</p>
+            <p>This low latency is critical for applications like remote surgery and autonomous vehicles, where every millisecond counts.</p>
+
+            <h2>Impact on Society</h2>
+            <p>5G will enable new technologies like autonomous vehicles, smart cities, and remote surgery. It will also power the Internet of Things (IoT), connecting billions of devices.</p>
+            <p>Farmers can use 5G sensors to monitor crops. Factories can use 5G robots for precision manufacturing. Doctors can perform surgeries remotely with real-time feedback.</p>
+
+            <h2>Challenges and Future</h2>
+            <p>Building 5G infrastructure is expensive. Many rural areas still do not have 5G coverage. But as technology advances, coverage will continue to expand. By 2030, 5G is expected to cover most of the world's population.</p>
+        `
+    },
+
+    /* ============================================================
+       5. COMPUTERS ARTICLE 1
+       ============================================================ */
     computers: {
-        img: "images/laptop.png",
+        img: "img/laptop.png",
         category: "COMPUTERS",
         title: "How Modern Computers Are Evolving",
         meta: "By TechNews Team · January 10, 2026 · 6 min read",
@@ -136,35 +214,129 @@ const articles = {
 
             <h2>The Rise of Portable Computing</h2>
             <p>One of the biggest trends is the shift toward portable computing. Ultrabooks, 2-in-1 devices, and tablets are becoming more popular because they combine performance with portability.</p>
+            <p>Companies like Apple, Dell, HP, and Lenovo are competing to create the thinnest, lightest, and most powerful laptops on the market.</p>
 
             <h2>Processors and Performance</h2>
             <p>Modern processors from Intel, AMD, and Apple's M-series chips are pushing the boundaries of performance. These chips are not only faster but also more energy-efficient, allowing for longer battery life.</p>
+            <p>With the rise of AI, computers are also being designed with dedicated AI accelerators (NPUs) to handle machine learning tasks locally.</p>
+
+            <h2>Storage and Memory</h2>
+            <p>Solid-state drives (SSDs) have replaced traditional hard drives in most modern computers. They are faster, quieter, and more durable. NVMe SSDs can transfer data at speeds over 7,000 MB/s.</p>
+            <p>DDR5 memory is now standard in high-end computers, offering double the bandwidth of DDR4.</p>
 
             <h2>The Future of Computers</h2>
-            <p>Looking ahead, we can expect to see more powerful ARM-based processors, longer battery life, and better integration with cloud services. Quantum computing is also on the horizon.</p>
+            <p>Looking ahead, we can expect to see more powerful ARM-based processors, longer battery life, and better integration with cloud services. Quantum computing is also on the horizon, promising to solve problems that today's computers cannot handle.</p>
+            <p>As computers become more powerful and more connected, they will continue to transform every aspect of our lives.</p>
         `
     },
 
+    /* ============================================================
+       6. COMPUTERS ARTICLE 2 - Programming
+       ============================================================ */
+    programming: {
+        img: "img/computer-code.png",
+        category: "COMPUTERS",
+        title: "Programming Languages in 2026",
+        meta: "By TechNews Team · January 9, 2026 · 7 min read",
+        body: `
+            <p>Programming languages are the foundation of all software. In 2026, developers have more choices than ever before. Each language has its own strengths and use cases.</p>
+            <p>Choosing the right language depends on what you want to build, the performance you need, and the community that supports it.</p>
+
+            <h2>Python</h2>
+            <p>Python remains the most popular language for AI, machine learning, and data science. Its simple syntax makes it perfect for beginners, while its powerful libraries (NumPy, TensorFlow, PyTorch) make it essential for experts.</p>
+            <p>Python is also widely used for web development (Django, Flask), automation, and scientific computing.</p>
+
+            <h2>JavaScript</h2>
+            <p>JavaScript powers the modern web. With frameworks like React, Vue, and Node.js, JavaScript is used both on the frontend and backend.</p>
+            <p>JavaScript is the only language that runs natively in every web browser, making it essential for any web developer.</p>
+
+            <h2>TypeScript</h2>
+            <p>TypeScript is a superset of JavaScript that adds static typing. It helps developers catch errors early and build more reliable applications.</p>
+            <p>Many large companies now use TypeScript for their frontend and backend code. It is becoming the standard for serious JavaScript projects.</p>
+
+            <h2>Rust and Go</h2>
+            <p>Rust and Go are becoming popular for building fast, safe, and concurrent systems. Many companies are adopting these languages for backend services.</p>
+            <p>Rust is known for its memory safety and performance, making it ideal for systems programming. Go is known for its simplicity and excellent support for concurrent programming.</p>
+
+            <h2>Java and C#</h2>
+            <p>Java and C# remain strong in enterprise environments. Java powers Android apps and large-scale backend systems. C# is the primary language for Windows applications and Unity game development.</p>
+            <p>Both languages have large communities and extensive libraries, making them reliable choices for large projects.</p>
+
+            <h2>Which Language Should You Learn?</h2>
+            <p>Start with Python if you are interested in AI or data science. Choose JavaScript if you want to build websites. Learn Rust or Go if you want to work on high-performance systems.</p>
+            <p>The best language depends on what you want to build. Most professional developers know multiple languages and choose the right tool for each job.</p>
+        `
+    },
+
+    /* ============================================================
+       7. SECURITY ARTICLE 1
+       ============================================================ */
     security: {
-        img: "images/cybersecurity.png",
+        img: "img/cybersecurity.png",
         category: "CYBERSECURITY",
         title: "Why Cybersecurity Is Important",
         meta: "By TechNews Team · January 8, 2026 · 5 min read",
         body: `
             <p>In today's digital world, cybersecurity is more important than ever. Every day, millions of cyber attacks target individuals, businesses, and governments around the world.</p>
-            <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These attacks usually aim to access, change, or destroy sensitive information.</p>
+            <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These attacks usually aim to access, change, or destroy sensitive information, extort money, or disrupt normal business operations.</p>
 
             <h2>Common Types of Cyber Threats</h2>
-            <p>Phishing emails trick users into revealing passwords. Ransomware locks files until a payment is made. Malware infects devices through unsafe downloads. Social engineering manipulates people into giving up confidential information.</p>
+            <p><strong>Phishing:</strong> Emails or messages that trick users into revealing passwords or personal information.</p>
+            <p><strong>Ransomware:</strong> Malicious software that locks files until a payment is made.</p>
+            <p><strong>Malware:</strong> Software designed to damage or gain unauthorized access to a computer.</p>
+            <p><strong>Social Engineering:</strong> Manipulating people into giving up confidential information.</p>
 
             <h2>Simple Ways to Stay Safe Online</h2>
             <p><strong>Use strong passwords:</strong> Create unique passwords for each account and use a password manager.</p>
             <p><strong>Enable two-factor authentication:</strong> This adds an extra layer of security to your accounts.</p>
             <p><strong>Keep software updated:</strong> Updates often include security patches that fix vulnerabilities.</p>
             <p><strong>Be careful with links:</strong> Do not click on suspicious links in emails or messages.</p>
+            <p><strong>Use a VPN on public Wi-Fi:</strong> This protects your data from being intercepted.</p>
+
+            <h2>Why Businesses Need Cybersecurity</h2>
+            <p>For businesses, a single data breach can cost millions of dollars and damage reputation. Companies must invest in security tools, train employees, and have a response plan for cyber incidents.</p>
+            <p>Governments around the world are also passing stricter data protection laws to protect citizens.</p>
 
             <h2>The Bottom Line</h2>
             <p>By following these simple habits, you can significantly reduce your risk of becoming a victim of cybercrime. Cybersecurity is not just for experts — it is for everyone.</p>
+        `
+    },
+
+    /* ============================================================
+       8. SECURITY ARTICLE 2 - Privacy
+       ============================================================ */
+    "security-privacy": {
+        img: "img/security-lock.png",
+        category: "CYBERSECURITY",
+        title: "Protecting Your Online Privacy",
+        meta: "By TechNews Team · January 7, 2026 · 6 min read",
+        body: `
+            <p>Your personal information is valuable. Every time you go online, data about your activity is collected, analyzed, and sometimes sold. Protecting your privacy is essential in the modern digital world.</p>
+            <p>From social media to search engines to mobile apps, companies collect vast amounts of data about you. Understanding how to protect yourself is a critical life skill.</p>
+
+            <h2>Use a VPN</h2>
+            <p>A Virtual Private Network (VPN) encrypts your internet traffic and hides your IP address. It is especially important when using public Wi-Fi in cafes, airports, or hotels.</p>
+            <p>With a VPN, even your internet service provider cannot see what websites you visit.</p>
+
+            <h2>Review Privacy Settings</h2>
+            <p>Take time to review the privacy settings on your social media accounts, apps, and devices. Limit what information is shared publicly.</p>
+            <p>Regularly check which apps have access to your location, camera, microphone, and contacts.</p>
+
+            <h2>Use Strong, Unique Passwords</h2>
+            <p>Never reuse passwords across multiple sites. Use a password manager to generate and store strong passwords for every account.</p>
+            <p>Enable two-factor authentication wherever possible. This adds an extra layer of protection even if your password is stolen.</p>
+
+            <h2>Be Careful with Apps</h2>
+            <p>Before installing an app, check what permissions it requests. If an app asks for access to your contacts or location without a good reason, think twice.</p>
+            <p>Delete apps you no longer use. Old apps may still collect data in the background.</p>
+
+            <h2>Regularly Delete Old Accounts</h2>
+            <p>If you no longer use a service, delete your account. Old accounts are a common source of data breaches.</p>
+            <p>Before deleting, download any data you want to keep. Most services offer a data export option.</p>
+
+            <h2>Stay Informed</h2>
+            <p>Cybersecurity threats evolve constantly. Stay informed about new risks and best practices to protect yourself.</p>
+            <p>Follow trusted security blogs, enable automatic updates, and be skeptical of anything that seems too good to be true.</p>
         `
     }
 };

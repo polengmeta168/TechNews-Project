@@ -1,20 +1,6 @@
-/* =====================================================
-    TechNews — site-wide interactivity
-   Sections in this file:
-   1. Dark / Light mode toggle
-   2. Contact form handler
-   3. Language toggle (EN / KH)
-   4. Category filter (AI / DEV / GADGETS / SECURITY)
-   5. Bookmarks / save for later
-   6. Reading mode (article page)
-   Each feature checks for its own elements first, so this
-   single file is safe to include on every page.
-   ===================================================== */
-
-// ================= DARK / LIGHT MODE TOGGLE =================
-// Dark Mode is the default. Light Mode is an optional alternate the visitor
-// can switch on.
-
+/* ============================================================
+   1. DARK MODE
+   ============================================================ */
 const darkModeBtn = document.getElementById("darkModeBtn");
 
 function applyMode(isDark) {
@@ -24,7 +10,6 @@ function applyMode(isDark) {
     }
 }
 
-// Load saved preference (defaults to dark mode when nothing is saved)
 const savedMode = localStorage.getItem("techpulse-theme");
 if (savedMode === "light") {
     applyMode(false);
@@ -41,8 +26,9 @@ if (darkModeBtn) {
 }
 
 
-// ================= CONTACT FORM =================
-
+/* ============================================================
+   2. CONTACT FORM
+   ============================================================ */
 function handleContactSubmit(event) {
     event.preventDefault();
     alert("Thanks for reaching out! Your message has been received.");
@@ -51,9 +37,9 @@ function handleContactSubmit(event) {
 }
 
 
-// ================= LANGUAGE TOGGLE (EN / KH) =================
-// Any element with data-en="..." and data-kh="..." will switch text on toggle.
-
+/* ============================================================
+   3. LANGUAGE TOGGLE (EN / KH)
+   ============================================================ */
 const langButtons = document.querySelectorAll(".lang-btn");
 const translatableEls = document.querySelectorAll("[data-en]");
 
@@ -77,9 +63,9 @@ langButtons.forEach((btn) => {
 });
 
 
-// ================= CATEGORY FILTER (AI / DEV / GADGETS / SECURITY) =================
-// Works on any page that has .filter-btn buttons + .news-card[data-category] cards.
-
+/* ============================================================
+   4. CATEGORY FILTER
+   ============================================================ */
 const categoryFilterButtons = document.querySelectorAll(".filter-btn");
 const filterableCards = document.querySelectorAll("[data-category]");
 
@@ -98,9 +84,9 @@ categoryFilterButtons.forEach((button) => {
 });
 
 
-// ================= BOOKMARKS / SAVE FOR LATER =================
-// Adds a toggleable bookmark icon on every card with a data-id attribute.
-
+/* ============================================================
+   5. BOOKMARKS
+   ============================================================ */
 const bookmarkButtons = document.querySelectorAll(".bookmark-btn");
 const savedBookmarks = JSON.parse(localStorage.getItem("techpulse-bookmarks") || "[]");
 
@@ -129,9 +115,9 @@ bookmarkButtons.forEach((button) => {
 });
 
 
-// ================= READING MODE (article page) =================
-// Toggles a larger, distraction-free font/width for reading articles.
-
+/* ============================================================
+   6. READING MODE
+   ============================================================ */
 const readingModeBtn = document.getElementById("readingModeBtn");
 
 if (readingModeBtn) {
@@ -145,3 +131,57 @@ if (readingModeBtn) {
         localStorage.setItem("techpulse-reading-mode", isOn ? "on" : "off");
     });
 }
+
+
+/* ============================================================
+   7. CLICKABLE CARD (ចុចលើកាតទាំងមូលដើម្បីទៅទំព័រអត្ថបទ)
+   ============================================================ */
+document.querySelectorAll(".news-card").forEach((card) => {
+    const link = card.querySelector("a[href*='article.html']");
+    if (!link) return;
+
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", (event) => {
+        // ប្រសិនបើចុចលើ bookmark ឬតំណ មិនត្រូវធ្វើអ្វី
+        if (event.target.closest(".bookmark-btn") || event.target.tagName === "A") {
+            return;
+        }
+        window.location.href = link.href;
+    });
+});
+/* ============================================================
+   8. AUTO ACTIVE NAVBAR
+   ដាក់ active លើ Navbar ដោយស្វ័យប្រវត្តិ តាមទំព័រដែលកំពុងមើល
+   ============================================================ */
+(function autoActiveNavbar() {
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    // កំណត់ Navbar ណាដែលត្រូវ active តាមទំព័រ
+    let activePage = "";
+
+    if (currentPath === "" || currentPath === "index.html") {
+        activePage = "index";
+    } else if (currentPath === "news.html") {
+        activePage = "news";
+    } else if (currentPath === "article.html") {
+        // Article Page → News ជា active
+        activePage = "news";
+    } else if (currentPath === "categories.html") {
+        activePage = "categories";
+    } else if (currentPath === "blog.html") {
+        activePage = "blog";
+    } else if (currentPath === "contact.html") {
+        activePage = "contact";
+    }
+
+    // ដាក់ active លើ Navbar ដែលត្រូវគ្នា
+    navLinks.forEach((link) => {
+        if (link.dataset.page === activePage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+})();

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>TechNews - Latest News</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,15 +26,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
-                <li class="nav-item"><a class="nav-link active" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+                <li class="nav-item"><a class="nav-link" data-page="index" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" data-page="news" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
+                <li class="nav-item"><a class="nav-link" data-page="categories" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
+                <li class="nav-item"><a class="nav-link" data-page="blog" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
+                <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
             </ul>
-
             <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
-
             <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
                 <button type="button" class="lang-btn active" data-lang="en">EN</button>
                 <button type="button" class="lang-btn" data-lang="kh">KH</button>
@@ -62,9 +59,11 @@
             </div>
 
             <div class="row g-4">
+
+                <!-- AI 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="ai">
-                        <button class="bookmark-btn" data-id="news-ai" aria-label="Add bookmark">📑</button>
+                    <article class="news-card" data-category="ai" data-href="article.html?id=ai">
+                        <button class="bookmark-btn" data-id="news-ai-1" aria-label="Add bookmark">📑</button>
                         <img src="img/ai.png" alt="Artificial Intelligence">
                         <div class="card-content">
                             <span class="category">AI</span>
@@ -75,9 +74,24 @@
                     </article>
                 </div>
 
+                <!-- AI 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="mobile">
-                        <button class="bookmark-btn" data-id="news-mobile" aria-label="Add bookmark">📑</button>
+                    <article class="news-card" data-category="ai" data-href="article.html?id=ai-ml">
+                        <button class="bookmark-btn" data-id="news-ai-2" aria-label="Add bookmark">📑</button>
+                        <img src="img/ai-robot.png" alt="Machine Learning">
+                        <div class="card-content">
+                            <span class="category">AI</span>
+                            <h3>Machine Learning Explained</h3>
+                            <p>Discover how machines learn from data and make intelligent decisions.</p>
+                            <a href="article.html?id=ai-ml">Read Article →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Mobile 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card" data-category="mobile" data-href="article.html?id=mobile">
+                        <button class="bookmark-btn" data-id="news-mobile-1" aria-label="Add bookmark">📑</button>
                         <img src="img/smartphone.png" alt="Smartphone technology">
                         <div class="card-content">
                             <span class="category">Mobile</span>
@@ -88,9 +102,24 @@
                     </article>
                 </div>
 
+                <!-- Mobile 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="computers">
-                        <button class="bookmark-btn" data-id="news-computers" aria-label="Add bookmark">📑</button>
+                    <article class="news-card" data-category="mobile" data-href="article.html?id=mobile-5g">
+                        <button class="bookmark-btn" data-id="news-mobile-2" aria-label="Add bookmark">📑</button>
+                        <img src="img/mobile-5g.png" alt="5G Technology">
+                        <div class="card-content">
+                            <span class="category">Mobile</span>
+                            <h3>The Rise of 5G Connectivity</h3>
+                            <p>How 5G is transforming mobile internet speeds and connectivity.</p>
+                            <a href="article.html?id=mobile-5g">Read Article →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Computers 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card" data-category="computers" data-href="article.html?id=computers">
+                        <button class="bookmark-btn" data-id="news-computers-1" aria-label="Add bookmark">📑</button>
                         <img src="img/laptop.png" alt="Laptop computer">
                         <div class="card-content">
                             <span class="category">Computers</span>
@@ -101,9 +130,24 @@
                     </article>
                 </div>
 
+                <!-- Computers 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="security">
-                        <button class="bookmark-btn" data-id="news-security" aria-label="Add bookmark">📑</button>
+                    <article class="news-card" data-category="computers" data-href="article.html?id=programming">
+                        <button class="bookmark-btn" data-id="news-computers-2" aria-label="Add bookmark">📑</button>
+                        <img src="img/computer-code.png" alt="Programming Code">
+                        <div class="card-content">
+                            <span class="category">Computers</span>
+                            <h3>Programming Languages in 2026</h3>
+                            <p>The most popular programming languages every developer should know.</p>
+                            <a href="article.html?id=programming">Read Article →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Security 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card" data-category="security" data-href="article.html?id=security">
+                        <button class="bookmark-btn" data-id="news-security-1" aria-label="Add bookmark">📑</button>
                         <img src="img/cybersecurity.png" alt="Cybersecurity">
                         <div class="card-content">
                             <span class="category">Security</span>
@@ -113,6 +157,21 @@
                         </div>
                     </article>
                 </div>
+
+                <!-- Security 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="news-card" data-category="security" data-href="article.html?id=security-privacy">
+                        <button class="bookmark-btn" data-id="news-security-2" aria-label="Add bookmark">📑</button>
+                        <img src="img/security-lock.png" alt="Online Privacy">
+                        <div class="card-content">
+                            <span class="category">Security</span>
+                            <h3>Protecting Your Online Privacy</h3>
+                            <p>Essential tips to keep your personal information safe online.</p>
+                            <a href="article.html?id=security-privacy">Read Article →</a>
+                        </div>
+                    </article>
+                </div>
+
             </div>
         </div>
     </section>
