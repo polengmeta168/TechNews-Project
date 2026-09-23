@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews Article</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .article-page { padding-top: 100px; }
+        .article-hero {
+            padding: 30px 0 20px;
+            background: linear-gradient(135deg, rgba(23, 28, 51, 0.96), rgba(255, 255, 255, 0.02));
+        }
+        .article-hero .hero-small {
+            letter-spacing: 2px;
+        }
+        .article-subtitle {
+            color: #c5d1eb;
+            max-width: 700px;
+            margin-top: 20px;
+            font-size: 1.08rem;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .article-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .article-image {
+            width: 100%;
+            border-radius: 18px;
+            margin-bottom: 28px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        .article-content {
+            padding: 40px 0 80px;
+        }
+        .article-body p {
+            font-size: 1.06rem;
+            line-height: 1.9;
+            color: #eef3ff;
+            margin-bottom: 18px;
+        }
+        .article-quote {
+            background: rgba(255,255,255,0.04);
+            border-left: 4px solid #3dd9b3;
+            padding: 18px 22px;
+            border-radius: 10px;
+            font-size: 1.08rem;
+            color: #dffcf4;
+            margin: 30px 0;
+        }
+        .article-side {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: 24px 20px;
+            color: #fff;
+        }
+        .article-side h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+        }
+        .article-side ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #dfe7ff;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body data-article-page="true">
+<script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+            </ul>
+
+            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
+
+            <div class="lang-toggle ms-lg-2" id="langToggle" role="group" aria-label="Language toggle">
+                <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                <button type="button" class="lang-btn" data-lang="kh">KH</button>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<main class="article-page">
+    <section class="article-hero">
+        <div class="container">
+            <p class="hero-small" data-en="TECH NEWS" data-kh="ព័ត៌មានបច្ចេកវិទ្យា">TECH NEWS</p>
+            <h1 id="articleTitle">The Future of AI Technology</h1>
+            <p id="articleSubtitle" class="article-subtitle">
+                AI tools are shaping the way we work, learn, and create in everyday life.
+            </p>
+
+            <div class="article-meta">
+                <span id="articleCategory" class="article-badge">AI</span>
+                <span id="articleDate" data-en="April 20, 2026" data-kh="ថ្ងៃទី 20 ខែមេសា ២០២៦">April 20, 2026</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <img id="articleImage" class="article-image" src="img/ai.png" alt="Article image">
+
+                    <div class="article-body">
+                        <p id="articleLead">
+                            Artificial intelligence is moving beyond research labs and becoming part of everyday digital experiences. From personal assistants to predictive tools, AI is changing how people and businesses make decisions.
+                        </p>
+
+                        <p data-article-paragraph>Across education, healthcare, logistics, and content creation, AI systems are becoming faster and more intuitive.</p>
+                        <p data-article-paragraph>The biggest opportunity is not just automation. It is the ability to turn complex information into useful decisions.</p>
+                        <p data-article-paragraph>The future of AI is not about replacing people. It is about empowering them with tools that improve productivity and creativity.</p>
+
+                        <blockquote id="articleQuote" class="article-quote">
+                            AI is most powerful when used to augment human potential, not replace it.
+                        </blockquote>
+                    </div>
+                </div>
+
+                <aside class="col-lg-4">
+                    <div class="article-side">
+                        <h3 data-en="Key Takeaways" data-kh="ចំណុចសំខាន់">Key Takeaways</h3>
+                        <ul>
+                            <li data-en="AI is becoming part of daily life." data-kh="AI កំពុងក្លាយជាផ្នែកនៃជីវិតប្រចាំថ្ងៃ។">AI is becoming part of daily life.</li>
+                            <li data-en="Workflows are faster with automation." data-kh="លំហូរប្រតិបត្តិការលឿនជាងមុន ដោយសារតែការធ្វើស្វ័យប្រវត្តិ។">Workflows are faster with automation.</li>
+                            <li data-en="Human creativity still matters most." data-kh="ភាពច្នៃប្រឌិតរបស់មនុស្សនៅតែមានសារៈសំខាន់បំផុត។">Human creativity still matters most.</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="footer-logo">Tech<span>News</span></h3>
+                <p><span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span></p>
+            </div>
+
+            <div class="col-md-6 text-md-end">
+                <h5 data-en="Quick Links" data-kh="តំណភ្ជាប់រហ័ស">Quick Links</h5>
+                <a href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a>
+                <a href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a>
+                <a href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a>
+                <a href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">
+            <span data-en="© 2026 TechNews. All Rights Reserved." data-kh="© 2026 TechNews។ រក្សាសិទ្ធិគ្រប់យ៉ាង។">© 2026 TechNews. All Rights Reserved.</span>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS/script.js"></script>
+</body>
+</html>
