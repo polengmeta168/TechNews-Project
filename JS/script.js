@@ -28,7 +28,10 @@ if (darkModeBtn) {
 
 function handleContactSubmit(event) {
     event.preventDefault();
-    alert("Thanks for reaching out! Your message has been received.");
+    const lang = localStorage.getItem("techpulse-lang") || "en";
+    alert(lang === "kh"
+        ? "សូមអរគុណ! សាររបស់អ្នកត្រូវបានទទួលរួចរាល់។"
+        : "Thanks for reaching out! Your message has been received.");
     event.target.reset();
     return false;
 }
@@ -37,6 +40,8 @@ function handleContactSubmit(event) {
 
 const langButtons = document.querySelectorAll(".lang-btn");
 const translatableEls = document.querySelectorAll("[data-en]");
+const translatablePlaceholders = document.querySelectorAll("[data-placeholder-en]");
+const translatableAria = document.querySelectorAll("[data-aria-en]");
 
 const articleData = {
     ai: {
@@ -188,6 +193,16 @@ function setLanguage(lang) {
     translatableEls.forEach((el) => {
         const text = lang === "kh" ? el.dataset.kh : el.dataset.en;
         if (text) el.textContent = text;
+    });
+
+    translatablePlaceholders.forEach((el) => {
+        const placeholder = lang === "kh" ? el.dataset.placeholderKh : el.dataset.placeholderEn;
+        if (placeholder) el.placeholder = placeholder;
+    });
+
+    translatableAria.forEach((el) => {
+        const label = lang === "kh" ? el.dataset.ariaKh : el.dataset.ariaEn;
+        if (label) el.setAttribute("aria-label", label);
     });
 
     if (document.body.dataset.articlePage === "true") {

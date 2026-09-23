@@ -71,11 +71,11 @@
             </div>
 
             <div class="filter-row" role="group" aria-label="Filter news by category">
-                <button type="button" class="filter-btn active" data-filter="all">All</button>
-                <button type="button" class="filter-btn" data-filter="ai">AI</button>
-                <button type="button" class="filter-btn" data-filter="mobile">MOBILE</button>
-                <button type="button" class="filter-btn" data-filter="computers">COMPUTERS</button>
-                <button type="button" class="filter-btn" data-filter="security">SECURITY</button>
+                <button type="button" class="filter-btn active" data-filter="all" data-en="All" data-kh="ទាំងអស់">All</button>
+                <button type="button" class="filter-btn" data-filter="ai" data-en="AI" data-kh="AI">AI</button>
+                <button type="button" class="filter-btn" data-filter="mobile" data-en="Mobile" data-kh="ទូរស័ព្ទ">MOBILE</button>
+                <button type="button" class="filter-btn" data-filter="computers" data-en="Computers" data-kh="កុំព្យូទ័រ">COMPUTERS</button>
+                <button type="button" class="filter-btn" data-filter="security" data-en="Security" data-kh="សន្តិសុខ">SECURITY</button>
             </div>
 
             <div class="row g-4">
@@ -84,10 +84,10 @@
                         <button class="bookmark-btn" data-id="news-ai" aria-label="Add bookmark">📑</button>
                         <img src="img/ai.png" alt="Artificial Intelligence">
                         <div class="card-content">
-                            <span class="category">AI</span>
-                            <h3>The Future of Artificial Intelligence</h3>
-                            <p>Learn how artificial intelligence is changing the way we use technology.</p>
-                            <a href="article.html">Read Article →</a>
+                            <span class="category" data-en="AI" data-kh="AI">AI</span>
+                            <h3 data-en="The Future of Artificial Intelligence" data-kh="អនាគតនៃបច្ចេកវិទ្យា AI">The Future of Artificial Intelligence</h3>
+                            <p data-en="Learn how AI is reshaping work, education, and daily life through smarter decisions and automation." data-kh="ស្វែងយល់ពីរបៀបដែល AI កំពុងបំលាស់លំនៅការងារ ការអប់រំ និងជីវិតប្រចាំថ្ងៃតាមរយៈការសម្រេចចិត្តឆ្លាត និងស្វ័យប្រវត្តិ។">Learn how artificial intelligence is changing the way we use technology.</p>
+                            <a href="article.html?id=ai" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -97,10 +97,10 @@
                         <button class="bookmark-btn" data-id="news-mobile" aria-label="Add bookmark">📑</button>
                         <img src="img/smartphone.png" alt="Smartphone technology">
                         <div class="card-content">
-                            <span class="category">Mobile</span>
-                            <h3>New Trends in Smartphone Technology</h3>
-                            <p>Discover new features and innovations in modern smartphones.</p>
-                            <a href="article.html">Read Article →</a>
+                            <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
+                            <h3 data-en="New Trends in Smartphone Technology" data-kh="និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ">New Trends in Smartphone Technology</h3>
+                            <p data-en="Discover the newest camera, battery, and AI features making smartphones more powerful and personal." data-kh="រកឃើញសមាសធាតុថ្មីៗក្នុងកាមេរ៉ា ថ្ម និង AI ដែលធ្វើឱ្យទូរស័ព្ទកាន់តែខ្លាំង និងឆ្លាតវៃជាងមុន។">Discover new features and innovations in modern smartphones.</p>
+                            <a href="article.html?id=mobile" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -110,10 +110,10 @@
                         <button class="bookmark-btn" data-id="news-computers" aria-label="Add bookmark">📑</button>
                         <img src="img/laptop.png" alt="Laptop computer">
                         <div class="card-content">
-                            <span class="category">Computers</span>
-                            <h3>How Modern Computers Are Evolving</h3>
-                            <p>Explore the latest improvements in computer performance and design.</p>
-                            <a href="article.html">Read Article →</a>
+                            <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
+                            <h3 data-en="How Modern Computers Are Evolving" data-kh="កុំព្យូទ័រទំនើបកំពុងវិវត្តទៅក្នុងទិសដៅថ្មី">How Modern Computers Are Evolving</h3>
+                            <p data-en="Explore the latest improvements in performance, battery life, and design for everyday productivity." data-kh="ស្វែងយល់ពីការកែលម្អថ្មីៗក្នុងផ្នែកសមត្ថភាព ថ្ម និងការរចនាដើម្បីធ្វើការងារប្រចាំថ្ងៃកាន់តែមានប្រសិទ្ធភាព។">Explore the latest improvements in computer performance and design.</p>
+                            <a href="article.html?id=computers" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -123,10 +123,10 @@
                         <button class="bookmark-btn" data-id="news-security" aria-label="Add bookmark">📑</button>
                         <img src="img/cybersecurity.png" alt="Cybersecurity">
                         <div class="card-content">
-                            <span class="category">Security</span>
-                            <h3>Why Cybersecurity Is Important</h3>
-                            <p>Learn simple ways to stay safe in today's digital world.</p>
-                            <a href="article.html">Read Article →</a>
+                            <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
+                            <h3 data-en="Why Cybersecurity Is Important" data-kh="ហេតុអ្វីសន្តិសុខអនឡាញសំខាន់">Why Cybersecurity Is Important</h3>
+                            <p data-en="Learn simple habits that help protect your accounts, devices, and personal information online." data-kh="ស្វែងយល់ពីទម្លាប់សាមញ្ញៗដែលជួយការពារគណនី ឧបករណ៍ និងព័ត៌មានផ្ទាល់ខ្លួននៅលើអនឡាញ។">Learn simple ways to stay safe in today's digital world.</p>
+                            <a href="article.html?id=security" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
