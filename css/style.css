@@ -155,7 +155,7 @@ body.dark-mode .navbar-toggler-icon {
             rgba(232, 238, 247, 0.92),
             rgba(232, 238, 247, 0.97)
         ),
-        url("../images/ai.png");
+        url("../img/ai.png");
 
     background-size: cover;
     background-position: center;
@@ -167,7 +167,7 @@ body.dark-mode .hero {
             rgba(11, 17, 32, 0.76),
             rgba(11, 17, 32, 0.88)
         ),
-        url("../images/ai.png");
+        url("../img/ai.png");
 }
 
 .hero-small {
