@@ -9,10 +9,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    
 
     <style>
         /* ================= MODERN BLOG PAGE ================= */
@@ -108,7 +107,7 @@
 
         .interactive-title {
             color: #ffffff;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 5px;
@@ -130,7 +129,7 @@
         }
 
         .blog-title {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
             font-size: 34px;
             font-weight: 700;
             color: var(--text-heading);
@@ -162,7 +161,7 @@
         }
 
         .blog-body h2 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
             font-size: 24px;
             font-weight: 600;
             color: var(--text-heading);
@@ -291,37 +290,38 @@
                 <!-- Top Bar -->
                 <div class="blog-top-bar">
                     <button id="readingModeBtn" class="reading-mode-btn" type="button">
-                        📖 Reading Mode
+                        📖 <span data-en="Reading Mode" data-kh="របៀបអាន">Reading Mode</span>
                     </button>
-                    <span id="readTime" class="read-time">5 min read</span>
+                    <span id="readTime" class="read-time" data-en="5 min read" data-kh="អាន 5 នាទី">5 min read</span>
                 </div>
 
                 <!-- Interactive Box -->
                 <div class="interactive-box">
                     <div class="play-btn">▶</div>
-                    <div class="interactive-title">Interactive Deep Dive</div>
-                    <div class="interactive-sub">Neural Architectures • Ethical Standards</div>
+                    <div class="interactive-title" data-en="Interactive Deep Dive" data-kh="ការសិក្សាស៊ីជម្រៅ">Interactive Deep Dive</div>
+                    <div class="interactive-sub" data-en="Neural Architectures • Ethical Standards" data-kh="ស្ថាបត្យកម្មសរសៃប្រសាទ • ស្តង់ដារក្រមសីលធម៌">Neural Architectures • Ethical Standards</div>
                 </div>
 
                 <!-- Category -->
-                <span id="blogCategory" class="category-tag">ARTIFICIAL INTELLIGENCE</span>
+                <span id="blogCategory" class="category-tag" data-en="ARTIFICIAL INTELLIGENCE" data-kh="បញ្ញាសិប្បនិម្មិត">ARTIFICIAL INTELLIGENCE</span>
 
                 <!-- Title -->
-                <h1 id="blogTitle" class="blog-title">Understanding Artificial Intelligence in Everyday Life</h1>
+                <h1 id="blogTitle" class="blog-title" data-en="Understanding Artificial Intelligence in Everyday Life" data-kh="ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ">Understanding Artificial Intelligence in Everyday Life</h1>
 
                 <!-- Meta -->
-                <p id="blogMeta" class="blog-meta">By <strong>TechNews Team</strong> · September 2024</p>
+                <p id="blogMeta" class="blog-meta" data-en="By TechNews Team · September 2024" data-kh="ដោយក្រុម TechNews · កញ្ញា 2024">By <strong>TechNews Team</strong> · September 2024</p>
 
                 <!-- Body -->
                 <div id="blogBody" class="blog-body">
-                    <p>Loading article...</p>
+                    <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
                 </div>
 
                 <!-- Bottom Bar -->
                 <div class="blog-bottom-bar">
-                    <a href="index.html" class="back-btn">← Back to Top Overview</a>
+                    <a href="index.html" class="back-btn" data-en="← Back to Top Overview" data-kh="← ត្រឡប់ទៅទំព័រដើម">← Back to Top Overview</a>
                     <span class="share-row">
-                        Share: <a href="#">Twitter</a> · <a href="#">LinkedIn</a>
+                        <span data-en="Share:" data-kh="ចែករំលែក:">Share:</span>
+                        <a href="#">Twitter</a> · <a href="#">LinkedIn</a>
                     </span>
                 </div>
 
@@ -343,8 +343,9 @@
 <script src="js/script.js"></script>
 
 <script>
+/* Blog content with EN and KH versions */
 const blogPosts = {
-    ai: {
+    en: {
         category: "ARTIFICIAL INTELLIGENCE",
         title: "Understanding Artificial Intelligence in Everyday Life",
         meta: "By <strong>TechNews Team</strong> · September 2024",
@@ -363,18 +364,52 @@ const blogPosts = {
             <h2>The Road Ahead</h2>
             <p>The future of AI will focus on making systems more transparent, more efficient, and more human-centered. Whether you are a student, a professional, or just curious, learning about AI today will prepare you for the world of tomorrow.</p>
         `
+    },
+    kh: {
+        category: "បញ្ញាសិប្បនិម្មិត",
+        title: "ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ",
+        meta: "ដោយ <strong>ក្រុម TechNews</strong> · កញ្ញា 2024",
+        readTime: "អាន 4 នាទី",
+        body: `
+            <p>បញ្ញាសិប្បនិម្មិត (AI) បានផ្លាស់ប្តូរយ៉ាងឆាប់រហ័សពីការពិសោធន៍ក្នុងមន្ទីរពិសោធន៍ ទៅជាគ្រឹះនៃបច្ចេកវិទ្យាទំនើប។ សព្វថ្ងៃនេះ AI គ្រប់គ្រងប្រព័ន្ធណែនាំការស្វែងរក ការបកប្រែសំដីធម្មជាតិ ការថតរូបតាមទូរស័ព្ទ និងការធ្វើរោគវិនិច្ឆ័យវេជ្ជសាស្ត្រដោយស្វ័យប្រវត្តិ។</p>
+            <p>នៅពេលកម្មវិធីឆ្លាតវៃបន្តវិវត្ត ការយល់ដឹងពីគំនិតបណ្តាញសរសៃប្រសាទ និងឯកជនភាពទិន្នន័យ ជួយអ្នកប្រើប្រាស់ក្នុងការរុករកបទពិសោធន៍ឌីជីថលទំនើបដោយការទទួលខុសត្រូវ។</p>
+
+            <h2>ហេតុអ្វី AI សំខាន់</h2>
+            <p>AI អនុញ្ញាតឱ្យកុំព្យូទ័របំពេញភារកិច្ចដែលជាធម្មតាត្រូវការបញ្ញារបស់មនុស្ស។ នេះរួមមានការស្គាល់រូបភាព ការយល់ដឹងពីសំដី ការបកប្រែភាសា និងការសម្រេចចិត្តស្មុគស្មាញ។</p>
+            <p>ឧស្សាហកម្មដូចជាសុខាភិបាល ការអប់រំ ហិរញ្ញវត្ថុ និងការដឹកជញ្ជូន កំពុងត្រូវបានផ្លាស់ប្តូរដោយ AI។ វេជ្ជបណ្ឌិតប្រើ AI ដើម្បីរកជំងឺបានលឿន គ្រូបង្រៀនប្រើវាដើម្បីធ្វើឱ្យការរៀនមានលក្ខណៈផ្ទាល់ខ្លួន ហើយក្រុមហ៊ុនប្រើវាដើម្បីបម្រើអតិថិជនបានលឿន។</p>
+
+            <h2>បញ្ហាប្រឈម និងឱកាស</h2>
+            <p>ជាមួយនឹងអំណាចដ៏អស្ចារ្យ មកជាមួយនឹងការទទួលខុសត្រូវដ៏អស្ចារ្យ។ AI បង្កើតសំណួរសំខាន់ៗអំពីឯកជនភាព ការលំអៀង និងការងារ។ រដ្ឋាភិបាល និងអង្គការត្រូវបង្កើតគោលការណ៍ក្រមសីលធម៌ ដើម្បីធានាថាវាផ្តល់អត្ថប្រយោជន៍ដល់មនុស្សគ្រប់រូបដោយយុត្តិធម៌។</p>
+
+            <h2>ផ្លូវទៅមុខ</h2>
+            <p>អនាគតនៃ AI នឹងផ្តោតលើការធ្វើឱ្យប្រព័ន្ធមានតម្លាភាព ប្រសិទ្ធភាព និងផ្តោតលើមនុស្ស។ មិនថាអ្នកជាសិស្ស អ្នកជំនាញ ឬគ្រាន់តែចង់ដឹង ការរៀនអំពី AI នៅថ្ងៃនេះ នឹងរៀបចំអ្នកសម្រាប់ពិភពលោកនៅថ្ងៃស្អែក។</p>
+        `
     }
 };
 
-const defaultPost = blogPosts["ai"];
+/* Detect current language and load content */
+function loadBlogContent() {
+    const lang = localStorage.getItem("techpulse-lang") || "en";
+    const post = blogPosts[lang] || blogPosts["en"];
 
-document.getElementById("blogCategory").textContent = defaultPost.category;
-document.getElementById("blogTitle").textContent = defaultPost.title;
-document.getElementById("blogMeta").innerHTML = defaultPost.meta;
-document.getElementById("readTime").textContent = defaultPost.readTime;
-document.getElementById("blogBody").innerHTML = defaultPost.body;
+    document.getElementById("blogCategory").textContent = post.category;
+    document.getElementById("blogTitle").textContent = post.title;
+    document.getElementById("blogMeta").innerHTML = post.meta;
+    document.getElementById("readTime").textContent = post.readTime;
+    document.getElementById("blogBody").innerHTML = post.body;
 
-document.title = "TechNews - " + defaultPost.title;
+    document.title = "TechNews - " + post.title;
+}
+
+/* Load on page start */
+loadBlogContent();
+
+/* Reload content when language button is clicked */
+document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        setTimeout(loadBlogContent, 50);
+    });
+});
 </script>
 
 </body>

@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -50,12 +50,13 @@
                 <h2 data-en="Latest Technology News" data-kh="ព័ត៌មានបច្ចេកវិទ្យាចុងក្រោយ">Latest Technology News</h2>
             </div>
 
+            <!-- Filter buttons -->
             <div class="filter-row" role="group" aria-label="Filter news by category">
-                <button type="button" class="filter-btn active" data-filter="all">All</button>
-                <button type="button" class="filter-btn" data-filter="ai">AI</button>
-                <button type="button" class="filter-btn" data-filter="mobile">MOBILE</button>
-                <button type="button" class="filter-btn" data-filter="computers">COMPUTERS</button>
-                <button type="button" class="filter-btn" data-filter="security">SECURITY</button>
+                <button type="button" class="filter-btn active" data-filter="all" data-en="All" data-kh="ទាំងអស់">All</button>
+                <button type="button" class="filter-btn" data-filter="ai" data-en="AI" data-kh="AI">AI</button>
+                <button type="button" class="filter-btn" data-filter="mobile" data-en="MOBILE" data-kh="ទូរស័ព្ទ">MOBILE</button>
+                <button type="button" class="filter-btn" data-filter="computers" data-en="COMPUTERS" data-kh="កុំព្យូទ័រ">COMPUTERS</button>
+                <button type="button" class="filter-btn" data-filter="security" data-en="SECURITY" data-kh="សន្តិសុខ">SECURITY</button>
             </div>
 
             <div class="row g-4">
@@ -66,10 +67,10 @@
                         <button class="bookmark-btn" data-id="news-ai-1" aria-label="Add bookmark">📑</button>
                         <img src="img/ai.png" alt="Artificial Intelligence">
                         <div class="card-content">
-                            <span class="category">AI</span>
-                            <h3>The Future of Artificial Intelligence</h3>
-                            <p>Learn how artificial intelligence is changing the way we use technology.</p>
-                            <a href="article.html?id=ai">Read Article →</a>
+                            <span class="category" data-en="AI" data-kh="AI">AI</span>
+                            <h3 data-en="The Future of Artificial Intelligence" data-kh="អនាគតនៃបញ្ញាសិប្បនិម្មិត">The Future of Artificial Intelligence</h3>
+                            <p data-en="Learn how artificial intelligence is changing the way we use technology." data-kh="ស្វែងយល់ពីរបៀបដែលបញ្ញាសិប្បនិម្មិតកំពុងផ្លាស់ប្តូរបច្ចេកវិទ្យា។">Learn how artificial intelligence is changing the way we use technology.</p>
+                            <a href="article.html?id=ai" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -80,10 +81,10 @@
                         <button class="bookmark-btn" data-id="news-ai-2" aria-label="Add bookmark">📑</button>
                         <img src="img/ai-robot.png" alt="Machine Learning">
                         <div class="card-content">
-                            <span class="category">AI</span>
-                            <h3>Machine Learning Explained</h3>
-                            <p>Discover how machines learn from data and make intelligent decisions.</p>
-                            <a href="article.html?id=ai-ml">Read Article →</a>
+                            <span class="category" data-en="AI" data-kh="AI">AI</span>
+                            <h3 data-en="Machine Learning Explained" data-kh="ការពន្យល់អំពីការរៀនរបស់ម៉ាស៊ីន">Machine Learning Explained</h3>
+                            <p data-en="Discover how machines learn from data and make intelligent decisions." data-kh="ស្វែងយល់ពីរបៀបដែលម៉ាស៊ីនរៀនពីទិន្នន័យ និងធ្វើការសម្រេចចិត្តឆ្លាតវៃ។">Discover how machines learn from data and make intelligent decisions.</p>
+                            <a href="article.html?id=ai-ml" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -94,10 +95,10 @@
                         <button class="bookmark-btn" data-id="news-mobile-1" aria-label="Add bookmark">📑</button>
                         <img src="img/smartphone.png" alt="Smartphone technology">
                         <div class="card-content">
-                            <span class="category">Mobile</span>
-                            <h3>New Trends in Smartphone Technology</h3>
-                            <p>Discover new features and innovations in modern smartphones.</p>
-                            <a href="article.html?id=mobile">Read Article →</a>
+                            <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
+                            <h3 data-en="New Trends in Smartphone Technology" data-kh="និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ">New Trends in Smartphone Technology</h3>
+                            <p data-en="Discover new features and innovations in modern smartphones." data-kh="ស្វែងយល់ពីមុខងារថ្មីៗ និងការច្នៃប្រឌិតក្នុងទូរស័ព្ទទំនើប។">Discover new features and innovations in modern smartphones.</p>
+                            <a href="article.html?id=mobile" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -108,10 +109,10 @@
                         <button class="bookmark-btn" data-id="news-mobile-2" aria-label="Add bookmark">📑</button>
                         <img src="img/mobile-5g.png" alt="5G Technology">
                         <div class="card-content">
-                            <span class="category">Mobile</span>
-                            <h3>The Rise of 5G Connectivity</h3>
-                            <p>How 5G is transforming mobile internet speeds and connectivity.</p>
-                            <a href="article.html?id=mobile-5g">Read Article →</a>
+                            <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
+                            <h3 data-en="The Rise of 5G Connectivity" data-kh="ការកើនឡើងនៃការតភ្ជាប់ 5G">The Rise of 5G Connectivity</h3>
+                            <p data-en="How 5G is transforming mobile internet speeds and connectivity." data-kh="របៀបដែល 5G កំពុងផ្លាស់ប្តូរល្បឿនអ៊ីនធឺណិតទូរស័ព្ទ និងការតភ្ជាប់។">How 5G is transforming mobile internet speeds and connectivity.</p>
+                            <a href="article.html?id=mobile-5g" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -122,10 +123,10 @@
                         <button class="bookmark-btn" data-id="news-computers-1" aria-label="Add bookmark">📑</button>
                         <img src="img/laptop.png" alt="Laptop computer">
                         <div class="card-content">
-                            <span class="category">Computers</span>
-                            <h3>How Modern Computers Are Evolving</h3>
-                            <p>Explore the latest improvements in computer performance and design.</p>
-                            <a href="article.html?id=computers">Read Article →</a>
+                            <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
+                            <h3 data-en="How Modern Computers Are Evolving" data-kh="របៀបដែលកុំព្យូទ័រទំនើបកំពុងវិវត្ត">How Modern Computers Are Evolving</h3>
+                            <p data-en="Explore the latest improvements in computer performance and design." data-kh="ស្វែងយល់ពីភាពប្រសើរឡើងថ្មីៗក្នុងការអនុវត្ត និងការរចនាកុំព្យូទ័រ។">Explore the latest improvements in computer performance and design.</p>
+                            <a href="article.html?id=computers" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -136,10 +137,10 @@
                         <button class="bookmark-btn" data-id="news-computers-2" aria-label="Add bookmark">📑</button>
                         <img src="img/computer-code.png" alt="Programming Code">
                         <div class="card-content">
-                            <span class="category">Computers</span>
-                            <h3>Programming Languages in 2026</h3>
-                            <p>The most popular programming languages every developer should know.</p>
-                            <a href="article.html?id=programming">Read Article →</a>
+                            <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
+                            <h3 data-en="Programming Languages in 2026" data-kh="ភាសាសរសេរកម្មវិធីក្នុងឆ្នាំ 2026">Programming Languages in 2026</h3>
+                            <p data-en="The most popular programming languages every developer should know." data-kh="ភាសាសរសេរកម្មវិធីពេញនិយមបំផុតដែលអ្នកអភិវឌ្ឍន៍គ្រប់រូបគួរដឹង។">The most popular programming languages every developer should know.</p>
+                            <a href="article.html?id=programming" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -150,10 +151,10 @@
                         <button class="bookmark-btn" data-id="news-security-1" aria-label="Add bookmark">📑</button>
                         <img src="img/cybersecurity.png" alt="Cybersecurity">
                         <div class="card-content">
-                            <span class="category">Security</span>
-                            <h3>Why Cybersecurity Is Important</h3>
-                            <p>Learn simple ways to stay safe in today's digital world.</p>
-                            <a href="article.html?id=security">Read Article →</a>
+                            <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
+                            <h3 data-en="Why Cybersecurity Is Important" data-kh="ហេតុអ្វីបានជាសន្តិសុខអនឡាញសំខាន់">Why Cybersecurity Is Important</h3>
+                            <p data-en="Learn simple ways to stay safe in today's digital world." data-kh="ស្វែងយល់ពីវិធីសាមញ្ញក្នុងការការពារខ្លួនក្នុងពិភពឌីជីថល។">Learn simple ways to stay safe in today's digital world.</p>
+                            <a href="article.html?id=security" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>
@@ -164,10 +165,10 @@
                         <button class="bookmark-btn" data-id="news-security-2" aria-label="Add bookmark">📑</button>
                         <img src="img/security-lock.png" alt="Online Privacy">
                         <div class="card-content">
-                            <span class="category">Security</span>
-                            <h3>Protecting Your Online Privacy</h3>
-                            <p>Essential tips to keep your personal information safe online.</p>
-                            <a href="article.html?id=security-privacy">Read Article →</a>
+                            <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
+                            <h3 data-en="Protecting Your Online Privacy" data-kh="ការការពារឯកជនភាពអនឡាញរបស់អ្នក">Protecting Your Online Privacy</h3>
+                            <p data-en="Essential tips to keep your personal information safe online." data-kh="គន្លឹះសំខាន់ៗដើម្បីរក្សាព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកឱ្យមានសុវត្ថិភាពលើអនឡាញ។">Essential tips to keep your personal information safe online.</p>
+                            <a href="article.html?id=security-privacy" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
                         </div>
                     </article>
                 </div>

@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -44,7 +44,6 @@
 
 <main>
 
-<!-- HERO SECTION (no stats box) -->
 <section class="hero">
     <div class="container">
         <div class="row justify-content-center">
@@ -54,9 +53,7 @@
                     <span data-en="Discover the" data-kh="ស្វែងយល់ពី">Discover the</span>
                     <span data-en="Future of Technology" data-kh="អនាគតបច្ចេកវិទ្យា">Future of Technology</span>
                 </h1>
-                <p class="hero-text" data-en="Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity." data-kh="ទទួលបានព័ត៌មានថ្មីៗអំពីបច្ចេកវិទ្យា និន្នាការ AI ទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី និងសន្តិសុខអនឡាញ។">
-                    Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity.
-                </p>
+                <p class="hero-text" data-en="Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity." data-kh="ទទួលបានព័ត៌មានថ្មីៗអំពីបច្ចេកវិទ្យា និន្នាការ AI ទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី និងសន្តិសុខអនឡាញ។">Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity.</p>
                 <a href="news.html" class="btn btn-primary" data-en="Explore News" data-kh="ស្វែងយល់ព័ត៌មាន">Explore News →</a>
                 <a href="blog.html" class="btn btn-outline-light ms-2" data-en="Read Blog" data-kh="អានប្លុក">Read Blog</a>
             </div>
@@ -64,63 +61,58 @@
     </div>
 </section>
 
-<!-- TRENDING NEWS -->
 <section class="section">
     <div class="container">
         <div class="section-title">
             <p data-en="STAY UPDATED" data-kh="ព័ត៌មានថ្មីៗ">STAY UPDATED</p>
             <h2 data-en="Trending Technology News" data-kh="ព័ត៌មានបច្ចេកវិទ្យាកំពុងពេញនិយម">Trending Technology News</h2>
         </div>
-
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <article class="news-card" data-href="article.html?id=ai">
                     <button class="bookmark-btn" data-id="home-ai" aria-label="Add bookmark">📑</button>
-                    <img src="img/ai.png" alt="Artificial Intelligence">
+                    <img src="img/ai.png" alt="AI">
                     <div class="card-content">
-                        <span class="category">AI</span>
-                        <h3>The Future of Artificial Intelligence</h3>
-                        <p>Learn how artificial intelligence is changing the way we use technology.</p>
-                        <a href="article.html?id=ai">Read More →</a>
+                        <span class="category" data-en="AI" data-kh="AI">AI</span>
+                        <h3 data-en="The Future of Artificial Intelligence" data-kh="អនាគតនៃបញ្ញាសិប្បនិម្មិត">The Future of Artificial Intelligence</h3>
+                        <p data-en="Learn how artificial intelligence is changing the way we use technology." data-kh="ស្វែងយល់ពីរបៀបដែលបញ្ញាសិប្បនិម្មិតកំពុងផ្លាស់ប្តូរបច្ចេកវិទ្យា។">Learn how artificial intelligence is changing the way we use technology.</p>
+                        <a href="article.html?id=ai" data-en="Read More →" data-kh="អានបន្ថែម →">Read More →</a>
                     </div>
                 </article>
             </div>
-
             <div class="col-md-6 col-lg-4">
                 <article class="news-card" data-href="article.html?id=mobile">
                     <button class="bookmark-btn" data-id="home-mobile" aria-label="Add bookmark">📑</button>
-                    <img src="img/smartphone.png" alt="Smartphone technology">
+                    <img src="img/smartphone.png" alt="Mobile">
                     <div class="card-content">
-                        <span class="category">Mobile</span>
-                        <h3>New Trends in Smartphone Technology</h3>
-                        <p>Discover new features and innovations in modern smartphones.</p>
-                        <a href="article.html?id=mobile">Read More →</a>
+                        <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
+                        <h3 data-en="New Trends in Smartphone Technology" data-kh="និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ">New Trends in Smartphone Technology</h3>
+                        <p data-en="Discover new features and innovations in modern smartphones." data-kh="ស្វែងយល់ពីមុខងារថ្មីៗ និងការច្នៃប្រឌិតក្នុងទូរស័ព្ទទំនើប។">Discover new features and innovations in modern smartphones.</p>
+                        <a href="article.html?id=mobile" data-en="Read More →" data-kh="អានបន្ថែម →">Read More →</a>
                     </div>
                 </article>
             </div>
-
             <div class="col-md-6 col-lg-4">
                 <article class="news-card" data-href="article.html?id=security">
                     <button class="bookmark-btn" data-id="home-security" aria-label="Add bookmark">📑</button>
-                    <img src="img/cybersecurity.png" alt="Cybersecurity">
+                    <img src="img/cybersecurity.png" alt="Security">
                     <div class="card-content">
-                        <span class="category">Security</span>
-                        <h3>Why Cybersecurity Is Important</h3>
-                        <p>Learn simple ways to stay safe in today's digital world.</p>
-                        <a href="article.html?id=security">Read More →</a>
+                        <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
+                        <h3 data-en="Why Cybersecurity Is Important" data-kh="ហេតុអ្វីបានជាសន្តិសុខអនឡាញសំខាន់">Why Cybersecurity Is Important</h3>
+                        <p data-en="Learn simple ways to stay safe in today's digital world." data-kh="ស្វែងយល់ពីវិធីសាមញ្ញក្នុងការការពារខ្លួនក្នុងពិភពឌីជីថល។">Learn simple ways to stay safe in today's digital world.</p>
+                        <a href="article.html?id=security" data-en="Read More →" data-kh="អានបន្ថែម →">Read More →</a>
                     </div>
                 </article>
             </div>
-
             <div class="col-md-6 col-lg-4">
                 <article class="news-card" data-href="article.html?id=computers">
                     <button class="bookmark-btn" data-id="home-dev" aria-label="Add bookmark">📑</button>
-                    <img src="img/laptop.png" alt="Laptop computer">
+                    <img src="img/laptop.png" alt="Computers">
                     <div class="card-content">
-                        <span class="category">Computers</span>
-                        <h3>How Modern Computers Are Evolving</h3>
-                        <p>Explore the latest improvements in computer performance and design.</p>
-                        <a href="article.html?id=computers">Read More →</a>
+                        <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
+                        <h3 data-en="How Modern Computers Are Evolving" data-kh="របៀបដែលកុំព្យូទ័រទំនើបកំពុងវិវត្ត">How Modern Computers Are Evolving</h3>
+                        <p data-en="Explore the latest improvements in computer performance and design." data-kh="ស្វែងយល់ពីភាពប្រសើរឡើងថ្មីៗក្នុងការអនុវត្ត និងការរចនាកុំព្យូទ័រ។">Explore the latest improvements in computer performance and design.</p>
+                        <a href="article.html?id=computers" data-en="Read More →" data-kh="អានបន្ថែម →">Read More →</a>
                     </div>
                 </article>
             </div>
@@ -128,7 +120,6 @@
     </div>
 </section>
 
-<!-- CATEGORIES -->
 <section class="categories-section">
     <div class="container">
         <div class="section-title">
@@ -139,36 +130,35 @@
             <div class="col-6 col-lg-3">
                 <div class="category-box">
                     <div class="category-icon">🤖</div>
-                    <h3>Artificial Intelligence</h3>
-                    <a href="categories.html">Explore →</a>
+                    <h3 data-en="Artificial Intelligence" data-kh="បញ្ញាសិប្បនិម្មិត">Artificial Intelligence</h3>
+                    <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="category-box">
                     <div class="category-icon">📱</div>
-                    <h3>Mobile</h3>
-                    <a href="categories.html">Explore →</a>
+                    <h3 data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</h3>
+                    <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="category-box">
                     <div class="category-icon">💻</div>
-                    <h3>Computers</h3>
-                    <a href="categories.html">Explore →</a>
+                    <h3 data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</h3>
+                    <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                 </div>
             </div>
             <div class="col-6 col-lg-3">
                 <div class="category-box">
                     <div class="category-icon">🔐</div>
-                    <h3>Cybersecurity</h3>
-                    <a href="categories.html">Explore →</a>
+                    <h3 data-en="Cybersecurity" data-kh="សន្តិសុខអនឡាញ">Cybersecurity</h3>
+                    <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ABOUT (with stats box) -->
 <section class="section">
     <div class="container">
         <div class="row align-items-center">
@@ -178,27 +168,23 @@
                     <span data-en="Technology made" data-kh="បច្ចេកវិទ្យា">Technology made</span>
                     <span data-en="simple." data-kh="សាមញ្ញ។">simple.</span>
                 </h2>
-                <p data-en="TechNews is a technology news and blog website created to help students and technology enthusiasts discover useful information in one place." data-kh="TechNews គឺជាវែបសាយព័ត៌មាន និងប្លុកបច្ចេកវិទ្យា បង្កើតឡើងដើម្បីជួយសិស្ស និងអ្នកចូលចិត្តបច្ចេកវិទ្យារកឃើញព័ត៌មានមានប្រយោជន៍នៅកន្លែងតែមួយ។">
-                    TechNews is a technology news and blog website created to help students and technology enthusiasts discover useful information in one place.
-                </p>
-                <p data-en="We cover AI, mobile technology, computers, programming, cybersecurity, and digital trends." data-kh="យើងគ្របដណ្តប់លើ AI បច្ចេកវិទ្យាទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី សន្តិសុខអនឡាញ និងនិន្នាការឌីជីថល។">
-                    We cover AI, mobile technology, computers, programming, cybersecurity, and digital trends.
-                </p>
+                <p data-en="TechNews is a technology news and blog website created to help students and technology enthusiasts discover useful information in one place." data-kh="TechNews គឺជាវែបសាយព័ត៌មាន និងប្លុកបច្ចេកវិទ្យា បង្កើតឡើងដើម្បីជួយសិស្ស និងអ្នកចូលចិត្តបច្ចេកវិទ្យារកឃើញព័ត៌មានមានប្រយោជន៍នៅកន្លែងតែមួយ។">TechNews is a technology news and blog website created to help students and technology enthusiasts discover useful information in one place.</p>
+                <p data-en="We cover AI, mobile technology, computers, programming, cybersecurity, and digital trends." data-kh="យើងគ្របដណ្តប់លើ AI បច្ចេកវិទ្យាទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី សន្តិសុខអនឡាញ និងនិន្នាការឌីជីថល។">We cover AI, mobile technology, computers, programming, cybersecurity, and digital trends.</p>
                 <a href="blog.html" class="btn btn-primary" data-en="Explore Our Blog" data-kh="ស្វែងយល់ប្លុករបស់យើង">Explore Our Blog</a>
             </div>
             <div class="col-lg-6">
                 <div class="about-box">
                     <div>
                         <strong>120<span>+</span></strong>
-                        <p>TECH ARTICLES</p>
+                        <p data-en="TECH ARTICLES" data-kh="អត្ថបទបច្ចេកវិទ្យា">TECH ARTICLES</p>
                     </div>
                     <div>
                         <strong>6</strong>
-                        <p>CORE TOPICS</p>
+                        <p data-en="CORE TOPICS" data-kh="ប្រធានបទស្នូល">CORE TOPICS</p>
                     </div>
                     <div>
                         <strong>24<span>/7</span></strong>
-                        <p>LIVE UPDATES</p>
+                        <p data-en="LIVE UPDATES" data-kh="ព័ត៌មានផ្ទាល់">LIVE UPDATES</p>
                     </div>
                 </div>
             </div>
@@ -213,18 +199,18 @@
         <div class="row">
             <div class="col-md-6">
                 <h3 class="footer-logo">Tech<span>News</span></h3>
-                <p><span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span></p>
+                <p data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</p>
             </div>
             <div class="col-md-6 text-md-end">
                 <h5 data-en="Quick Links" data-kh="តំណភ្ជាប់រហ័ស">Quick Links</h5>
-                <a href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a>
-                <a href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a>
-                <a href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a>
-                <a href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a>
+                <a href="index.html" data-en="Home" data-kh="ទំព័រដើម">Home</a>
+                <a href="news.html" data-en="News" data-kh="ព័ត៌មាន">News</a>
+                <a href="blog.html" data-en="Blog" data-kh="ប្លុក">Blog</a>
+                <a href="contact.html" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a>
             </div>
         </div>
         <hr>
-        <p class="copyright"><span data-en="© 2026 TechNews. All Rights Reserved." data-kh="© 2026 TechNews។ រក្សាសិទ្ធិគ្រប់យ៉ាង។">© 2026 TechNews. All Rights Reserved.</span></p>
+        <p class="copyright" data-en="© 2026 TechNews. All Rights Reserved." data-kh="© 2026 TechNews។ រក្សាសិទ្ធិគ្រប់យ៉ាង។">© 2026 TechNews. All Rights Reserved.</p>
     </div>
 </footer>
 

@@ -958,3 +958,74 @@ body.reading-mode .article-title {
         padding: 6px 10px;
     }
 }
+/* ================= KHMER FONT IMPROVEMENTS =================
+   These rules make Khmer text look better - larger line-height,
+   appropriate font sizes, and proper font family.
+*/
+
+/* Khmer font for all text */
+body {
+    font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.section-title h2,
+.about-title,
+.article-title,
+.footer-logo,
+.blog-title,
+.blog-body h2,
+.interactive-title {
+    font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Article page - make Khmer text readable */
+.article-title {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+#articleBody p {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 22px;
+}
+
+#articleBody h2 {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* When language is Khmer, slightly adjust sizes */
+html[lang="km"] .article-title {
+    font-size: 30px;
+}
+
+html[lang="km"] #articleBody p {
+    font-size: 17px;
+    line-height: 2.1;
+}
+
+html[lang="km"] #articleBody h2 {
+    font-size: 24px;
+}
+
+/* Blog page adjustments for Khmer */
+html[lang="km"] .blog-title {
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+html[lang="km"] .blog-body {
+    font-size: 17px;
+    line-height: 2.1;
+}
+
+html[lang="km"] .blog-body h2 {
+    font-size: 24px;
+}
