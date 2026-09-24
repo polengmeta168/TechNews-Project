@@ -23,6 +23,14 @@
     --border: #dce3ee;
 
     --on-accent: #ffffff;
+
+    /* Hero / Stats variables for both themes */
+    --hero-text: #0f172a;
+    --hero-accent: #2563eb;
+    --hero-subtext: #334155;
+    --stat-number: #0f172a;
+    --stat-accent: #2563eb;
+    --stat-label: #64748b;
 }
 
 body.dark-mode {
@@ -45,6 +53,13 @@ body.dark-mode {
     --border: #385070;
 
     --on-accent: #0b1120;
+
+    --hero-text: #ffffff;
+    --hero-accent: #3b82f6;
+    --hero-subtext: #cbd5e1;
+    --stat-number: #ffffff;
+    --stat-accent: #3b82f6;
+    --stat-label: #94a3b8;
 }
 
 
@@ -61,9 +76,10 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Kantumruy Pro', 'Inter', sans-serif;
     background: var(--bg-body);
     color: var(--text-body);
+    line-height: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -71,8 +87,12 @@ h1, h2, h3, h4, h5, h6,
 .section-title h2,
 .about-title,
 .article-title,
-.footer-logo {
-    font-family: 'Poppins', sans-serif;
+.footer-logo,
+.blog-title,
+.blog-body h2,
+.interactive-title {
+    font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
 a {
@@ -100,7 +120,7 @@ section {
     font-size: 25px;
     font-weight: 700;
     color: var(--text-heading) !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
 }
 
 .navbar-brand span,
@@ -140,8 +160,8 @@ body.dark-mode .navbar-toggler-icon {
 
     background:
         linear-gradient(
-            rgba(11, 17, 32, 0.92),
-            rgba(11, 17, 32, 0.97)
+            rgba(248, 250, 252, 0.92),
+            rgba(248, 250, 252, 0.97)
         ),
         url("../img/ai.png");
 
@@ -158,44 +178,50 @@ body.dark-mode .hero {
         url("../img/ai.png");
 }
 
-/* Small badge "WELCOME TO TECHNEWS" */
+/* Small badge */
 .hero-small {
     display: inline-block;
-    color: #38bdf8;
+    color: var(--hero-accent);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border: 1px solid rgba(56, 189, 248, 0.4);
+    border: 1px solid var(--hero-accent);
     border-radius: 999px;
     padding: 8px 18px;
     margin-bottom: 30px;
-    background: rgba(56, 189, 248, 0.08);
+    background: transparent;
 }
 
-/* Main headline: "Discover the" white, "Future of Technology" blue */
+body.dark-mode .hero-small {
+    background: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+}
+
+/* Main headline */
 .hero h1 {
     font-size: 64px;
     font-weight: 700;
     line-height: 1.15;
     margin: 20px 0;
-    color: #ffffff;
+    color: var(--hero-text);
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero h1 span:first-child {
-    color: #ffffff;
+    color: var(--hero-text);
 }
 
 .hero h1 span:last-child {
-    color: #3b82f6;
+    color: var(--hero-accent);
 }
 
 .hero-text {
     max-width: 650px;
-    color: #cbd5e1;
+    color: var(--hero-subtext);
     font-size: 17px;
     line-height: 1.8;
     margin: 0 auto 35px auto;
@@ -203,7 +229,7 @@ body.dark-mode .hero {
 
 /* Hero buttons */
 .hero .btn-primary {
-    background: #2563eb;
+    background: var(--hero-accent);
     border: none;
     color: #ffffff;
     font-weight: 600;
@@ -213,22 +239,32 @@ body.dark-mode .hero {
 }
 
 .hero .btn-primary:hover {
-    background: #1d4ed8;
+    background: var(--accent-strong);
 }
 
 .hero .btn-outline-light {
     padding: 14px 32px;
     font-weight: 600;
-    color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: var(--hero-text) !important;
+    border: 1px solid var(--hero-text) !important;
     border-radius: 8px;
     background: transparent;
 }
 
+body.dark-mode .hero .btn-outline-light {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
 .hero .btn-outline-light:hover {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+body.dark-mode .hero .btn-outline-light:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: #ffffff !important;
 }
+
 
 /* ================= HERO STATS BOX ================= */
 
@@ -237,13 +273,20 @@ body.dark-mode .hero {
     justify-content: center;
     gap: 0;
     margin-top: 60px;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
     border-radius: 16px;
     padding: 25px 40px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .hero-stats {
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow: none;
     backdrop-filter: blur(10px);
 }
 
@@ -251,7 +294,7 @@ body.dark-mode .hero {
     flex: 1;
     text-align: center;
     padding: 0 20px;
-    border-right: 1px solid rgba(56, 189, 248, 0.15);
+    border-right: 1px solid var(--border);
 }
 
 .hero-stats > div:last-child {
@@ -262,16 +305,16 @@ body.dark-mode .hero {
     display: block;
     font-size: 32px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--stat-number);
     margin-bottom: 5px;
 }
 
 .hero-stats strong span {
-    color: #3b82f6;
+    color: var(--stat-accent);
 }
 
 .hero-stats p {
-    color: #94a3b8;
+    color: var(--stat-label);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -443,15 +486,15 @@ body.dark-mode .btn-outline-light {
 .about-title {
     font-size: 42px;
     margin: 15px 0 25px;
-    color: #ffffff;
+    color: var(--text-heading);
 }
 
 .about-title span:first-child {
-    color: #ffffff;
+    color: var(--text-heading);
 }
 
 .about-title span:last-child {
-    color: #3b82f6;
+    color: var(--accent);
 }
 
 .about-box {
@@ -463,6 +506,11 @@ body.dark-mode .btn-outline-light {
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .about-box {
+    box-shadow: none;
 }
 
 .about-box > div {
@@ -475,16 +523,16 @@ body.dark-mode .btn-outline-light {
     display: block;
     font-size: 32px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-heading);
     margin-bottom: 8px;
 }
 
 .about-box strong span {
-    color: #3b82f6;
+    color: var(--accent);
 }
 
 .about-box p {
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.5px;
@@ -521,6 +569,70 @@ body.dark-mode .btn-outline-light {
 }
 
 
+/* ================= TEAM CHAT BOX (Contact page) ================= */
+
+.team-chat-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px;
+    height: 100%;
+}
+
+.team-label {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.team-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 15px;
+}
+
+.team-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.telegram-user {
+    display: block;
+    background: var(--bg-section-alt);
+    border: 1px solid var(--border);
+    color: var(--text-heading);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.telegram-user:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+}
+
+body.dark-mode .telegram-user {
+    background: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+body.dark-mode .telegram-user:hover {
+    background: var(--accent);
+    color: var(--on-accent);
+}
+
+
 /* ================= ARTICLE PAGE ================= */
 
 .article-img {
@@ -532,10 +644,11 @@ body.dark-mode .btn-outline-light {
 }
 
 .article-title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     margin: 15px 0 10px;
     color: var(--text-heading);
+    line-height: 1.5;
 }
 
 .article-meta {
@@ -549,10 +662,34 @@ body.dark-mode .btn-outline-light {
     margin-bottom: 10px;
 }
 
-.col-lg-8 p {
+#articleBody p {
     color: var(--text-body);
-    line-height: 1.9;
-    margin-bottom: 18px;
+    line-height: 2;
+    margin-bottom: 22px;
+    font-size: 16px;
+}
+
+#articleBody h2 {
+    font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Khmer language adjustments */
+html[lang="km"] .article-title {
+    font-size: 30px;
+}
+
+html[lang="km"] #articleBody p {
+    font-size: 17px;
+    line-height: 2.1;
+}
+
+html[lang="km"] #articleBody h2 {
+    font-size: 24px;
 }
 
 
@@ -699,7 +836,7 @@ footer hr {
 }
 
 
-/* ================= READING MODE (article page) ================= */
+/* ================= READING MODE ================= */
 
 .reading-mode-btn {
     background: transparent;
@@ -721,12 +858,14 @@ footer hr {
     color: var(--on-accent);
 }
 
-body.reading-mode .col-lg-8 {
+body.reading-mode .col-lg-8,
+body.reading-mode .col-lg-9 {
     max-width: 700px;
     margin: 0 auto;
     float: none;
 }
 
+body.reading-mode #articleBody p,
 body.reading-mode .col-lg-8 p {
     font-size: 19px;
     line-height: 2;
@@ -737,9 +876,7 @@ body.reading-mode .article-title {
 }
 
 
-/* ================= RESPONSIVE =================
-   Order matters: smaller widths come last so they override larger ones.
-*/
+/* ================= RESPONSIVE ================= */
 
 /* ---------- TABLET (768px) ---------- */
 @media (max-width: 768px) {
@@ -786,6 +923,15 @@ body.reading-mode .article-title {
 
     .page-section {
         padding-top: 120px;
+    }
+
+    .team-chat-box {
+        padding: 22px;
+        margin-top: 10px;
+    }
+
+    .team-title {
+        font-size: 22px;
     }
 }
 
@@ -837,7 +983,6 @@ body.reading-mode .article-title {
         text-align: center;
     }
 
-    /* Hero stats: stack vertically */
     .hero-stats {
         flex-direction: column;
         padding: 20px;
@@ -846,7 +991,7 @@ body.reading-mode .article-title {
 
     .hero-stats > div {
         border-right: none;
-        border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+        border-bottom: 1px solid var(--border);
         padding-bottom: 12px;
     }
 
@@ -958,74 +1103,21 @@ body.reading-mode .article-title {
         padding: 6px 10px;
     }
 }
-/* ================= KHMER FONT IMPROVEMENTS =================
-   These rules make Khmer text look better - larger line-height,
-   appropriate font sizes, and proper font family.
-*/
-
-/* Khmer font for all text */
-body {
-    font-family: 'Kantumruy Pro', 'Inter', sans-serif;
-    line-height: 1.8;
+.video-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
 }
 
-h1, h2, h3, h4, h5, h6,
-.navbar-brand,
-.section-title h2,
-.about-title,
-.article-title,
-.footer-logo,
-.blog-title,
-.blog-body h2,
-.interactive-title {
-    font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
-    line-height: 1.6;
-}
-
-/* Article page - make Khmer text readable */
-.article-title {
-    font-size: 32px;
-    line-height: 1.5;
-}
-
-#articleBody p {
-    font-size: 16px;
-    line-height: 2;
-    margin-bottom: 22px;
-}
-
-#articleBody h2 {
-    font-size: 22px;
-    line-height: 1.6;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-/* When language is Khmer, slightly adjust sizes */
-html[lang="km"] .article-title {
-    font-size: 30px;
-}
-
-html[lang="km"] #articleBody p {
-    font-size: 17px;
-    line-height: 2.1;
-}
-
-html[lang="km"] #articleBody h2 {
-    font-size: 24px;
-}
-
-/* Blog page adjustments for Khmer */
-html[lang="km"] .blog-title {
-    font-size: 30px;
-    line-height: 1.5;
-}
-
-html[lang="km"] .blog-body {
-    font-size: 17px;
-    line-height: 2.1;
-}
-
-html[lang="km"] .blog-body h2 {
-    font-size: 24px;
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
