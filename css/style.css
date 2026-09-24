@@ -1,41 +1,30 @@
 /* =====================================================
    COLOR TOKENS
-   Matches the project's Typography + Color System doc:
-   Primary #2563EB, Secondary #7C3AED, Background #F8FAFC,
-   Text #0F172A. This light palette is the default theme;
-   Dark Mode (toggle button) is an optional alternate below.
+   Light Mode is default; Dark Mode is optional (toggle).
    ===================================================== */
 
 :root {
-    /* Backgrounds - each one step darker, so sections are visibly separated */
-    --bg-body: #f8fafc;        /* Background - main page background */
+    --bg-body: #f8fafc;
     --bg-nav: #ffffff;
-    --bg-section-alt: #eef2f8; /* alternating section background */
-    --bg-card: #ffffff;        /* cards stay white so they pop against the tinted body */
+    --bg-section-alt: #eef2f8;
+    --bg-card: #ffffff;
     --bg-card-hover: #f1f5fb;
 
-    /* Text */
-    --text-heading: #0f172a;   /* Text - headings, nav, article titles */
+    --text-heading: #0f172a;
     --text-body: #334155;
     --text-muted: #64748b;
 
-    /* Primary - logo, primary buttons, active links, important UI elements */
     --accent: #2563eb;
     --accent-strong: #1d4ed8;
 
-    /* Secondary - highlights, secondary buttons, categories, accents */
     --secondary: #7c3aed;
     --secondary-strong: #6d28d9;
 
-    /* Borders */
     --border: #dce3ee;
 
-    /* Text color to use ON TOP of an accent/secondary background */
     --on-accent: #ffffff;
 }
 
-/* Optional Dark Mode, kept for readers who prefer it (toggle button).
-   Same Primary/Secondary accents, dark backgrounds. */
 body.dark-mode {
     --bg-body: #0b1120;
     --bg-nav: #101a2e;
@@ -119,9 +108,6 @@ section {
     color: var(--accent);
 }
 
-/* Bootstrap's navbar-dark hamburger icon is white by default, which
-   disappears on our light navbar background - darken it by default
-   and switch it back for the dark-mode navbar. */
 .navbar-toggler-icon {
     filter: invert(1) brightness(0.3);
 }
@@ -148,12 +134,14 @@ body.dark-mode .navbar-toggler-icon {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding-top: 80px;
 
     background:
         linear-gradient(
-            rgba(232, 238, 247, 0.92),
-            rgba(232, 238, 247, 0.97)
+            rgba(11, 17, 32, 0.92),
+            rgba(11, 17, 32, 0.97)
         ),
         url("../img/ai.png");
 
@@ -164,40 +152,135 @@ body.dark-mode .navbar-toggler-icon {
 body.dark-mode .hero {
     background:
         linear-gradient(
-            rgba(11, 17, 32, 0.76),
-            rgba(11, 17, 32, 0.88)
+            rgba(11, 17, 32, 0.92),
+            rgba(11, 17, 32, 0.97)
         ),
         url("../img/ai.png");
 }
 
+/* Small badge "WELCOME TO TECHNEWS" */
 .hero-small {
-    color: var(--accent);
-    font-size: 14px;
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 999px;
+    padding: 8px 18px;
+    margin-bottom: 30px;
+    background: rgba(56, 189, 248, 0.08);
 }
 
+/* Main headline: "Discover the" white, "Future of Technology" blue */
 .hero h1 {
-    font-size: 60px;
+    font-size: 64px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
     margin: 20px 0;
-    color: var(--text-heading);
+    color: #ffffff;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero h1 span {
-    color: var(--accent);
+.hero h1 span:first-child {
+    color: #ffffff;
+}
+
+.hero h1 span:last-child {
+    color: #3b82f6;
 }
 
 .hero-text {
     max-width: 650px;
-    color: var(--text-body);
-    font-size: 18px;
+    color: #cbd5e1;
+    font-size: 17px;
     line-height: 1.8;
+    margin: 0 auto 35px auto;
+}
+
+/* Hero buttons */
+.hero .btn-primary {
+    background: #2563eb;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.hero .btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.hero .btn-outline-light {
+    padding: 14px 32px;
+    font-weight: 600;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px;
+    background: transparent;
+}
+
+.hero .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff !important;
+}
+
+/* ================= HERO STATS BOX ================= */
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 60px;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 16px;
+    padding: 25px 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(10px);
+}
+
+.hero-stats > div {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    border-right: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.hero-stats > div:last-child {
+    border-right: none;
+}
+
+.hero-stats strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.hero-stats strong span {
+    color: #3b82f6;
+}
+
+.hero-stats p {
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 
-/* ================= BUTTON ================= */
+/* ================= BUTTON (general) ================= */
 
 .btn-primary {
     background: var(--accent);
@@ -213,8 +296,6 @@ body.dark-mode .hero {
 }
 
 .btn-outline-light {
-    /* !important overrides Bootstrap's own fixed white color so this
-       always follows the current theme (light by default, dark below) */
     padding: 12px 25px;
     font-weight: 600;
     color: var(--text-heading) !important;
@@ -232,7 +313,6 @@ body.dark-mode .btn-outline-light {
     padding: 100px 0;
 }
 
-/* Alternate section background so blocks of content read as distinct areas */
 .section:nth-of-type(even) {
     background: var(--bg-section-alt);
 }
@@ -265,6 +345,8 @@ body.dark-mode .btn-outline-light {
     height: 100%;
     transition: 0.3s;
     display: block;
+    position: relative;
+    cursor: pointer;
 }
 
 .news-card:hover {
@@ -286,7 +368,6 @@ body.dark-mode .btn-outline-light {
 }
 
 .category {
-    /* Secondary color: categories, per the Color Usage Rule */
     color: var(--secondary);
     font-size: 13px;
     font-weight: 600;
@@ -308,6 +389,8 @@ body.dark-mode .btn-outline-light {
 .card-content a {
     color: var(--accent);
     font-weight: 600;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -330,7 +413,6 @@ body.dark-mode .btn-outline-light {
 
 .category-box:hover {
     transform: translateY(-8px);
-    /* Secondary color: this is a category card, per the Color Usage Rule */
     border-color: var(--secondary);
 }
 
@@ -361,11 +443,15 @@ body.dark-mode .btn-outline-light {
 .about-title {
     font-size: 42px;
     margin: 15px 0 25px;
-    color: var(--text-heading);
+    color: #ffffff;
 }
 
-.about-title span {
-    color: var(--accent);
+.about-title span:first-child {
+    color: #ffffff;
+}
+
+.about-title span:last-child {
+    color: #3b82f6;
 }
 
 .about-box {
@@ -387,14 +473,23 @@ body.dark-mode .btn-outline-light {
 
 .about-box strong {
     display: block;
-    font-size: 30px;
-    color: var(--accent);
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
     margin-bottom: 8px;
 }
 
+.about-box strong span {
+    color: #3b82f6;
+}
+
 .about-box p {
-    color: var(--text-muted);
-    font-size: 14px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 
@@ -559,7 +654,6 @@ footer hr {
 }
 
 .filter-btn:hover {
-    /* Secondary color: category filter tags, per the Color Usage Rule */
     border-color: var(--secondary);
     color: var(--secondary);
 }
@@ -573,15 +667,11 @@ footer hr {
 
 /* ================= BOOKMARK ICON ================= */
 
-.news-card {
-    position: relative;
-}
-
 .bookmark-btn {
     position: absolute;
     top: 14px;
     right: 14px;
-    z-index: 2;
+    z-index: 3;
     background: rgba(11, 17, 32, 0.55);
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
@@ -598,7 +688,6 @@ footer hr {
 }
 
 .bookmark-btn:hover {
-    /* Secondary color: highlight/save action, per the Color Usage Rule */
     background: var(--secondary);
     color: var(--on-accent);
 }
@@ -627,7 +716,6 @@ footer hr {
 
 .reading-mode-btn:hover,
 .reading-mode-btn.active {
-    /* Secondary color: highlight feature, per the Color Usage Rule */
     background: var(--secondary);
     border-color: var(--secondary);
     color: var(--on-accent);
@@ -650,20 +738,29 @@ body.reading-mode .article-title {
 
 
 /* ================= RESPONSIVE =================
-   Three breakpoints to match the approved wireframes:
-   - Desktop  : 1440px and up   (default styles above)
-   - Tablet   : max-width 768px
-   - Mobile   : max-width 480px (covers 390px phones)
+   Order matters: smaller widths come last so they override larger ones.
 */
 
 /* ---------- TABLET (768px) ---------- */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 38px;
+        font-size: 42px;
     }
 
     .hero-text {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .hero-stats {
+        padding: 20px 25px;
+    }
+
+    .hero-stats strong {
+        font-size: 26px;
+    }
+
+    .hero-stats > div {
+        padding: 0 12px;
     }
 
     .section-title h2 {
@@ -674,7 +771,6 @@ body.reading-mode .article-title {
         flex-direction: column;
     }
 
-    /* Category filter tags wrap onto two rows instead of shrinking */
     .filter-row {
         gap: 8px;
     }
@@ -684,7 +780,6 @@ body.reading-mode .article-title {
         padding: 8px 14px;
     }
 
-    /* Language toggle + dark mode move under the collapsed nav links */
     .lang-toggle {
         margin-top: 12px;
     }
@@ -694,21 +789,47 @@ body.reading-mode .article-title {
     }
 }
 
-/* ---------- MOBILE (390px phones) ---------- */
-@media (max-width: 480px) {
+/* ---------- PHONE (576px) ---------- */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    #darkModeBtn {
+        margin-top: 12px;
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .lang-toggle {
+        margin-top: 12px;
+        margin-left: 0 !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 140px 0 60px 0;
+    }
+
     .hero h1 {
         font-size: 30px;
     }
 
     .hero-small {
-        font-size: 12px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        padding: 6px 14px;
     }
 
-    .section-title h2 {
-        font-size: 22px;
+    .hero-text {
+        font-size: 14px;
+        line-height: 1.6;
     }
 
-    /* Stack the two hero buttons instead of squeezing them side by side */
     .hero .btn {
         display: block;
         width: 100%;
@@ -716,42 +837,124 @@ body.reading-mode .article-title {
         text-align: center;
     }
 
-    /* Bookmark icon shrinks slightly so it doesn't crowd small card images */
-    .bookmark-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 13px;
+    /* Hero stats: stack vertically */
+    .hero-stats {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .hero-stats > div {
+        border-right: none;
+        border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+        padding-bottom: 12px;
+    }
+
+    .hero-stats > div:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .hero-stats strong {
+        font-size: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 22px;
+    }
+
+    .section-title p {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .news-card img {
+        height: 180px;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+
+    .category-box {
+        padding: 20px 12px;
+    }
+
+    .category-image {
+        height: 110px;
+    }
+
+    .category-box h3 {
+        font-size: 15px;
     }
 
     .about-box {
         padding: 20px;
+        flex-direction: column;
+    }
+
+    .about-box strong {
+        font-size: 24px;
     }
 
     .filter-btn {
         font-size: 11px;
         padding: 7px 12px;
     }
-}
-/* ================= CLICKABLE CARD ================= */
 
-.news-card {
-    position: relative;
-    cursor: pointer;
+    .bookmark-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .article-title {
+        font-size: 26px;
+    }
+
+    .article-img {
+        max-height: 220px;
+    }
+
+    footer {
+        padding: 40px 0 20px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 20px;
+    }
+
+    footer a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
 }
 
-.news-card:hover {
-    transform: translateY(-8px);
-    background: var(--bg-card-hover);
-    border-color: var(--accent);
-}
+/* ---------- SMALL PHONE (480px) ---------- */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 26px;
+    }
 
-/* ធ្វើឱ្យតំណ "Read Article →" នៅខាងលើ */
-.card-content a {
-    position: relative;
-    z-index: 2;
-}
+    .hero-small {
+        font-size: 9px;
+    }
 
-/* ធ្វើឱ្យ bookmark button នៅខាងលើ */
-.bookmark-btn {
-    z-index: 3;
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .about-box {
+        padding: 18px;
+    }
+
+    .filter-btn {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
 }
