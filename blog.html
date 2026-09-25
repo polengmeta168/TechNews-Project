@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        /* ================= MODERN BLOG PAGE ================= */
         .blog-wrapper {
             max-width: 800px;
             margin: 0 auto;
@@ -67,7 +69,8 @@
         .video-box {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
             margin-bottom: 40px;
             border-radius: 16px;
             overflow: hidden;
@@ -206,9 +209,11 @@
             .blog-wrapper {
                 padding: 25px 20px;
             }
+
             .blog-title {
                 font-size: 26px;
             }
+
             .blog-body h2 {
                 font-size: 21px;
             }
@@ -217,108 +222,118 @@
 </head>
 
 <body>
-<script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
+    <script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
 
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
-                <li class="nav-item"><a class="nav-link active" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
-            </ul>
-            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
-            <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
-                <button type="button" class="lang-btn active" data-lang="en">EN</button>
-                <button type="button" class="lang-btn" data-lang="kh">KH</button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home"
+                                    data-kh="ទំព័រដើម">Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News"
+                                    data-kh="ព័ត៌មាន">News</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories"
+                                    data-kh="ប្រភេទ">Categories</span></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="blog.html"><span data-en="Blog"
+                                    data-kh="ប្លុក">Blog</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact"
+                                    data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+                    </ul>
+                    <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
+                    <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
+                        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="kh">KH</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</nav>
-</header>
+        </nav>
+    </header>
 
-<main>
-    <section class="section page-section">
-        <div class="container">
+    <main>
+        <section class="section page-section">
+            <div class="container">
 
-            <div class="blog-wrapper">
+                <div class="blog-wrapper">
 
-                <!-- Top Bar -->
-                <div class="blog-top-bar">
-                    <button id="readingModeBtn" class="reading-mode-btn" type="button">
-                        📖 <span data-en="Reading Mode" data-kh="របៀបអាន">Reading Mode</span>
-                    </button>
-                    <span id="readTime" class="read-time" data-en="5 min read" data-kh="អាន 5 នាទី">5 min read</span>
-                </div>
 
-                <!-- Video Box -->
-                <div class="video-box">
-                    <iframe
-                        src="https://www.youtube.com/embed/ad79nYk2keg"
-                        title="Artificial Intelligence Explained"
-                        frameborder="0"
-                        loading="lazy"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+                    <div class="blog-top-bar">
+                        <button id="readingModeBtn" class="reading-mode-btn" type="button">
+                            📖 <span data-en="Reading Mode" data-kh="របៀបអាន">Reading Mode</span>
+                        </button>
+                        <span id="readTime" class="read-time" data-en="5 min read" data-kh="អាន 5 នាទី">5 min
+                            read</span>
+                    </div>
 
-                <!-- Category -->
-                <span id="blogCategory" class="category-tag" data-en="ARTIFICIAL INTELLIGENCE" data-kh="បញ្ញាសិប្បនិម្មិត">ARTIFICIAL INTELLIGENCE</span>
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/ad79nYk2keg"
+                            title="Artificial Intelligence Explained" frameborder="0" loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
 
-                <!-- Title -->
-                <h1 id="blogTitle" class="blog-title" data-en="Understanding Artificial Intelligence in Everyday Life" data-kh="ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ">Understanding Artificial Intelligence in Everyday Life</h1>
 
-                <!-- Meta -->
-                <p id="blogMeta" class="blog-meta" data-en="By TechNews Team · September 2024" data-kh="ដោយក្រុម TechNews · កញ្ញា 2024">By <strong>TechNews Team</strong> · September 2024</p>
+                    <span id="blogCategory" class="category-tag" data-en="ARTIFICIAL INTELLIGENCE"
+                        data-kh="បញ្ញាសិប្បនិម្មិត">ARTIFICIAL INTELLIGENCE</span>
 
-                <!-- Body -->
-                <div id="blogBody" class="blog-body">
-                    <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
-                </div>
 
-                <!-- Bottom Bar -->
-                <div class="blog-bottom-bar">
-                    <a href="index.html" class="back-btn" data-en="← Back to Top Overview" data-kh="← ត្រឡប់ទៅទំព័រដើម">← Back to Top Overview</a>
-                    <span class="share-row">
-                        <span data-en="Share:" data-kh="ចែករំលែក:">Share:</span>
-                        <a href="#">Twitter</a> · <a href="#">LinkedIn</a>
-                    </span>
+                    <h1 id="blogTitle" class="blog-title"
+                        data-en="Understanding Artificial Intelligence in Everyday Life"
+                        data-kh="ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ">Understanding Artificial
+                        Intelligence in Everyday Life</h1>
+
+
+                    <p id="blogMeta" class="blog-meta" data-en="By TechNews Team · September 2024"
+                        data-kh="ដោយក្រុម TechNews · កញ្ញា 2024">By <strong>TechNews Team</strong> · September 2024</p>
+
+
+                    <div id="blogBody" class="blog-body">
+                        <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
+                    </div>
+
+
+                    <div class="blog-bottom-bar">
+                        <a href="index.html" class="back-btn" data-en="← Back to Top Overview"
+                            data-kh="← ត្រឡប់ទៅទំព័រដើម">← Back to Top Overview</a>
+                        <span class="share-row">
+                            <span data-en="Share:" data-kh="ចែករំលែក:">Share:</span>
+                            <a href="#">Twitter</a> · <a href="#">LinkedIn</a>
+                        </span>
+                    </div>
+
                 </div>
 
             </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="container text-center">
+            <h3 class="footer-logo">Tech<span>News</span></h3>
+            <p><span data-en="Stay updated. Stay connected with technology."
+                    data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with
+                    technology.</span></p>
+            <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
         </div>
-    </section>
-</main>
+    </footer>
 
-<footer>
-    <div class="container text-center">
-        <h3 class="footer-logo">Tech<span>News</span></h3>
-        <p><span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span></p>
-        <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
-    </div>
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+    <script>
 
-<script>
-/* Blog content with EN and KH versions */
-const blogPosts = {
-    en: {
-        category: "ARTIFICIAL INTELLIGENCE",
-        title: "Understanding Artificial Intelligence in Everyday Life",
-        meta: "By <strong>TechNews Team</strong> · September 2024",
-        readTime: "4 min read",
-        body: `
+        const blogPosts = {
+            en: {
+                category: "ARTIFICIAL INTELLIGENCE",
+                title: "Understanding Artificial Intelligence in Everyday Life",
+                meta: "By <strong>TechNews Team</strong> · September 2024",
+                readTime: "4 min read",
+                body: `
             <p>Artificial Intelligence (AI) has rapidly shifted from lab experiments into the bedrock of modern tech. Today, AI powers search recommendation systems, natural speech translation, smartphone computational photography, and automated medical diagnosis.</p>
             <p>As intelligent software continues to evolve, understanding basic neural network concepts and data privacy safeguards helps users navigate modern digital experiences responsibly.</p>
 
@@ -332,13 +347,13 @@ const blogPosts = {
             <h2>The Road Ahead</h2>
             <p>The future of AI will focus on making systems more transparent, more efficient, and more human-centered. Whether you are a student, a professional, or just curious, learning about AI today will prepare you for the world of tomorrow.</p>
         `
-    },
-    kh: {
-        category: "បញ្ញាសិប្បនិម្មិត",
-        title: "ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ",
-        meta: "ដោយ <strong>ក្រុម TechNews</strong> · កញ្ញា 2024",
-        readTime: "អាន 4 នាទី",
-        body: `
+            },
+            kh: {
+                category: "បញ្ញាសិប្បនិម្មិត",
+                title: "ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ",
+                meta: "ដោយ <strong>ក្រុម TechNews</strong> · កញ្ញា 2024",
+                readTime: "អាន 4 នាទី",
+                body: `
             <p>បញ្ញាសិប្បនិម្មិត (AI) បានផ្លាស់ប្តូរយ៉ាងឆាប់រហ័សពីការពិសោធន៍ក្នុងមន្ទីរពិសោធន៍ ទៅជាគ្រឹះនៃបច្ចេកវិទ្យាទំនើប។ សព្វថ្ងៃនេះ AI គ្រប់គ្រងប្រព័ន្ធណែនាំការស្វែងរក ការបកប្រែសំដីធម្មជាតិ ការថតរូបតាមទូរស័ព្ទ និងការធ្វើរោគវិនិច្ឆ័យវេជ្ជសាស្ត្រដោយស្វ័យប្រវត្តិ។</p>
             <p>នៅពេលកម្មវិធីឆ្លាតវៃបន្តវិវត្ត ការយល់ដឹងពីគំនិតបណ្តាញសរសៃប្រសាទ និងឯកជនភាពទិន្នន័យ ជួយអ្នកប្រើប្រាស់ក្នុងការរុករកបទពិសោធន៍ឌីជីថលទំនើបដោយការទទួលខុសត្រូវ។</p>
 
@@ -352,33 +367,33 @@ const blogPosts = {
             <h2>ផ្លូវទៅមុខ</h2>
             <p>អនាគតនៃ AI នឹងផ្តោតលើការធ្វើឱ្យប្រព័ន្ធមានតម្លាភាព ប្រសិទ្ធភាព និងផ្តោតលើមនុស្ស។ មិនថាអ្នកជាសិស្ស អ្នកជំនាញ ឬគ្រាន់តែចង់ដឹង ការរៀនអំពី AI នៅថ្ងៃនេះ នឹងរៀបចំអ្នកសម្រាប់ពិភពលោកនៅថ្ងៃស្អែក។</p>
         `
-    }
-};
+            }
+        };
 
-/* Detect current language and load content */
-function loadBlogContent() {
-    const lang = localStorage.getItem("techpulse-lang") || "en";
-    const post = blogPosts[lang] || blogPosts["en"];
 
-    document.getElementById("blogCategory").textContent = post.category;
-    document.getElementById("blogTitle").textContent = post.title;
-    document.getElementById("blogMeta").innerHTML = post.meta;
-    document.getElementById("readTime").textContent = post.readTime;
-    document.getElementById("blogBody").innerHTML = post.body;
+        function loadBlogContent() {
+            const lang = localStorage.getItem("techpulse-lang") || "en";
+            const post = blogPosts[lang] || blogPosts["en"];
 
-    document.title = "TechNews - " + post.title;
-}
+            document.getElementById("blogCategory").textContent = post.category;
+            document.getElementById("blogTitle").textContent = post.title;
+            document.getElementById("blogMeta").innerHTML = post.meta;
+            document.getElementById("readTime").textContent = post.readTime;
+            document.getElementById("blogBody").innerHTML = post.body;
 
-/* Load on page start */
-loadBlogContent();
+            document.title = "TechNews - " + post.title;
+        }
 
-/* Reload content when language button is clicked */
-document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-        setTimeout(loadBlogContent, 50);
-    });
-});
-</script>
+
+        loadBlogContent();
+
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                setTimeout(loadBlogContent, 50);
+            });
+        });
+    </script>
 
 </body>
+
 </html>

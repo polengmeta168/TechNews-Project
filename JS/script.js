@@ -1,6 +1,4 @@
-/* ============================================================
-   1. DARK MODE
-   ============================================================ */
+
 const darkModeBtn = document.getElementById("darkModeBtn");
 
 function applyMode(isDark) {
@@ -26,9 +24,7 @@ if (darkModeBtn) {
 }
 
 
-/* ============================================================
-   2. CONTACT FORM
-   ============================================================ */
+
 function handleContactSubmit(event) {
     event.preventDefault();
     alert("Thanks for reaching out! Your message has been received.");
@@ -37,9 +33,6 @@ function handleContactSubmit(event) {
 }
 
 
-/* ============================================================
-   3. LANGUAGE TOGGLE (EN / KH)
-   ============================================================ */
 const langButtons = document.querySelectorAll(".lang-btn");
 const translatableEls = document.querySelectorAll("[data-en]");
 
@@ -63,9 +56,7 @@ langButtons.forEach((btn) => {
 });
 
 
-/* ============================================================
-   4. CATEGORY FILTER
-   ============================================================ */
+
 const categoryFilterButtons = document.querySelectorAll(".filter-btn");
 const filterableCards = document.querySelectorAll("[data-category]");
 
@@ -84,9 +75,6 @@ categoryFilterButtons.forEach((button) => {
 });
 
 
-/* ============================================================
-   5. BOOKMARKS
-   ============================================================ */
 const bookmarkButtons = document.querySelectorAll(".bookmark-btn");
 const savedBookmarks = JSON.parse(localStorage.getItem("techpulse-bookmarks") || "[]");
 
@@ -115,9 +103,7 @@ bookmarkButtons.forEach((button) => {
 });
 
 
-/* ============================================================
-   6. READING MODE
-   ============================================================ */
+
 const readingModeBtn = document.getElementById("readingModeBtn");
 
 if (readingModeBtn) {
@@ -133,9 +119,8 @@ if (readingModeBtn) {
 }
 
 
-/* ============================================================
-   7. CLICKABLE CARD (ចុចលើកាតទាំងមូលដើម្បីទៅទំព័រអត្ថបទ)
-   ============================================================ */
+
+
 document.querySelectorAll(".news-card").forEach((card) => {
     const link = card.querySelector("a[href*='article.html']");
     if (!link) return;
@@ -143,22 +128,19 @@ document.querySelectorAll(".news-card").forEach((card) => {
     card.style.cursor = "pointer";
 
     card.addEventListener("click", (event) => {
-        // ប្រសិនបើចុចលើ bookmark ឬតំណ មិនត្រូវធ្វើអ្វី
+
         if (event.target.closest(".bookmark-btn") || event.target.tagName === "A") {
             return;
         }
         window.location.href = link.href;
     });
 });
-/* ============================================================
-   8. AUTO ACTIVE NAVBAR
-   ដាក់ active លើ Navbar ដោយស្វ័យប្រវត្តិ តាមទំព័រដែលកំពុងមើល
-   ============================================================ */
+
 (function autoActiveNavbar() {
     const currentPath = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-    // កំណត់ Navbar ណាដែលត្រូវ active តាមទំព័រ
+
     let activePage = "";
 
     if (currentPath === "" || currentPath === "index.html") {
@@ -176,7 +158,7 @@ document.querySelectorAll(".news-card").forEach((card) => {
         activePage = "contact";
     }
 
-    // ដាក់ active លើ Navbar ដែលត្រូវគ្នា
+
     navLinks.forEach((link) => {
         if (link.dataset.page === activePage) {
             link.classList.add("active");

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,87 +10,98 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
+    <script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
 
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
-            </ul>
-            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
-            <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
-                <button type="button" class="lang-btn active" data-lang="en">EN</button>
-                <button type="button" class="lang-btn" data-lang="kh">KH</button>
-            </div>
-        </div>
-    </div>
-</nav>
-</header>
-
-<main>
-    <section class="section page-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-
-                    <button id="readingModeBtn" class="reading-mode-btn" type="button" data-en="📖 Reading Mode" data-kh="📖 របៀបអាន">📖 Reading Mode</button>
-
-                    <img id="articleImg" src="img/ai.png" alt="Article" class="article-img">
-
-                    <span id="articleCategory" class="category">ARTIFICIAL INTELLIGENCE</span>
-
-                    <h1 id="articleTitle" class="article-title">The Future of Artificial Intelligence</h1>
-
-                    <p id="articleMeta" class="article-meta">By TechNews Team · January 2026 · 5 min read</p>
-
-                    <div id="articleBody">
-                        <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home"
+                                    data-kh="ទំព័រដើម">Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News"
+                                    data-kh="ព័ត៌មាន">News</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories"
+                                    data-kh="ប្រភេទ">Categories</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html"><span data-en="Blog"
+                                    data-kh="ប្លុក">Blog</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact"
+                                    data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+                    </ul>
+                    <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
+                    <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
+                        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="kh">KH</button>
                     </div>
-
-                    <a href="news.html" class="btn btn-primary mt-3" data-en="← Back to News" data-kh="← ត្រឡប់ទៅព័ត៌មាន">← Back to News</a>
-
                 </div>
             </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section page-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+
+                        <button id="readingModeBtn" class="reading-mode-btn" type="button" data-en="📖 Reading Mode"
+                            data-kh="📖 របៀបអាន">📖 Reading Mode</button>
+
+                        <img id="articleImg" src="img/ai.png" alt="Article" class="article-img">
+
+                        <span id="articleCategory" class="category">ARTIFICIAL INTELLIGENCE</span>
+
+                        <h1 id="articleTitle" class="article-title">The Future of Artificial Intelligence</h1>
+
+                        <p id="articleMeta" class="article-meta">By TechNews Team · January 2026 · 5 min read</p>
+
+                        <div id="articleBody">
+                            <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
+                        </div>
+
+                        <a href="news.html" class="btn btn-primary mt-3" data-en="← Back to News"
+                            data-kh="← ត្រឡប់ទៅព័ត៌មាន">← Back to News</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <h3 class="footer-logo">Tech<span>News</span></h3>
+            <p><span data-en="Stay updated. Stay connected with technology."
+                    data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with
+                    technology.</span></p>
+            <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
         </div>
-    </section>
-</main>
+    </footer>
 
-<footer>
-    <div class="container text-center">
-        <h3 class="footer-logo">Tech<span>News</span></h3>
-        <p><span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span></p>
-        <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
-    </div>
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
-
-<script>
-const articles = {
-    en: {
-        ai: {
-            img: "img/ai.png",
-            category: "ARTIFICIAL INTELLIGENCE",
-            title: "The Future of Artificial Intelligence",
-            meta: "By TechNews Team · January 15, 2026 · 5 min read",
-            body: `
+    <script>
+        const articles = {
+            en: {
+                ai: {
+                    img: "img/ai.png",
+                    category: "ARTIFICIAL INTELLIGENCE",
+                    title: "The Future of Artificial Intelligence",
+                    meta: "By TechNews Team · January 15, 2026 · 5 min read",
+                    body: `
                 <p>Artificial Intelligence (AI) is one of the most transformative technologies of our time. It refers to the simulation of human intelligence processes by machines, especially computer systems.</p>
                 <p>These processes include learning, reasoning, and self-correction. AI is already part of our daily lives — from voice assistants on our phones, to recommendation systems on streaming platforms, to fraud detection in banking.</p>
                 <h2>Why AI Matters</h2>
@@ -100,13 +112,13 @@ const articles = {
                 <h2>The Road Ahead</h2>
                 <p>The future of AI will focus on making systems more transparent, more efficient, and more human-centered.</p>
             `
-        },
-        "ai-ml": {
-            img: "img/ai-robot.png",
-            category: "ARTIFICIAL INTELLIGENCE",
-            title: "Machine Learning Explained",
-            meta: "By TechNews Team · January 14, 2026 · 6 min read",
-            body: `
+                },
+                "ai-ml": {
+                    img: "img/ai-robot.png",
+                    category: "ARTIFICIAL INTELLIGENCE",
+                    title: "Machine Learning Explained",
+                    meta: "By TechNews Team · January 14, 2026 · 6 min read",
+                    body: `
                 <p>Machine Learning (ML) is a subset of AI that allows computers to learn from data without being explicitly programmed.</p>
                 <h2>Types of Machine Learning</h2>
                 <p><strong>Supervised Learning:</strong> The model is trained on labeled data.</p>
@@ -117,13 +129,13 @@ const articles = {
                 <h2>The Future of Machine Learning</h2>
                 <p>As data grows and computing power increases, machine learning will become even more powerful.</p>
             `
-        },
-        mobile: {
-            img: "img/smartphone.png",
-            category: "MOBILE TECHNOLOGY",
-            title: "New Trends in Smartphone Technology",
-            meta: "By TechNews Team · January 12, 2026 · 4 min read",
-            body: `
+                },
+                mobile: {
+                    img: "img/smartphone.png",
+                    category: "MOBILE TECHNOLOGY",
+                    title: "New Trends in Smartphone Technology",
+                    meta: "By TechNews Team · January 12, 2026 · 4 min read",
+                    body: `
                 <p>Smartphones have become an essential part of modern life. Every year, manufacturers introduce new features that change the way we communicate.</p>
                 <h2>Camera Innovation</h2>
                 <p>Modern smartphones now feature multi-lens cameras with computational photography.</p>
@@ -134,13 +146,13 @@ const articles = {
                 <h2>What's Next for Smartphones?</h2>
                 <p>The future of smartphones will focus on AI integration and new form factors.</p>
             `
-        },
-        "mobile-5g": {
-            img: "img/mobile-5g.png",
-            category: "MOBILE TECHNOLOGY",
-            title: "The Rise of 5G Connectivity",
-            meta: "By TechNews Team · January 11, 2026 · 5 min read",
-            body: `
+                },
+                "mobile-5g": {
+                    img: "img/mobile-5g.png",
+                    category: "MOBILE TECHNOLOGY",
+                    title: "The Rise of 5G Connectivity",
+                    meta: "By TechNews Team · January 11, 2026 · 5 min read",
+                    body: `
                 <p>5G is the fifth generation of mobile network technology. It promises faster speeds and lower latency.</p>
                 <h2>How 5G Works</h2>
                 <p>5G uses higher frequency radio waves than 4G, allowing more data to be transmitted faster.</p>
@@ -151,13 +163,13 @@ const articles = {
                 <h2>Challenges and Future</h2>
                 <p>Building 5G infrastructure is expensive, but coverage will continue to expand.</p>
             `
-        },
-        computers: {
-            img: "img/laptop.png",
-            category: "COMPUTERS",
-            title: "How Modern Computers Are Evolving",
-            meta: "By TechNews Team · January 10, 2026 · 6 min read",
-            body: `
+                },
+                computers: {
+                    img: "img/laptop.png",
+                    category: "COMPUTERS",
+                    title: "How Modern Computers Are Evolving",
+                    meta: "By TechNews Team · January 10, 2026 · 6 min read",
+                    body: `
                 <p>Computers have come a long way since the first electronic machines. Today's computers are faster, smaller, and more powerful.</p>
                 <h2>The Rise of Portable Computing</h2>
                 <p>Ultrabooks, 2-in-1 devices, and tablets are becoming more popular.</p>
@@ -168,13 +180,13 @@ const articles = {
                 <h2>The Future of Computers</h2>
                 <p>We can expect more powerful ARM-based processors and better cloud integration.</p>
             `
-        },
-        programming: {
-            img: "img/computer-code.png",
-            category: "COMPUTERS",
-            title: "Programming Languages in 2026",
-            meta: "By TechNews Team · January 9, 2026 · 7 min read",
-            body: `
+                },
+                programming: {
+                    img: "img/computer-code.png",
+                    category: "COMPUTERS",
+                    title: "Programming Languages in 2026",
+                    meta: "By TechNews Team · January 9, 2026 · 7 min read",
+                    body: `
                 <p>Programming languages are the foundation of all software. In 2026, developers have more choices than ever.</p>
                 <h2>Python</h2>
                 <p>Python remains the most popular language for AI, machine learning, and data science.</p>
@@ -187,13 +199,13 @@ const articles = {
                 <h2>Which Language Should You Learn?</h2>
                 <p>Start with Python if you are interested in AI. Choose JavaScript for web development.</p>
             `
-        },
-        security: {
-            img: "img/cybersecurity.png",
-            category: "CYBERSECURITY",
-            title: "Why Cybersecurity Is Important",
-            meta: "By TechNews Team · January 8, 2026 · 5 min read",
-            body: `
+                },
+                security: {
+                    img: "img/cybersecurity.png",
+                    category: "CYBERSECURITY",
+                    title: "Why Cybersecurity Is Important",
+                    meta: "By TechNews Team · January 8, 2026 · 5 min read",
+                    body: `
                 <p>In today's digital world, cybersecurity is more important than ever. Every day, millions of cyber attacks target individuals and businesses.</p>
                 <h2>Common Types of Cyber Threats</h2>
                 <p><strong>Phishing:</strong> Emails that trick users into revealing passwords.</p>
@@ -206,13 +218,13 @@ const articles = {
                 <h2>The Bottom Line</h2>
                 <p>By following these simple habits, you can significantly reduce your risk of cybercrime.</p>
             `
-        },
-        "security-privacy": {
-            img: "img/security-lock.png",
-            category: "CYBERSECURITY",
-            title: "Protecting Your Online Privacy",
-            meta: "By TechNews Team · January 7, 2026 · 6 min read",
-            body: `
+                },
+                "security-privacy": {
+                    img: "img/security-lock.png",
+                    category: "CYBERSECURITY",
+                    title: "Protecting Your Online Privacy",
+                    meta: "By TechNews Team · January 7, 2026 · 6 min read",
+                    body: `
                 <p>Your personal information is valuable. Every time you go online, data about your activity is collected.</p>
                 <h2>Use a VPN</h2>
                 <p>A Virtual Private Network encrypts your internet traffic and hides your IP address.</p>
@@ -225,15 +237,15 @@ const articles = {
                 <h2>Stay Informed</h2>
                 <p>Cybersecurity threats evolve constantly. Stay informed about new risks.</p>
             `
-        }
-    },
-    kh: {
-        ai: {
-            img: "img/ai.png",
-            category: "បញ្ញាសិប្បនិម្មិត",
-            title: "អនាគតនៃបញ្ញាសិប្បនិម្មិត",
-            meta: "ដោយក្រុម TechNews · មករា 15, 2026 · អាន 5 នាទី",
-            body: `
+                }
+            },
+            kh: {
+                ai: {
+                    img: "img/ai.png",
+                    category: "បញ្ញាសិប្បនិម្មិត",
+                    title: "អនាគតនៃបញ្ញាសិប្បនិម្មិត",
+                    meta: "ដោយក្រុម TechNews · មករា 15, 2026 · អាន 5 នាទី",
+                    body: `
                 <p>បញ្ញាសិប្បនិម្មិត (AI) គឺជាបច្ចេកវិទ្យាដ៏មានឥទ្ធិពលបំផុតមួយនៃសម័យរបស់យើង។ វាសំដៅលើការក្លែងធ្វើដំណើរការបញ្ញារបស់មនុស្សដោយម៉ាស៊ីន។</p>
                 <p>ដំណើរការទាំងនេះរួមមានការរៀនសូត្រ ការវែកញែក និងការកែតម្រូវខ្លួនឯង។ AI គឺជាផ្នែកនៃជីវិតប្រចាំថ្ងៃរបស់យើងរួចទៅហើយ។</p>
                 <h2>ហេតុអ្វី AI សំខាន់</h2>
@@ -244,13 +256,13 @@ const articles = {
                 <h2>ផ្លូវទៅមុខ</h2>
                 <p>អនាគតនៃ AI នឹងផ្តោតលើការធ្វើឱ្យប្រព័ន្ធមានតម្លាភាព និងផ្តោតលើមនុស្ស។</p>
             `
-        },
-        "ai-ml": {
-            img: "img/ai-robot.png",
-            category: "បញ្ញាសិប្បនិម្មិត",
-            title: "ការពន្យល់អំពីការរៀនរបស់ម៉ាស៊ីន",
-            meta: "ដោយក្រុម TechNews · មករា 14, 2026 · អាន 6 នាទី",
-            body: `
+                },
+                "ai-ml": {
+                    img: "img/ai-robot.png",
+                    category: "បញ្ញាសិប្បនិម្មិត",
+                    title: "ការពន្យល់អំពីការរៀនរបស់ម៉ាស៊ីន",
+                    meta: "ដោយក្រុម TechNews · មករា 14, 2026 · អាន 6 នាទី",
+                    body: `
                 <p>ការរៀនរបស់ម៉ាស៊ីន (ML) គឺជាផ្នែកមួយនៃ AI ដែលអនុញ្ញាតឱ្យកុំព្យូទ័ររៀនពីទិន្នន័យដោយមិនចាំបាច់សរសេរកម្មវិធីច្បាស់លាស់។</p>
                 <h2>ប្រភេទនៃការរៀនរបស់ម៉ាស៊ីន</h2>
                 <p><strong>ការរៀនដោយគ្រូ:</strong> គំរូត្រូវបានបង្វឹកលើទិន្នន័យដែលមានស្លាក។</p>
@@ -261,13 +273,13 @@ const articles = {
                 <h2>អនាគតនៃការរៀនរបស់ម៉ាស៊ីន</h2>
                 <p>នៅពេលទិន្នន័យកើនឡើង និងថាមពលកុំព្យូទ័រកើនឡើង ការរៀនរបស់ម៉ាស៊ីននឹងកាន់តែមានឥទ្ធិពល។</p>
             `
-        },
-        mobile: {
-            img: "img/smartphone.png",
-            category: "បច្ចេកវិទ្យាទូរស័ព្ទ",
-            title: "និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ",
-            meta: "ដោយក្រុម TechNews · មករា 12, 2026 · អាន 4 នាទី",
-            body: `
+                },
+                mobile: {
+                    img: "img/smartphone.png",
+                    category: "បច្ចេកវិទ្យាទូរស័ព្ទ",
+                    title: "និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ",
+                    meta: "ដោយក្រុម TechNews · មករា 12, 2026 · អាន 4 នាទី",
+                    body: `
                 <p>ទូរស័ព្ទបានក្លាយជាផ្នែកដ៏សំខាន់នៃជីវិតទំនើប។ ជារៀងរាល់ឆ្នាំ ក្រុមហ៊ុនផលិតបង្ហាញមុខងារថ្មីៗ។</p>
                 <h2>ការច្នៃប្រឌិតកាមេរ៉ា</h2>
                 <p>ទូរស័ព្ទទំនើបមានកាមេរ៉ាពហុកែវជាមួយការថតរូបបែបគណនា។</p>
@@ -278,13 +290,13 @@ const articles = {
                 <h2>អ្វីទៀតសម្រាប់ទូរស័ព្ទ?</h2>
                 <p>អនាគតនៃទូរស័ព្ទនឹងផ្តោតលើការរួមបញ្ចូល AI និងទម្រង់ថ្មី។</p>
             `
-        },
-        "mobile-5g": {
-            img: "img/mobile-5g.png",
-            category: "បច្ចេកវិទ្យាទូរស័ព្ទ",
-            title: "ការកើនឡើងនៃការតភ្ជាប់ 5G",
-            meta: "ដោយក្រុម TechNews · មករា 11, 2026 · អាន 5 នាទី",
-            body: `
+                },
+                "mobile-5g": {
+                    img: "img/mobile-5g.png",
+                    category: "បច្ចេកវិទ្យាទូរស័ព្ទ",
+                    title: "ការកើនឡើងនៃការតភ្ជាប់ 5G",
+                    meta: "ដោយក្រុម TechNews · មករា 11, 2026 · អាន 5 នាទី",
+                    body: `
                 <p>5G គឺជាជំនាន់ទីប្រាំនៃបច្ចេកវិទ្យាបណ្តាញទូរស័ព្ទ។ វាសន្យាល្បឿនលឿនជាង និងការយឺតយ៉ាវទាបជាង។</p>
                 <h2>របៀបដែល 5G ដំណើរការ</h2>
                 <p>5G ប្រើរលកវិទ្យុដែលមានប្រេកង់ខ្ពស់ជាង 4G។</p>
@@ -295,13 +307,13 @@ const articles = {
                 <h2>បញ្ហាប្រឈម និងអនាគត</h2>
                 <p>ការសាងសង់ហេដ្ឋារចនាសម្ព័ន្ធ 5G មានតម្លៃថ្លៃ ប៉ុន្តែការគ្របដណ្តប់នឹងបន្តពង្រីក។</p>
             `
-        },
-        computers: {
-            img: "img/laptop.png",
-            category: "កុំព្យូទ័រ",
-            title: "របៀបដែលកុំព្យូទ័រទំនើបកំពុងវិវត្ត",
-            meta: "ដោយក្រុម TechNews · មករា 10, 2026 · អាន 6 នាទី",
-            body: `
+                },
+                computers: {
+                    img: "img/laptop.png",
+                    category: "កុំព្យូទ័រ",
+                    title: "របៀបដែលកុំព្យូទ័រទំនើបកំពុងវិវត្ត",
+                    meta: "ដោយក្រុម TechNews · មករា 10, 2026 · អាន 6 នាទី",
+                    body: `
                 <p>កុំព្យូទ័របានវិវត្តយ៉ាងខ្លាំងចាប់តាំងពីម៉ាស៊ីនអេឡិចត្រូនិចដំបូង។ កុំព្យូទ័រសព្វថ្ងៃលឿនជាង តូចជាង និងមានឥទ្ធិពលជាង។</p>
                 <h2>ការកើនឡើងនៃកុំព្យូទ័រចល័ត</h2>
                 <p>Ultrabooks ឧបករណ៍ 2-in-1 និង tablet កំពុងពេញនិយមជាង។</p>
@@ -312,13 +324,13 @@ const articles = {
                 <h2>អនាគតនៃកុំព្យូទ័រ</h2>
                 <p>យើងអាចរំពឹងថានឹងឃើញដំណើរការ ARM ដែលមានឥទ្ធិពលជាង និងការរួមបញ្ចូល cloud កាន់តែប្រសើរ។</p>
             `
-        },
-        programming: {
-            img: "img/computer-code.png",
-            category: "កុំព្យូទ័រ",
-            title: "ភាសាសរសេរកម្មវិធីក្នុងឆ្នាំ 2026",
-            meta: "ដោយក្រុម TechNews · មករា 9, 2026 · អាន 7 នាទី",
-            body: `
+                },
+                programming: {
+                    img: "img/computer-code.png",
+                    category: "កុំព្យូទ័រ",
+                    title: "ភាសាសរសេរកម្មវិធីក្នុងឆ្នាំ 2026",
+                    meta: "ដោយក្រុម TechNews · មករា 9, 2026 · អាន 7 នាទី",
+                    body: `
                 <p>ភាសាសរសេរកម្មវិធីគឺជាគ្រឹះនៃកម្មវិធីទាំងអស់។ ក្នុងឆ្នាំ 2026 អ្នកអភិវឌ្ឍន៍មានជម្រើសច្រើនជាងពេលណាៗទាំងអស់។</p>
                 <h2>Python</h2>
                 <p>Python នៅតែជាភាសាពេញនិយមបំផុតសម្រាប់ AI ការរៀនរបស់ម៉ាស៊ីន និងវិទ្យាសាស្ត្រទិន្នន័យ។</p>
@@ -331,13 +343,13 @@ const articles = {
                 <h2>តើអ្នកគួររៀនភាសាណា?</h2>
                 <p>ចាប់ផ្តើមជាមួយ Python ប្រសិនបើអ្នកចាប់អារម្មណ៍លើ AI។ ជ្រើស JavaScript សម្រាប់ការអភិវឌ្ឍន៍គេហទំព័រ។</p>
             `
-        },
-        security: {
-            img: "img/cybersecurity.png",
-            category: "សន្តិសុខអនឡាញ",
-            title: "ហេតុអ្វីបានជាសន្តិសុខអនឡាញសំខាន់",
-            meta: "ដោយក្រុម TechNews · មករា 8, 2026 · អាន 5 នាទី",
-            body: `
+                },
+                security: {
+                    img: "img/cybersecurity.png",
+                    category: "សន្តិសុខអនឡាញ",
+                    title: "ហេតុអ្វីបានជាសន្តិសុខអនឡាញសំខាន់",
+                    meta: "ដោយក្រុម TechNews · មករា 8, 2026 · អាន 5 នាទី",
+                    body: `
                 <p>នៅក្នុងពិភពឌីជីថលសព្វថ្ងៃ សន្តិសុខអនឡាញសំខាន់ជាងពេលណាៗទាំងអស់។ ជារៀងរាល់ថ្ងៃ ការវាយប្រហារតាមអ៊ីនធឺណិតរាប់លានប្រភេទកំពុងកើតឡើង។</p>
                 <h2>ប្រភេទនៃការគំរាមកំហែងអនឡាញ</h2>
                 <p><strong>Phishing:</strong> អ៊ីមែលដែលបញ្ឆោតអ្នកប្រើប្រាស់ឱ្យបង្ហាញពាក្យសម្ងាត់។</p>
@@ -350,13 +362,13 @@ const articles = {
                 <h2>សេចក្តីសន្និដ្ឋាន</h2>
                 <p>ដោយអនុវត្តតាមទម្លាប់សាមញ្ញទាំងនេះ អ្នកអាចកាត់បន្ថយហានិភ័យនៃឧក្រិដ្ឋកម្មអនឡាញបានយ៉ាងច្រើន។</p>
             `
-        },
-        "security-privacy": {
-            img: "img/security-lock.png",
-            category: "សន្តិសុខអនឡាញ",
-            title: "ការការពារឯកជនភាពអនឡាញរបស់អ្នក",
-            meta: "ដោយក្រុម TechNews · មករា 7, 2026 · អាន 6 នាទី",
-            body: `
+                },
+                "security-privacy": {
+                    img: "img/security-lock.png",
+                    category: "សន្តិសុខអនឡាញ",
+                    title: "ការការពារឯកជនភាពអនឡាញរបស់អ្នក",
+                    meta: "ដោយក្រុម TechNews · មករា 7, 2026 · អាន 6 នាទី",
+                    body: `
                 <p>ព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកមានតម្លៃ។ រាល់ពេលអ្នកចូលអនឡាញ ទិន្នន័យអំពីសកម្មភាពរបស់អ្នកត្រូវបានប្រមូល។</p>
                 <h2>ប្រើ VPN</h2>
                 <p>VPN អ៊ិនគ្រីបចរាចរណ៍អ៊ីនធឺណិតរបស់អ្នក និងលាក់អាសយដ្ឋាន IP របស់អ្នក។</p>
@@ -369,36 +381,37 @@ const articles = {
                 <h2>រក្សាព័ត៌មានឱ្យទាន់សម័យ</h2>
                 <p>ការគំរាមកំហែងអនឡាញវិវត្តជាប្រចាំ។ រក្សាព័ត៌មានអំពីហានិភ័យថ្មីៗ។</p>
             `
+                }
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id") || "ai";
+
+        function loadArticle() {
+            const lang = localStorage.getItem("techpulse-lang") || "en";
+            const langArticles = articles[lang] || articles["en"];
+            const article = langArticles[id] || langArticles["ai"];
+
+            document.getElementById("articleImg").src = article.img;
+            document.getElementById("articleImg").alt = article.title;
+            document.getElementById("articleCategory").textContent = article.category;
+            document.getElementById("articleTitle").textContent = article.title;
+            document.getElementById("articleMeta").textContent = article.meta;
+            document.getElementById("articleBody").innerHTML = article.body;
+
+            document.title = "TechNews - " + article.title;
         }
-    }
-};
 
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id") || "ai";
+        loadArticle();
 
-function loadArticle() {
-    const lang = localStorage.getItem("techpulse-lang") || "en";
-    const langArticles = articles[lang] || articles["en"];
-    const article = langArticles[id] || langArticles["ai"];
-
-    document.getElementById("articleImg").src = article.img;
-    document.getElementById("articleImg").alt = article.title;
-    document.getElementById("articleCategory").textContent = article.category;
-    document.getElementById("articleTitle").textContent = article.title;
-    document.getElementById("articleMeta").textContent = article.meta;
-    document.getElementById("articleBody").innerHTML = article.body;
-
-    document.title = "TechNews - " + article.title;
-}
-
-loadArticle();
-
-document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-        setTimeout(loadArticle, 50);
-    });
-});
-</script>
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                setTimeout(loadArticle, 50);
+            });
+        });
+    </script>
 
 </body>
+
 </html>

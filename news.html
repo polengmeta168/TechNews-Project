@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,185 +10,233 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
+    <script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
 
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" data-page="index" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
-                <li class="nav-item"><a class="nav-link" data-page="news" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
-                <li class="nav-item"><a class="nav-link" data-page="categories" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
-                <li class="nav-item"><a class="nav-link" data-page="blog" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
-                <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
-            </ul>
-            <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
-            <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
-                <button type="button" class="lang-btn active" data-lang="en">EN</button>
-                <button type="button" class="lang-btn" data-lang="kh">KH</button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" data-page="index" href="index.html"><span
+                                    data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="news" href="news.html"><span data-en="News"
+                                    data-kh="ព័ត៌មាន">News</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="categories" href="categories.html"><span
+                                    data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="blog" href="blog.html"><span data-en="Blog"
+                                    data-kh="ប្លុក">Blog</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html"><span
+                                    data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+                    </ul>
+                    <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
+                    <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
+                        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="kh">KH</button>
+                    </div>
+                </div>
             </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section page-section">
+            <div class="container">
+                <div class="section-title text-center">
+                    <p data-en="STAY INFORMED" data-kh="រក្សាព័ត៌មានថ្មីៗ">STAY INFORMED</p>
+                    <h2 data-en="Latest Technology News" data-kh="ព័ត៌មានបច្ចេកវិទ្យាចុងក្រោយ">Latest Technology News
+                    </h2>
+                </div>
+
+
+                <div class="filter-row" role="group" aria-label="Filter news by category">
+                    <button type="button" class="filter-btn active" data-filter="all" data-en="All"
+                        data-kh="ទាំងអស់">All</button>
+                    <button type="button" class="filter-btn" data-filter="ai" data-en="AI" data-kh="AI">AI</button>
+                    <button type="button" class="filter-btn" data-filter="mobile" data-en="MOBILE"
+                        data-kh="ទូរស័ព្ទ">MOBILE</button>
+                    <button type="button" class="filter-btn" data-filter="computers" data-en="COMPUTERS"
+                        data-kh="កុំព្យូទ័រ">COMPUTERS</button>
+                    <button type="button" class="filter-btn" data-filter="security" data-en="SECURITY"
+                        data-kh="សន្តិសុខ">SECURITY</button>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="ai" data-href="article.html?id=ai">
+                            <button class="bookmark-btn" data-id="news-ai-1" aria-label="Add bookmark">📑</button>
+                            <img src="img/ai.png" alt="Artificial Intelligence">
+                            <div class="card-content">
+                                <span class="category" data-en="AI" data-kh="AI">AI</span>
+                                <h3 data-en="The Future of Artificial Intelligence" data-kh="អនាគតនៃបញ្ញាសិប្បនិម្មិត">
+                                    The Future of Artificial Intelligence</h3>
+                                <p data-en="Learn how artificial intelligence is changing the way we use technology."
+                                    data-kh="ស្វែងយល់ពីរបៀបដែលបញ្ញាសិប្បនិម្មិតកំពុងផ្លាស់ប្តូរបច្ចេកវិទ្យា។">Learn how
+                                    artificial intelligence is changing the way we use technology.</p>
+                                <a href="article.html?id=ai" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article
+                                    →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="ai" data-href="article.html?id=ai-ml">
+                            <button class="bookmark-btn" data-id="news-ai-2" aria-label="Add bookmark">📑</button>
+                            <img src="img/ai-robot.png" alt="Machine Learning">
+                            <div class="card-content">
+                                <span class="category" data-en="AI" data-kh="AI">AI</span>
+                                <h3 data-en="Machine Learning Explained" data-kh="ការពន្យល់អំពីការរៀនរបស់ម៉ាស៊ីន">
+                                    Machine Learning Explained</h3>
+                                <p data-en="Discover how machines learn from data and make intelligent decisions."
+                                    data-kh="ស្វែងយល់ពីរបៀបដែលម៉ាស៊ីនរៀនពីទិន្នន័យ និងធ្វើការសម្រេចចិត្តឆ្លាតវៃ។">
+                                    Discover how machines learn from data and make intelligent decisions.</p>
+                                <a href="article.html?id=ai-ml" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read
+                                    Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="mobile" data-href="article.html?id=mobile">
+                            <button class="bookmark-btn" data-id="news-mobile-1" aria-label="Add bookmark">📑</button>
+                            <img src="img/smartphone.png" alt="Smartphone technology">
+                            <div class="card-content">
+                                <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
+                                <h3 data-en="New Trends in Smartphone Technology"
+                                    data-kh="និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ">New Trends in Smartphone Technology
+                                </h3>
+                                <p data-en="Discover new features and innovations in modern smartphones."
+                                    data-kh="ស្វែងយល់ពីមុខងារថ្មីៗ និងការច្នៃប្រឌិតក្នុងទូរស័ព្ទទំនើប។">Discover new
+                                    features and innovations in modern smartphones.</p>
+                                <a href="article.html?id=mobile" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read
+                                    Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="mobile" data-href="article.html?id=mobile-5g">
+                            <button class="bookmark-btn" data-id="news-mobile-2" aria-label="Add bookmark">📑</button>
+                            <img src="img/mobile-5g.png" alt="5G Technology">
+                            <div class="card-content">
+                                <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
+                                <h3 data-en="The Rise of 5G Connectivity" data-kh="ការកើនឡើងនៃការតភ្ជាប់ 5G">The Rise of
+                                    5G Connectivity</h3>
+                                <p data-en="How 5G is transforming mobile internet speeds and connectivity."
+                                    data-kh="របៀបដែល 5G កំពុងផ្លាស់ប្តូរល្បឿនអ៊ីនធឺណិតទូរស័ព្ទ និងការតភ្ជាប់។">How 5G is
+                                    transforming mobile internet speeds and connectivity.</p>
+                                <a href="article.html?id=mobile-5g" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read
+                                    Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="computers" data-href="article.html?id=computers">
+                            <button class="bookmark-btn" data-id="news-computers-1"
+                                aria-label="Add bookmark">📑</button>
+                            <img src="img/laptop.png" alt="Laptop computer">
+                            <div class="card-content">
+                                <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
+                                <h3 data-en="How Modern Computers Are Evolving"
+                                    data-kh="របៀបដែលកុំព្យូទ័រទំនើបកំពុងវិវត្ត">How Modern Computers Are Evolving</h3>
+                                <p data-en="Explore the latest improvements in computer performance and design."
+                                    data-kh="ស្វែងយល់ពីភាពប្រសើរឡើងថ្មីៗក្នុងការអនុវត្ត និងការរចនាកុំព្យូទ័រ។">Explore
+                                    the latest improvements in computer performance and design.</p>
+                                <a href="article.html?id=computers" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read
+                                    Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="computers" data-href="article.html?id=programming">
+                            <button class="bookmark-btn" data-id="news-computers-2"
+                                aria-label="Add bookmark">📑</button>
+                            <img src="img/computer-code.png" alt="Programming Code">
+                            <div class="card-content">
+                                <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
+                                <h3 data-en="Programming Languages in 2026" data-kh="ភាសាសរសេរកម្មវិធីក្នុងឆ្នាំ 2026">
+                                    Programming Languages in 2026</h3>
+                                <p data-en="The most popular programming languages every developer should know."
+                                    data-kh="ភាសាសរសេរកម្មវិធីពេញនិយមបំផុតដែលអ្នកអភិវឌ្ឍន៍គ្រប់រូបគួរដឹង។">The most
+                                    popular programming languages every developer should know.</p>
+                                <a href="article.html?id=programming" data-en="Read Article →"
+                                    data-kh="អានអត្ថបទ →">Read Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="security" data-href="article.html?id=security">
+                            <button class="bookmark-btn" data-id="news-security-1" aria-label="Add bookmark">📑</button>
+                            <img src="img/cybersecurity.png" alt="Cybersecurity">
+                            <div class="card-content">
+                                <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
+                                <h3 data-en="Why Cybersecurity Is Important" data-kh="ហេតុអ្វីបានជាសន្តិសុខអនឡាញសំខាន់">
+                                    Why Cybersecurity Is Important</h3>
+                                <p data-en="Learn simple ways to stay safe in today's digital world."
+                                    data-kh="ស្វែងយល់ពីវិធីសាមញ្ញក្នុងការការពារខ្លួនក្នុងពិភពឌីជីថល។">Learn simple ways
+                                    to stay safe in today's digital world.</p>
+                                <a href="article.html?id=security" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read
+                                    Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card" data-category="security"
+                            data-href="article.html?id=security-privacy">
+                            <button class="bookmark-btn" data-id="news-security-2" aria-label="Add bookmark">📑</button>
+                            <img src="img/security-lock.png" alt="Online Privacy">
+                            <div class="card-content">
+                                <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
+                                <h3 data-en="Protecting Your Online Privacy" data-kh="ការការពារឯកជនភាពអនឡាញរបស់អ្នក">
+                                    Protecting Your Online Privacy</h3>
+                                <p data-en="Essential tips to keep your personal information safe online."
+                                    data-kh="គន្លឹះសំខាន់ៗដើម្បីរក្សាព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកឱ្យមានសុវត្ថិភាពលើអនឡាញ។">
+                                    Essential tips to keep your personal information safe online.</p>
+                                <a href="article.html?id=security-privacy" data-en="Read Article →"
+                                    data-kh="អានអត្ថបទ →">Read Article →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <h3 class="footer-logo">Tech<span>News</span></h3>
+            <p><span data-en="Stay updated. Stay connected with technology."
+                    data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with
+                    technology.</span></p>
+            <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
         </div>
-    </div>
-</nav>
-</header>
+    </footer>
 
-<main>
-    <section class="section page-section">
-        <div class="container">
-            <div class="section-title text-center">
-                <p data-en="STAY INFORMED" data-kh="រក្សាព័ត៌មានថ្មីៗ">STAY INFORMED</p>
-                <h2 data-en="Latest Technology News" data-kh="ព័ត៌មានបច្ចេកវិទ្យាចុងក្រោយ">Latest Technology News</h2>
-            </div>
-
-            <!-- Filter buttons -->
-            <div class="filter-row" role="group" aria-label="Filter news by category">
-                <button type="button" class="filter-btn active" data-filter="all" data-en="All" data-kh="ទាំងអស់">All</button>
-                <button type="button" class="filter-btn" data-filter="ai" data-en="AI" data-kh="AI">AI</button>
-                <button type="button" class="filter-btn" data-filter="mobile" data-en="MOBILE" data-kh="ទូរស័ព្ទ">MOBILE</button>
-                <button type="button" class="filter-btn" data-filter="computers" data-en="COMPUTERS" data-kh="កុំព្យូទ័រ">COMPUTERS</button>
-                <button type="button" class="filter-btn" data-filter="security" data-en="SECURITY" data-kh="សន្តិសុខ">SECURITY</button>
-            </div>
-
-            <div class="row g-4">
-
-                <!-- AI 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="ai" data-href="article.html?id=ai">
-                        <button class="bookmark-btn" data-id="news-ai-1" aria-label="Add bookmark">📑</button>
-                        <img src="img/ai.png" alt="Artificial Intelligence">
-                        <div class="card-content">
-                            <span class="category" data-en="AI" data-kh="AI">AI</span>
-                            <h3 data-en="The Future of Artificial Intelligence" data-kh="អនាគតនៃបញ្ញាសិប្បនិម្មិត">The Future of Artificial Intelligence</h3>
-                            <p data-en="Learn how artificial intelligence is changing the way we use technology." data-kh="ស្វែងយល់ពីរបៀបដែលបញ្ញាសិប្បនិម្មិតកំពុងផ្លាស់ប្តូរបច្ចេកវិទ្យា។">Learn how artificial intelligence is changing the way we use technology.</p>
-                            <a href="article.html?id=ai" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- AI 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="ai" data-href="article.html?id=ai-ml">
-                        <button class="bookmark-btn" data-id="news-ai-2" aria-label="Add bookmark">📑</button>
-                        <img src="img/ai-robot.png" alt="Machine Learning">
-                        <div class="card-content">
-                            <span class="category" data-en="AI" data-kh="AI">AI</span>
-                            <h3 data-en="Machine Learning Explained" data-kh="ការពន្យល់អំពីការរៀនរបស់ម៉ាស៊ីន">Machine Learning Explained</h3>
-                            <p data-en="Discover how machines learn from data and make intelligent decisions." data-kh="ស្វែងយល់ពីរបៀបដែលម៉ាស៊ីនរៀនពីទិន្នន័យ និងធ្វើការសម្រេចចិត្តឆ្លាតវៃ។">Discover how machines learn from data and make intelligent decisions.</p>
-                            <a href="article.html?id=ai-ml" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Mobile 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="mobile" data-href="article.html?id=mobile">
-                        <button class="bookmark-btn" data-id="news-mobile-1" aria-label="Add bookmark">📑</button>
-                        <img src="img/smartphone.png" alt="Smartphone technology">
-                        <div class="card-content">
-                            <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
-                            <h3 data-en="New Trends in Smartphone Technology" data-kh="និន្នាការថ្មីក្នុងបច្ចេកវិទ្យាទូរស័ព្ទ">New Trends in Smartphone Technology</h3>
-                            <p data-en="Discover new features and innovations in modern smartphones." data-kh="ស្វែងយល់ពីមុខងារថ្មីៗ និងការច្នៃប្រឌិតក្នុងទូរស័ព្ទទំនើប។">Discover new features and innovations in modern smartphones.</p>
-                            <a href="article.html?id=mobile" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Mobile 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="mobile" data-href="article.html?id=mobile-5g">
-                        <button class="bookmark-btn" data-id="news-mobile-2" aria-label="Add bookmark">📑</button>
-                        <img src="img/mobile-5g.png" alt="5G Technology">
-                        <div class="card-content">
-                            <span class="category" data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</span>
-                            <h3 data-en="The Rise of 5G Connectivity" data-kh="ការកើនឡើងនៃការតភ្ជាប់ 5G">The Rise of 5G Connectivity</h3>
-                            <p data-en="How 5G is transforming mobile internet speeds and connectivity." data-kh="របៀបដែល 5G កំពុងផ្លាស់ប្តូរល្បឿនអ៊ីនធឺណិតទូរស័ព្ទ និងការតភ្ជាប់។">How 5G is transforming mobile internet speeds and connectivity.</p>
-                            <a href="article.html?id=mobile-5g" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Computers 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="computers" data-href="article.html?id=computers">
-                        <button class="bookmark-btn" data-id="news-computers-1" aria-label="Add bookmark">📑</button>
-                        <img src="img/laptop.png" alt="Laptop computer">
-                        <div class="card-content">
-                            <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
-                            <h3 data-en="How Modern Computers Are Evolving" data-kh="របៀបដែលកុំព្យូទ័រទំនើបកំពុងវិវត្ត">How Modern Computers Are Evolving</h3>
-                            <p data-en="Explore the latest improvements in computer performance and design." data-kh="ស្វែងយល់ពីភាពប្រសើរឡើងថ្មីៗក្នុងការអនុវត្ត និងការរចនាកុំព្យូទ័រ។">Explore the latest improvements in computer performance and design.</p>
-                            <a href="article.html?id=computers" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Computers 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="computers" data-href="article.html?id=programming">
-                        <button class="bookmark-btn" data-id="news-computers-2" aria-label="Add bookmark">📑</button>
-                        <img src="img/computer-code.png" alt="Programming Code">
-                        <div class="card-content">
-                            <span class="category" data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</span>
-                            <h3 data-en="Programming Languages in 2026" data-kh="ភាសាសរសេរកម្មវិធីក្នុងឆ្នាំ 2026">Programming Languages in 2026</h3>
-                            <p data-en="The most popular programming languages every developer should know." data-kh="ភាសាសរសេរកម្មវិធីពេញនិយមបំផុតដែលអ្នកអភិវឌ្ឍន៍គ្រប់រូបគួរដឹង។">The most popular programming languages every developer should know.</p>
-                            <a href="article.html?id=programming" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Security 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="security" data-href="article.html?id=security">
-                        <button class="bookmark-btn" data-id="news-security-1" aria-label="Add bookmark">📑</button>
-                        <img src="img/cybersecurity.png" alt="Cybersecurity">
-                        <div class="card-content">
-                            <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
-                            <h3 data-en="Why Cybersecurity Is Important" data-kh="ហេតុអ្វីបានជាសន្តិសុខអនឡាញសំខាន់">Why Cybersecurity Is Important</h3>
-                            <p data-en="Learn simple ways to stay safe in today's digital world." data-kh="ស្វែងយល់ពីវិធីសាមញ្ញក្នុងការការពារខ្លួនក្នុងពិភពឌីជីថល។">Learn simple ways to stay safe in today's digital world.</p>
-                            <a href="article.html?id=security" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Security 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <article class="news-card" data-category="security" data-href="article.html?id=security-privacy">
-                        <button class="bookmark-btn" data-id="news-security-2" aria-label="Add bookmark">📑</button>
-                        <img src="img/security-lock.png" alt="Online Privacy">
-                        <div class="card-content">
-                            <span class="category" data-en="Security" data-kh="សន្តិសុខ">Security</span>
-                            <h3 data-en="Protecting Your Online Privacy" data-kh="ការការពារឯកជនភាពអនឡាញរបស់អ្នក">Protecting Your Online Privacy</h3>
-                            <p data-en="Essential tips to keep your personal information safe online." data-kh="គន្លឹះសំខាន់ៗដើម្បីរក្សាព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នកឱ្យមានសុវត្ថិភាពលើអនឡាញ។">Essential tips to keep your personal information safe online.</p>
-                            <a href="article.html?id=security-privacy" data-en="Read Article →" data-kh="អានអត្ថបទ →">Read Article →</a>
-                        </div>
-                    </article>
-                </div>
-
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container text-center">
-        <h3 class="footer-logo">Tech<span>News</span></h3>
-        <p><span data-en="Stay updated. Stay connected with technology." data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</span></p>
-        <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
