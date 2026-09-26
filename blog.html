@@ -260,7 +260,7 @@
 
                 <div class="blog-wrapper">
 
-
+                    <!-- Top Bar -->
                     <div class="blog-top-bar">
                         <button id="readingModeBtn" class="reading-mode-btn" type="button">
                             📖 <span data-en="Reading Mode" data-kh="របៀបអាន">Reading Mode</span>
@@ -269,6 +269,7 @@
                             read</span>
                     </div>
 
+                    <!-- Video Box -->
                     <div class="video-box">
                         <iframe src="https://www.youtube.com/embed/ad79nYk2keg"
                             title="Artificial Intelligence Explained" frameborder="0" loading="lazy"
@@ -277,32 +278,36 @@
                         </iframe>
                     </div>
 
-
+                    <!-- Category -->
                     <span id="blogCategory" class="category-tag" data-en="ARTIFICIAL INTELLIGENCE"
                         data-kh="បញ្ញាសិប្បនិម្មិត">ARTIFICIAL INTELLIGENCE</span>
 
-
+                    <!-- Title -->
                     <h1 id="blogTitle" class="blog-title"
                         data-en="Understanding Artificial Intelligence in Everyday Life"
                         data-kh="ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ">Understanding Artificial
                         Intelligence in Everyday Life</h1>
 
-
+                    <!-- Meta -->
                     <p id="blogMeta" class="blog-meta" data-en="By TechNews Team · September 2024"
                         data-kh="ដោយក្រុម TechNews · កញ្ញា 2024">By <strong>TechNews Team</strong> · September 2024</p>
 
-
+                    <!-- Body -->
                     <div id="blogBody" class="blog-body">
                         <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
                     </div>
 
-
+                    <!-- Bottom Bar -->
                     <div class="blog-bottom-bar">
                         <a href="index.html" class="back-btn" data-en="← Back to Top Overview"
                             data-kh="← ត្រឡប់ទៅទំព័រដើម">← Back to Top Overview</a>
                         <span class="share-row">
                             <span data-en="Share:" data-kh="ចែករំលែក:">Share:</span>
-                            <a href="#">Twitter</a> · <a href="#">LinkedIn</a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://tech-new-five.vercel.app/blog.html"
+                                target="_blank" rel="noopener">Facebook</a>
+                            ·
+                            <a href="https://www.facebook.com/dialog/send?link=https://tech-new-five.vercel.app/blog.html&app_id=123456789&redirect_uri=https://tech-new-five.vercel.app/blog.html"
+                                target="_blank" rel="noopener">Messenger</a>
                         </span>
                     </div>
 
@@ -326,7 +331,7 @@
     <script src="js/script.js"></script>
 
     <script>
-
+        /* Blog content with EN and KH versions */
         const blogPosts = {
             en: {
                 category: "ARTIFICIAL INTELLIGENCE",
@@ -370,7 +375,7 @@
             }
         };
 
-
+        /* Detect current language and load content */
         function loadBlogContent() {
             const lang = localStorage.getItem("techpulse-lang") || "en";
             const post = blogPosts[lang] || blogPosts["en"];
@@ -384,9 +389,10 @@
             document.title = "TechNews - " + post.title;
         }
 
-
+        /* Load on page start */
         loadBlogContent();
 
+        /* Reload content when language button is clicked */
         document.querySelectorAll(".lang-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
                 setTimeout(loadBlogContent, 50);
