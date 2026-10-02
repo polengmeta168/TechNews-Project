@@ -127,6 +127,9 @@ section {
 }
 
 .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     font-size: 22px;
     font-weight: 700;
     color: var(--text-heading) !important;
@@ -136,6 +139,14 @@ section {
     padding: 0 !important;
     white-space: nowrap;
     flex-shrink: 0;
+}
+
+.navbar-brand .site-logo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex: 0 0 32px;
 }
 
 .navbar-brand span,
@@ -651,6 +662,22 @@ body.dark-mode .about-box {
     margin-bottom: 25px;
 }
 
+.contact-access-note {
+    background: var(--bg-section-alt);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    padding: 12px 14px;
+}
+
+.contact-form-status {
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
 .telegram-user {
     display: block;
     background: var(--bg-section-alt);
@@ -815,7 +842,9 @@ body.dark-mode #darkModeBtn::before {
 }
 
 .lang-toggle {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 88px;
     height: 40px;
     min-height: 40px;
     max-height: 40px;
@@ -834,8 +863,7 @@ body.dark-mode #darkModeBtn::before {
     color: var(--text-heading);
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    padding: 0 14px;
+    padding: 0;
     cursor: pointer;
     transition: 0.2s;
     display: flex;

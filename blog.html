@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechNews - Blog</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-
     <style>
         .blog-wrapper {
             max-width: 800px;
@@ -24,9 +20,7 @@
             border: 1px solid var(--border);
             border-radius: 24px;
             padding: 40px 50px;
-            position: relative;
         }
-
         .blog-top-bar {
             display: flex;
             justify-content: space-between;
@@ -35,7 +29,6 @@
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .reading-mode-btn {
             display: inline-flex;
             align-items: center;
@@ -52,32 +45,27 @@
             cursor: pointer;
             transition: 0.2s;
         }
-
-        .reading-mode-btn:hover {
+        .reading-mode-btn:hover,
+        .reading-mode-btn.active {
             background: var(--accent);
             border-color: var(--accent);
             color: var(--on-accent);
         }
-
         .read-time {
             color: var(--text-muted);
             font-size: 13px;
             font-weight: 500;
         }
-
-        /* ================= VIDEO BOX ================= */
         .video-box {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
-            /* 16:9 aspect ratio */
             margin-bottom: 40px;
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--border);
             background: #000;
         }
-
         .video-box iframe {
             position: absolute;
             top: 0;
@@ -86,7 +74,6 @@
             height: 100%;
             border: none;
         }
-
         .category-tag {
             display: inline-block;
             color: var(--accent);
@@ -96,7 +83,6 @@
             text-transform: uppercase;
             margin-bottom: 15px;
         }
-
         .blog-title {
             font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
             font-size: 34px;
@@ -105,7 +91,6 @@
             line-height: 1.3;
             margin-bottom: 15px;
         }
-
         .blog-meta {
             color: var(--text-muted);
             font-size: 13px;
@@ -113,22 +98,13 @@
             padding-bottom: 25px;
             border-bottom: 1px solid var(--border);
         }
-
-        .blog-meta strong {
-            color: var(--text-heading);
-            font-weight: 600;
-        }
-
+        .blog-meta strong { color: var(--text-heading); font-weight: 600; }
         .blog-body {
             color: var(--text-body);
             font-size: 16px;
             line-height: 1.9;
         }
-
-        .blog-body p {
-            margin-bottom: 20px;
-        }
-
+        .blog-body p { margin-bottom: 20px; }
         .blog-body h2 {
             font-family: 'Kantumruy Pro', 'Poppins', sans-serif;
             font-size: 24px;
@@ -137,12 +113,6 @@
             margin-top: 35px;
             margin-bottom: 15px;
         }
-
-        .blog-body strong {
-            color: var(--text-heading);
-            font-weight: 600;
-        }
-
         .blog-bottom-bar {
             display: flex;
             justify-content: space-between;
@@ -153,100 +123,65 @@
             gap: 15px;
             flex-wrap: wrap;
         }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-heading);
-            font-size: 13px;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .back-btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: var(--on-accent);
-        }
-
-        .share-row {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
+        .share-row { color: var(--text-muted); font-size: 13px; }
         .share-row a {
             color: var(--text-heading);
             text-decoration: none;
             margin-left: 8px;
             font-weight: 500;
-            transition: 0.2s;
         }
-
-        .share-row a:hover {
-            color: var(--accent);
-        }
-
-        body.reading-mode .blog-wrapper {
-            max-width: 680px;
-        }
-
-        body.reading-mode .blog-body {
-            font-size: 19px;
-            line-height: 2;
-        }
-
-        body.reading-mode .blog-body h2 {
-            font-size: 28px;
-        }
-
+        .share-row a:hover { color: var(--accent); }
+        body.reading-mode .blog-wrapper { max-width: 680px; }
+        body.reading-mode .blog-body { font-size: 19px; line-height: 2; }
+        body.reading-mode .blog-body h2 { font-size: 28px; }
         @media (max-width: 768px) {
-            .blog-wrapper {
-                padding: 25px 20px;
-            }
-
-            .blog-title {
-                font-size: 26px;
-            }
-
-            .blog-body h2 {
-                font-size: 21px;
-            }
+            .blog-wrapper { padding: 25px 20px; }
+            .blog-title { font-size: 26px; }
+            .blog-body h2 { font-size: 21px; }
         }
     </style>
 </head>
 
 <body>
-    <script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("techpulse-theme") !== "light") {
+                    document.body.classList.add("dark-mode");
+                }
+                var lang = localStorage.getItem("techpulse-lang") || "en";
+                document.documentElement.lang = lang === "kh" ? "km" : "en";
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll("[data-en]").forEach(function (el) {
+                        var t = lang === "kh" ? el.getAttribute("data-kh") : el.getAttribute("data-en");
+                        if (t) el.textContent = t;
+                    });
+                    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+                        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+                    });
+                });
+            } catch (e) {}
+        })();
+    </script>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+                <a class="navbar-brand" href="index.html"><img class="site-logo" src="img/logo.png" alt="">Tech<span>News</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home"
-                                    data-kh="ទំព័រដើម">Home</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News"
-                                    data-kh="ព័ត៌មាន">News</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories"
-                                    data-kh="ប្រភេទ">Categories</span></a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html"><span data-en="Blog"
-                                    data-kh="ប្លុក">Blog</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact"
-                                    data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="index" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="news" href="news-page.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="categories" href="categories-page.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="blog" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact-page.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
                     </ul>
                     <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
                     <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
-                        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="en">EN</button>
                         <button type="button" class="lang-btn" data-lang="kh">KH</button>
                     </div>
                 </div>
@@ -257,62 +192,38 @@
     <main>
         <section class="section page-section">
             <div class="container">
-
                 <div class="blog-wrapper">
-
-                    <!-- Top Bar -->
                     <div class="blog-top-bar">
                         <button id="readingModeBtn" class="reading-mode-btn" type="button">
                             📖 <span data-en="Reading Mode" data-kh="របៀបអាន">Reading Mode</span>
                         </button>
-                        <span id="readTime" class="read-time" data-en="5 min read" data-kh="អាន 5 នាទី">5 min
-                            read</span>
+                        <span id="readTime" class="read-time" data-en="5 min read" data-kh="អាន 5 នាទី">5 min read</span>
                     </div>
 
-                    <!-- Video Box -->
                     <div class="video-box">
                         <iframe src="https://www.youtube.com/embed/ad79nYk2keg"
                             title="Artificial Intelligence Explained" frameborder="0" loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                            allowfullscreen></iframe>
                     </div>
 
-                    <!-- Category -->
-                    <span id="blogCategory" class="category-tag" data-en="ARTIFICIAL INTELLIGENCE"
-                        data-kh="បញ្ញាសិប្បនិម្មិត">ARTIFICIAL INTELLIGENCE</span>
-
-                    <!-- Title -->
-                    <h1 id="blogTitle" class="blog-title"
-                        data-en="Understanding Artificial Intelligence in Everyday Life"
-                        data-kh="ការយល់ដឹងអំពីបញ្ញាសិប្បនិម្មិតក្នុងជីវិតប្រចាំថ្ងៃ">Understanding Artificial
-                        Intelligence in Everyday Life</h1>
-
-                    <!-- Meta -->
-                    <p id="blogMeta" class="blog-meta" data-en="By TechNews Team · September 2024"
-                        data-kh="ដោយក្រុម TechNews · កញ្ញា 2024">By <strong>TechNews Team</strong> · September 2024</p>
-
-                    <!-- Body -->
+                    <span id="blogCategory" class="category-tag">ARTIFICIAL INTELLIGENCE</span>
+                    <h1 id="blogTitle" class="blog-title">Understanding Artificial Intelligence in Everyday Life</h1>
+                    <p id="blogMeta" class="blog-meta">By <strong>TechNews Team</strong> · September 2024</p>
                     <div id="blogBody" class="blog-body">
-                        <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
+                        <p>Loading article...</p>
                     </div>
 
-                    <!-- Bottom Bar -->
                     <div class="blog-bottom-bar">
-                        <a href="index.html" class="back-btn" data-en="← Back to Top Overview"
-                            data-kh="← ត្រឡប់ទៅទំព័រដើម">← Back to Top Overview</a>
+                        <a href="index.html" class="back-btn" data-en="← Back to Home" data-kh="← ត្រឡប់ទៅទំព័រដើម">← Back to Home</a>
                         <span class="share-row">
                             <span data-en="Share:" data-kh="ចែករំលែក:">Share:</span>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://tech-new-five.vercel.app/blog.html"
-                                target="_blank" rel="noopener">Facebook</a>
+                            <a href="#" class="share-facebook" target="_blank" rel="noopener">Facebook</a>
                             ·
-                            <a href="https://www.facebook.com/dialog/send?link=https://tech-new-five.vercel.app/blog.html&app_id=123456789&redirect_uri=https://tech-new-five.vercel.app/blog.html"
-                                target="_blank" rel="noopener">Messenger</a>
+                            <a href="#" class="share-telegram" target="_blank" rel="noopener">Telegram</a>
                         </span>
                     </div>
-
                 </div>
-
             </div>
         </section>
     </main>
@@ -320,18 +231,15 @@
     <footer>
         <div class="container text-center">
             <h3 class="footer-logo">Tech<span>News</span></h3>
-            <p><span data-en="Stay updated. Stay connected with technology."
-                    data-kh="ទទួលព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with
-                    technology.</span></p>
-            <p class="copyright"><span data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</span></p>
+            <p data-en="Stay updated. Stay connected with technology."
+                data-kh="តាមដានព័ត៌មានថ្មីៗ។ ភ្ជាប់ទំនាក់ទំនងជាមួយបច្ចេកវិទ្យា។">Stay updated. Stay connected with technology.</p>
+            <p class="copyright" data-en="© 2026 TechNews" data-kh="© 2026 TechNews">© 2026 TechNews</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/script.js"></script>
-
     <script>
-        /* Blog content with EN and KH versions */
         const blogPosts = {
             en: {
                 category: "ARTIFICIAL INTELLIGENCE",
@@ -341,14 +249,11 @@
                 body: `
             <p>Artificial Intelligence (AI) has rapidly shifted from lab experiments into the bedrock of modern tech. Today, AI powers search recommendation systems, natural speech translation, smartphone computational photography, and automated medical diagnosis.</p>
             <p>As intelligent software continues to evolve, understanding basic neural network concepts and data privacy safeguards helps users navigate modern digital experiences responsibly.</p>
-
             <h2>Why AI Matters</h2>
             <p>AI enables computers to perform tasks that normally require human intelligence. This includes recognizing images, understanding speech, translating languages, and making complex decisions.</p>
             <p>Industries such as healthcare, education, finance, and transportation are being reshaped by AI. Doctors use AI to detect diseases earlier, teachers use it to personalize learning, and companies use it to serve customers faster.</p>
-
             <h2>Challenges and Opportunities</h2>
             <p>With great power comes great responsibility. AI raises important questions about privacy, bias, and employment. Governments and organizations must create ethical guidelines to ensure it benefits everyone fairly.</p>
-
             <h2>The Road Ahead</h2>
             <p>The future of AI will focus on making systems more transparent, more efficient, and more human-centered. Whether you are a student, a professional, or just curious, learning about AI today will prepare you for the world of tomorrow.</p>
         `
@@ -359,47 +264,52 @@
                 meta: "ដោយ <strong>ក្រុម TechNews</strong> · កញ្ញា 2024",
                 readTime: "អាន 4 នាទី",
                 body: `
-            <p>បញ្ញាសិប្បនិម្មិត (AI) បានផ្លាស់ប្តូរយ៉ាងឆាប់រហ័សពីការពិសោធន៍ក្នុងមន្ទីរពិសោធន៍ ទៅជាគ្រឹះនៃបច្ចេកវិទ្យាទំនើប។ សព្វថ្ងៃនេះ AI គ្រប់គ្រងប្រព័ន្ធណែនាំការស្វែងរក ការបកប្រែសំដីធម្មជាតិ ការថតរូបតាមទូរស័ព្ទ និងការធ្វើរោគវិនិច្ឆ័យវេជ្ជសាស្ត្រដោយស្វ័យប្រវត្តិ។</p>
-            <p>នៅពេលកម្មវិធីឆ្លាតវៃបន្តវិវត្ត ការយល់ដឹងពីគំនិតបណ្តាញសរសៃប្រសាទ និងឯកជនភាពទិន្នន័យ ជួយអ្នកប្រើប្រាស់ក្នុងការរុករកបទពិសោធន៍ឌីជីថលទំនើបដោយការទទួលខុសត្រូវ។</p>
-
-            <h2>ហេតុអ្វី AI សំខាន់</h2>
-            <p>AI អនុញ្ញាតឱ្យកុំព្យូទ័របំពេញភារកិច្ចដែលជាធម្មតាត្រូវការបញ្ញារបស់មនុស្ស។ នេះរួមមានការស្គាល់រូបភាព ការយល់ដឹងពីសំដី ការបកប្រែភាសា និងការសម្រេចចិត្តស្មុគស្មាញ។</p>
-            <p>ឧស្សាហកម្មដូចជាសុខាភិបាល ការអប់រំ ហិរញ្ញវត្ថុ និងការដឹកជញ្ជូន កំពុងត្រូវបានផ្លាស់ប្តូរដោយ AI។ វេជ្ជបណ្ឌិតប្រើ AI ដើម្បីរកជំងឺបានលឿន គ្រូបង្រៀនប្រើវាដើម្បីធ្វើឱ្យការរៀនមានលក្ខណៈផ្ទាល់ខ្លួន ហើយក្រុមហ៊ុនប្រើវាដើម្បីបម្រើអតិថិជនបានលឿន។</p>
-
+            <p>បញ្ញាសិប្បនិម្មិត (AI) បានប្រែក្លាយពីការពិសោធន៍ក្នុងមន្ទីរពិសោធន៍ ទៅជាផ្នែកសំខាន់នៃបច្ចេកវិទ្យាទំនើប។ បច្ចុប្បន្ន AI ដំណើរការប្រព័ន្ធណែនាំការស្វែងរក ការបកប្រែសំដីធម្មជាតិ ការថតរូបតាមទូរស័ព្ទ និងការធ្វើរោគវិនិច្ឆ័យវេជ្ជសាស្ត្រស្វ័យប្រវត្តិ។</p>
+            <h2>ហេតុអ្វី AI សំខាន់?</h2>
+            <p>AI អនុញ្ញាតឱ្យកុំព្យូទ័របំពេញកិច្ចការដែលត្រូវការបញ្ញាមនុស្ស។ នេះរួមមានការស្គាល់រូបភាព ការយល់សំដី ការបកប្រែភាសា និងការសម្រេចចិត្តស្មុគស្មាញ។</p>
             <h2>បញ្ហាប្រឈម និងឱកាស</h2>
-            <p>ជាមួយនឹងអំណាចដ៏អស្ចារ្យ មកជាមួយនឹងការទទួលខុសត្រូវដ៏អស្ចារ្យ។ AI បង្កើតសំណួរសំខាន់ៗអំពីឯកជនភាព ការលំអៀង និងការងារ។ រដ្ឋាភិបាល និងអង្គការត្រូវបង្កើតគោលការណ៍ក្រមសីលធម៌ ដើម្បីធានាថាវាផ្តល់អត្ថប្រយោជន៍ដល់មនុស្សគ្រប់រូបដោយយុត្តិធម៌។</p>
-
+            <p>ជាមួយអំណាចដ៏អស្ចារ្យ មកជាមួយការទទួលខុសត្រូវដ៏អស្ចារ្យ។ AI លើកសំណួរអំពីឯកជនភាព ភាពលំអៀង និងការងារ។</p>
             <h2>ផ្លូវទៅមុខ</h2>
-            <p>អនាគតនៃ AI នឹងផ្តោតលើការធ្វើឱ្យប្រព័ន្ធមានតម្លាភាព ប្រសិទ្ធភាព និងផ្តោតលើមនុស្ស។ មិនថាអ្នកជាសិស្ស អ្នកជំនាញ ឬគ្រាន់តែចង់ដឹង ការរៀនអំពី AI នៅថ្ងៃនេះ នឹងរៀបចំអ្នកសម្រាប់ពិភពលោកនៅថ្ងៃស្អែក។</p>
+            <p>អនាគតនៃ AI នឹងផ្តោតលើការធ្វើឱ្យប្រព័ន្ធមានតម្លាភាព ប្រសិទ្ធភាព និងផ្តោតលើមនុស្ស។</p>
         `
             }
         };
 
-        /* Detect current language and load content */
         function loadBlogContent() {
             const lang = localStorage.getItem("techpulse-lang") || "en";
             const post = blogPosts[lang] || blogPosts["en"];
-
             document.getElementById("blogCategory").textContent = post.category;
             document.getElementById("blogTitle").textContent = post.title;
             document.getElementById("blogMeta").innerHTML = post.meta;
             document.getElementById("readTime").textContent = post.readTime;
             document.getElementById("blogBody").innerHTML = post.body;
-
             document.title = "TechNews - " + post.title;
         }
 
-        /* Load on page start */
         loadBlogContent();
 
-        /* Reload content when language button is clicked */
         document.querySelectorAll(".lang-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
                 setTimeout(loadBlogContent, 50);
             });
         });
-    </script>
 
+        /* ===== Dynamic Share Links ===== */
+        (function setupShareLinks() {
+            const currentUrl = encodeURIComponent(window.location.href);
+            const pageTitle = encodeURIComponent(document.title);
+
+            const fbLink = document.querySelector(".share-facebook");
+            const tgLink = document.querySelector(".share-telegram");
+
+            if (fbLink) {
+                fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+            }
+            if (tgLink) {
+                tgLink.href = `https://t.me/share/url?url=${currentUrl}&text=${pageTitle}`;
+            }
+        })();
+    </script>
 </body>
 
 </html>

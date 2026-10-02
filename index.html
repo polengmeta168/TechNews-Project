@@ -5,34 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechNews - Technology News & Blog</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("techpulse-theme") !== "light") {
+                    document.body.classList.add("dark-mode");
+                }
+                var lang = localStorage.getItem("techpulse-lang") || "en";
+                document.documentElement.lang = lang === "kh" ? "km" : "en";
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll("[data-en]").forEach(function (el) {
+                        var t = lang === "kh" ? el.getAttribute("data-kh") : el.getAttribute("data-en");
+                        if (t) el.textContent = t;
+                    });
+                    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+                        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+                    });
+                });
+            } catch (e) {}
+        })();
+    </script>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+                <a class="navbar-brand" href="index.html"><img class="site-logo" src="img/logo.png" alt="">Tech<span>News</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" data-page="index" href="index.html"><span data-en="Home" data-kh="ទំព័រដើម">Home</span></a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="news" href="news.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="categories" href="categories.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="news" href="news-page.html"><span data-en="News" data-kh="ព័ត៌មាន">News</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="categories" href="categories-page.html"><span data-en="Categories" data-kh="ប្រភេទ">Categories</span></a></li>
                         <li class="nav-item"><a class="nav-link" data-page="blog" href="blog.html"><span data-en="Blog" data-kh="ប្លុក">Blog</span></a></li>
-                        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
+                        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact-page.html"><span data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</span></a></li>
                     </ul>
                     <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
                     <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
@@ -44,43 +59,7 @@
         </nav>
     </header>
 
-    <script>
-        (function () {
-            try {
-                var theme = localStorage.getItem("techpulse-theme");
-                if (theme !== "light") document.body.classList.add("dark-mode");
-
-                var lang = localStorage.getItem("techpulse-lang") || "en";
-                document.documentElement.lang = lang === "kh" ? "km" : "en";
-
-                var h = document.querySelector("header");
-                h.querySelectorAll("[data-en]").forEach(function (e) {
-                    var t = lang === "kh" ? e.dataset.kh : e.dataset.en;
-                    if (t) e.textContent = t;
-                });
-
-                h.querySelectorAll(".lang-btn").forEach(function (b) {
-                    b.classList.toggle("active", b.dataset.lang === lang);
-                });
-
-                var map = {
-                    "index.html": "index",
-                    "news.html": "news",
-                    "article.html": "news",
-                    "categories.html": "categories",
-                    "blog.html": "blog",
-                    "contact.html": "contact"
-                };
-                var page = map[location.pathname.split("/").pop() || "index.html"];
-                h.querySelectorAll(".nav-link").forEach(function (a) {
-                    a.classList.toggle("active", a.dataset.page === page);
-                });
-            } catch (e) {}
-        })();
-    </script>
-
     <main>
-
         <section class="hero">
             <div class="container">
                 <div class="row justify-content-center">
@@ -94,7 +73,7 @@
                             data-en="Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity."
                             data-kh="ទទួលបានព័ត៌មានថ្មីៗអំពីបច្ចេកវិទ្យា និន្នាការ AI ទូរស័ព្ទ កុំព្យូទ័រ ការសរសេរកម្មវិធី និងសន្តិសុខអនឡាញ។">
                             Stay updated with the latest technology news, trends, AI, smartphones, computers, programming, and cybersecurity.</p>
-                        <a href="news.html" class="btn btn-primary" data-en="Explore News" data-kh="ស្វែងយល់ព័ត៌មាន">Explore News →</a>
+                        <a href="news-page.html" class="btn btn-primary" data-en="Explore News" data-kh="ស្វែងយល់ព័ត៌មាន">Explore News →</a>
                         <a href="blog.html" class="btn btn-outline-light ms-2" data-en="Read Blog" data-kh="អានប្លុក">Read Blog</a>
                     </div>
                 </div>
@@ -109,7 +88,7 @@
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
-                        <article class="news-card">
+                        <article class="news-card" data-href="article.html?id=ai">
                             <button class="bookmark-btn" data-id="home-ai" aria-label="Add bookmark">📑</button>
                             <img src="img/ai.png" alt="AI">
                             <div class="card-content">
@@ -121,7 +100,7 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <article class="news-card">
+                        <article class="news-card" data-href="article.html?id=mobile">
                             <button class="bookmark-btn" data-id="home-mobile" aria-label="Add bookmark">📑</button>
                             <img src="img/smartphone.png" alt="Mobile">
                             <div class="card-content">
@@ -133,7 +112,7 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <article class="news-card">
+                        <article class="news-card" data-href="article.html?id=security">
                             <button class="bookmark-btn" data-id="home-security" aria-label="Add bookmark">📑</button>
                             <img src="img/cybersecurity.png" alt="Security">
                             <div class="card-content">
@@ -145,7 +124,7 @@
                         </article>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <article class="news-card">
+                        <article class="news-card" data-href="article.html?id=computers">
                             <button class="bookmark-btn" data-id="home-dev" aria-label="Add bookmark">📑</button>
                             <img src="img/laptop.png" alt="Computers">
                             <div class="card-content">
@@ -171,28 +150,28 @@
                         <div class="category-box">
                             <div class="category-icon">🤖</div>
                             <h3 data-en="Artificial Intelligence" data-kh="បញ្ញាសិប្បនិម្មិត">Artificial Intelligence</h3>
-                            <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
+                            <a href="categories-page.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="category-box">
                             <div class="category-icon">📱</div>
                             <h3 data-en="Mobile" data-kh="ទូរស័ព្ទ">Mobile</h3>
-                            <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
+                            <a href="categories-page.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="category-box">
                             <div class="category-icon">💻</div>
                             <h3 data-en="Computers" data-kh="កុំព្យូទ័រ">Computers</h3>
-                            <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
+                            <a href="categories-page.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="category-box">
                             <div class="category-icon">🔐</div>
                             <h3 data-en="Cybersecurity" data-kh="សន្តិសុខអនឡាញ">Cybersecurity</h3>
-                            <a href="categories.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
+                            <a href="categories-page.html" data-en="Explore →" data-kh="ស្វែងយល់ →">Explore →</a>
                         </div>
                     </div>
                 </div>
@@ -233,7 +212,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -246,9 +224,9 @@
                 <div class="col-md-6 text-md-end">
                     <h5 data-en="Quick Links" data-kh="តំណភ្ជាប់រហ័ស">Quick Links</h5>
                     <a href="index.html" data-en="Home" data-kh="ទំព័រដើម">Home</a>
-                    <a href="news.html" data-en="News" data-kh="ព័ត៌មាន">News</a>
+                    <a href="news-page.html" data-en="News" data-kh="ព័ត៌មាន">News</a>
                     <a href="blog.html" data-en="Blog" data-kh="ប្លុក">Blog</a>
-                    <a href="contact.html" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a>
+                    <a href="contact-page.html" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a>
                 </div>
             </div>
             <hr>
@@ -258,7 +236,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/script.js"></script>
-
 </body>
 
 </html>

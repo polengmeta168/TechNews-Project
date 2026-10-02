@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tech-new-five.vercel.app/sitemap.xml

@@ -18,31 +18,49 @@
 </head>
 
 <body>
-    <script>if (localStorage.getItem("techpulse-theme") !== "light") document.body.classList.add("dark-mode");</script>
-
-    <header>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("techpulse-theme") !== "light") {
+                    document.body.classList.add("dark-mode");
+                }
+                var lang = localStorage.getItem("techpulse-lang") || "en";
+                document.documentElement.lang = lang === "kh" ? "km" : "en";
+                document.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll("[data-en]").forEach(function (el) {
+                        var t = lang === "kh" ? el.getAttribute("data-kh") : el.getAttribute("data-en");
+                        if (t) el.textContent = t;
+                    });
+                    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+                        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+                    });
+                });
+            } catch (e) {}
+        })();
+    </script>
+<header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Tech<span>News</span></a>
+                <a class="navbar-brand" href="index.html"><img class="site-logo" src="img/logo.png" alt="">Tech<span>News</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html"><span data-en="Home"
+                        <li class="nav-item"><a class="nav-link" data-page="index" href="index.html"><span data-en="Home"
                                     data-kh="ទំព័រដើម">Home</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="news.html"><span data-en="News"
+                        <li class="nav-item"><a class="nav-link" data-page="news" href="news-page.html"><span data-en="News"
                                     data-kh="ព័ត៌មាន">News</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="categories.html"><span data-en="Categories"
+                        <li class="nav-item"><a class="nav-link" data-page="categories" href="categories-page.html"><span data-en="Categories"
                                     data-kh="ប្រភេទ">Categories</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html"><span data-en="Blog"
+                        <li class="nav-item"><a class="nav-link" data-page="blog" href="blog.html"><span data-en="Blog"
                                     data-kh="ប្លុក">Blog</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html"><span data-en="Contact"
+                        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact-page.html"><span data-en="Contact"
                                     data-kh="ទំនាក់ទំនង">Contact</span></a></li>
                     </ul>
                     <button id="darkModeBtn" class="btn btn-outline-light ms-lg-3">🌙</button>
                     <div class="lang-toggle ms-lg-2" id="langToggle" role="group">
-                        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+                        <button type="button" class="lang-btn" data-lang="en">EN</button>
                         <button type="button" class="lang-btn" data-lang="kh">KH</button>
                     </div>
                 </div>
@@ -71,7 +89,7 @@
                             <p data-en="Loading article..." data-kh="កំពុងផ្ទុកអត្ថបទ...">Loading article...</p>
                         </div>
 
-                        <a href="news.html" class="btn btn-primary mt-3" data-en="← Back to News"
+                        <a href="news-page.html" class="btn btn-primary mt-3" data-en="← Back to News"
                             data-kh="← ត្រឡប់ទៅព័ត៌មាន">← Back to News</a>
 
                     </div>
